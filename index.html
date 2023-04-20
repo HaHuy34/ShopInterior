@@ -1,76 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    Import fontawesome
-    <link rel="stylesheet" href="./lib/fontawesome/css/fontawesome.min.css" />
-    <link rel="stylesheet" href="./lib/fontawesome/css/brands.min.css" />
-    <link rel="stylesheet" href="./lib/fontawesome/css/solid.min.css" />
-    <!-- Import bootstrap CSS core -->
-    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css" />
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <!-- <link
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Import fontawesome -->
+  <link rel="stylesheet" href="./lib/fontawesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="./lib/fontawesome/css/brands.min.css" />
+  <link rel="stylesheet" href="./lib/fontawesome/css/solid.min.css" />
+  <!-- Import bootstrap CSS core -->
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     /> -->
-    <!-- Import style.css -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Shop Interior</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <nav class="header-top">
-          <div class="logo">
-            <img src="./assets/images/ImagesFigma/logo_dark.png" alt="" />
-          </div>
-          <div class="link-home">
-            <ul class="menu">
-              <li>HOME</li>
-              <li>PAGES</li>
-              <li>PRODUCTS</li>
-              <li>BLOG</li>
-              <li>CONTACT US</li>
-            </ul>
-          </div>
-          <div class="icons">
-            <ul class="icon-link">
-              <li class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </li>
-              <li class="Cart">
-                <i class="fa-solid fa-cart-shopping"></i>
-              </li>
-              <li class="account">
-                <i class="fa-solid fa-user-large"></i>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <div class="slide-banner">
-          <img src="./assets/images/ImagesFigma/banner8.jpg" alt="">
+  <!-- Import style.css -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Shop Interior</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="header-top">
+        <div class="logo">
+          <img src="./assets/images/ImagesFigma/logo_dark.png" alt="" />
         </div>
-    </header>
-    <main class="main">
-      <div class="container">
-        <div class="row gutters">
-          <div class="col-lg-3 col-sm-6">
+        <div class="link-home">
+          <ul class="menu">
+            <li>HOME</li>
+            <li>PAGES</li>
+            <li>PRODUCTS</li>
+            <li>BLOG</li>
+            <li>CONTACT US</li>
+          </ul>
+        </div>
+        <div class="icons">
+          <ul class="icon-link">
+            <li class="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </li>
+            <li class="Cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </li>
+            <li class="account">
+              <i class="fa-solid fa-user-large"></i>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="slide-banner">
+      <img src="./assets/images/ImagesFigma/banner8.jpg" alt="">
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <div class="row gutters" id="row">
+        <div class="col-12 col-lg-3 col-sm-6" id="col">
+          <div class="content-main">
             <div class="icon-box">
-              <i class="flaticon-shipped"></i>
+              <i class="fa-solid fa-truck-arrow-right"></i>
             </div>
             <div class="icon-content">
-              <h6>Free Delivery</h6>
-              <p>Worldwide</p>
+              <p class="content-title">Free Delivery</p>
+              <p class="ct">Worldwide</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 col-sm-6" id="col">
+          <div class="content-main">
+            <div class="icon-box">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
+            <div class="icon-content">
+              <p class="content-title">Free Delivery</p>
+              <p class="ct">Worldwide</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-lg-3 col-sm-6" id="col">
+          <div class="content-main">
+            <div class="icon-box">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="icon-content">
+              <p class="content-title">Free Delivery</p>
+              <p class="ct">Worldwide</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-3 col-sm-6" id="col">
+          <div class="content-main">
+            <div class="icon-box">
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <div class="icon-content">
+              <p class="content-title">Free Delivery</p>
+              <p class="ct">Worldwide</p>
             </div>
           </div>
         </div>
       </div>
-    </main>
-    <footer class="footer"></footer>
-    <!-- Import js bootstrap -->
-    <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  </body>
+    </div>
+  </main>
+  <footer class="footer"></footer>
+  <!-- Import js bootstrap -->
+  <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
