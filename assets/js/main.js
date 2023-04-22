@@ -8,3 +8,23 @@ search.addEventListener("click", function () {
 closeSearch.addEventListener("click", function () {
   openSearch.style.transform = "translateX(-100%)";
 });
+
+//slide Trending Items
+$('.trending-items').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+});
+
+var filtered = false;
+
+$('.js-filter').on('click', function(){
+  if (filtered === false) {
+    $('.trending-items').slick('slickFilter',':even');
+    $(this).text('Unfilter Slides');
+    filtered = true;
+  } else {
+    $('.trending-items').slick('slickUnfilter');
+    $(this).text('Filter Slides');
+    filtered = false;
+  }
+});
