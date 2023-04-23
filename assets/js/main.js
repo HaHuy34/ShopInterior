@@ -28,3 +28,10 @@ $('.js-filter').on('click', function(){
     filtered = false;
   }
 });
+
+
+//Todo: Alert Add To Cart
+// const addtoCart = document.getElementsByClassName("card-item");
+// addtoCart.addEventListener("click", function(){
+//   alert("Product added to cart");
+// })
