@@ -122,11 +122,13 @@ ul.icon-link li.bars {
 a.btn-text {
   text-decoration: none;
 }
-.owl-slide-animated {
-  transform: translateX(00px);
+
+/* .owl-slide-animated {
+  transition: all 0.5s;
+  transform: translateX(20px);
   opacity: 1;
-  transition: all 0.05s;
-}
+  overflow: hidden;
+} */
 
 .owl-nav {
     display: none;
