@@ -57,9 +57,16 @@ $(".js-filter").on("click", function () {
 // })
 
 // Todo: SLIDE BANNER IMAGE
-
 $(".slide-banner-image").slick({
   slidesToShow: 6,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+});
+
+// Todo: SLIDE IMAGE COOPERATE
+$(".cooperate-main").slick({
+  slidesToShow: 5,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
