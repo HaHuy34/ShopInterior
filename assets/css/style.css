@@ -250,15 +250,6 @@ p.ct {
   font-size: 14px;
 }
 
-/* #row {
-  margin: 0;
-}
-
-#col {
-  padding: 0;
-  width: 25%;
-} */
-
 .open-search {
   z-index: 1;
   height: 100%;
@@ -821,10 +812,10 @@ ul.payment li {
 }
 
 /* SLIDE BANNER IMAGE */
-
 .slide-banner-image {
   display: flex;
   width: 100%;
+  height: 100%;
 }
 
 .img-nu {
@@ -842,7 +833,6 @@ ul.payment li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: violet;
   margin: 40px 0;
 }
 
