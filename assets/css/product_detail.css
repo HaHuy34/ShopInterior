@@ -228,7 +228,7 @@ main .container {
 }
 
 .product-img-main {
-  height: 75%;
+  height: 65%;
   padding: 10px 0;
   border: 1px solid #ddd;
   display: flex;
@@ -388,7 +388,7 @@ span.choose-color:first-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 44px 0;
   border-width: 1px 0px;
   border-style: solid;
   border-color: #e1dddd;
@@ -409,6 +409,10 @@ span.choose-color:first-child {
 .add-product input[type="number"]::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
+}
+
+.span.swith-lable {
+    margin-top: -2px;
 }
 
 .add-product button {

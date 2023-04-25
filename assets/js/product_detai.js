@@ -74,3 +74,9 @@ iconWishLish.addEventListener("click", function(){
   }
   count++;
 })
+
+// Todo: AddToCard
+var addToCart = document.querySelector(".custom-btn");
+addToCart.addEventListener("click", function(){
+  alert("Successfully added shopping carts");
+})
