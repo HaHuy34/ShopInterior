@@ -8,3 +8,69 @@ search.addEventListener("click", function () {
 closeSearch.addEventListener("click", function () {
   openSearch.style.transform = "translateX(-100%)";
 });
+
+
+//Todo: PRODUCT IMAGE DETAIL
+/*Box*/
+function changeBorder(box) {
+  var boxes = document.querySelectorAll(".muli");
+  for (var i = 0; i < boxes.length; i++) {
+    boxes[i].classList.remove("selected");
+  }
+  box.classList.add("selected");
+}
+/*BackGroundImage*/
+function changeImage(image) {
+  var mainImage = document.getElementById("main-image");
+  mainImage.src = image.src;
+}
+
+/* HoverScaleImagemain */
+const imgContainer = document.querySelector(".product-img-main");
+const img = imgContainer.querySelector(".img");
+
+imgContainer.addEventListener("mousemove", (e) => {
+  const x = e.clientX - e.target.offsetLeft;
+  const y = e.clientY - e.target.offsetTop;
+
+  img.style.transformOrigin = `${x}px ${y}px`;
+  img.style.transform = "scale(1.5)";
+});
+
+imgContainer.addEventListener("mouseleave", () => {
+  img.style.transformOrigin = "center center";
+  img.style.transform = "scale(1)";
+});
+
+// Todo: NumberOfAddedShopping
+
+function decrease() {
+  var quantity = document.getElementById("quantity");
+  if (quantity.value > 1) {
+    quantity.value--;
+  }
+}
+
+function increase() {
+  var quantity = document.getElementById("quantity");
+  if (quantity.value < 10) {
+    quantity.value++;
+  }
+}
+
+// Todo: WishLishIcon
+var iconWishLish = document.getElementById("icon");
+var count = 0;
+iconWishLish.addEventListener("click", function(){
+  // alert("Added products to the favorite list");
+  // Nếu người dùng click lần đầu tiên, chuyển màu của icon sang màu đỏ
+  if (count % 2 !== 0) {
+    iconWishLish.style.color = "#b1b6bf";
+  }
+  // Nếu người dùng click lần thứ hai, chuyển màu của icon trở lại màu ban đầu
+  else {
+    iconWishLish.style.color = "red";
+    alert("Added products to the favorite list");
+  }
+  count++;
+})

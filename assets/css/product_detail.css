@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;900&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,6 @@
 
 body {
   font-family: "Inter", sans-serif;
-  /* background-color: red; */
 }
 
 .container {
@@ -215,27 +214,62 @@ main .container {
   margin-top: 40px;
 }
 
-.product-img-main {
-  padding: 40px 0px 40px 140px;
-  border: 1px solid rgb(198, 194, 194);
+.product-image {
+  height: 100%;
 }
 
-.img-product {
-  width: 500px;
-  height: 400px;
-  background-size: contain;
-  background-repeat: no-repeat;
+.product-img-main {
+  height: 100%;
+  overflow: hidden;
+}
+
+.product-img-main img{
+  transition: transform .3s ease;
+}
+
+.product-img-main {
+  height: 75%;
+  padding: 10px 0;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+}
+
+.product-img-main img {
+  max-width: 100%;
+  height: auto;
 }
 
 .product-img-bottom {
-  display: flex;
   width: 100%;
+  height: 25%;
+  margin-top: 5px;
+  display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  align-items: center;
+}
+
+.muli {
+  height: 90%;
+  width: 23%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.muli.selected {
+			border-color: black;
+		}
+
+.muli img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 
-.img-muli {
+
+
+/* .img-muli {
   height: 150px;
   width: 130px;
   background-repeat: no-repeat;
@@ -246,7 +280,7 @@ main .container {
 .img-muli:first-child {
   border: 1px solid black;
 
-}
+} */
 
 
 
@@ -343,6 +377,7 @@ span.choose-color {
   padding: 1px 11px;
   border-radius: 50%;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 span.choose-color:first-child {
@@ -353,41 +388,145 @@ span.choose-color:first-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 10px; */
   padding: 20px 0;
   border-width: 1px 0px;
   border-style: solid;
   border-color: #e1dddd;
 }
 
-.quantity .qty {
-    text-align: center;
+.add-product {
+	display: flex;
+	align-items: center;
 }
 
-.btn-add-card {
-  display: flex;
-  align-items: center;
-  padding: 10px 25px;
-  background-color: #FF324D;
+.add-product input[type="number"] {
+  text-align: center;
+  outline: none;
+  height: 40px;
+}
+
+.add-product input[type="number"]::-webkit-inner-spin-button,
+.add-product input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.add-product button {
+	background-color: #eee;
+	border: none;
+	font-size: 1.2rem;
+	cursor: pointer;
+	outline: none;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	margin: 0 7px;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+}
+
+.custom-btn {
   color: #fff;
   border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.btn-3 {
+  background: #FF324D;
+  width: 170px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: #FF324D;
+  transition: all 0.3s ease;
+}
+
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+
+.btn-3:hover{
+  background: transparent;
+  box-shadow: none;
+}
+
+.btn-3:hover:before {
+  height: 100%;
+}
+
+.btn-3:hover:after {
+  width: 100%;
+}
+
+.btn-3 span:hover{
+  color: #FF324D;
+}
+
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: #FF324D;
+  transition: all 0.3s ease;
+}
+
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+
+.btn-3 span:after {
+  width: 0%;
+  height: 1px;
+}
+
+.btn-3 span:hover:before {
+  height: 100%;
+}
+
+.btn-3 span:hover:after {
+  width: 100%;
+}
+
+.wish-lish i {
+  font-size: 30px;
+  color: #b1b6bf;
   cursor: pointer;
 }
 
-.btn-add-card i {
-  margin-right: 10px;
-  text-align: center;
-}
-
-.add {
-  text-transform: capitalize;
-  font-weight: 500;
-}
-
 .main-tags {
+  padding: 0;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .share {
