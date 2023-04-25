@@ -6,6 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="./assets/images/ImagesFigma/logoweb.png">
+  <!-- Import Owl -->
+  <link rel="stylesheet" href="./lib/owlcarousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="./lib/owlcarousel/assets/owl.theme.default.min.css">
+  <!-- Import Jquery -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Import fontawesome -->
   <link rel="stylesheet" href="./lib/fontawesome/css/fontawesome.min.css" />
   <link rel="stylesheet" href="./lib/fontawesome/css/brands.min.css" />
@@ -80,124 +86,298 @@
         </div>
     </div>
     <!-- PRODUCT DETAIL -->
-    <div class="container">
-        <div class="row">
-            <div class="mb-md-0 mb-4 col-md-6 col-lg-6">
-              <div class="product-image">
-                <div class="product-img-main">
-                  <img class="img" src="./assets/images/ImagesFigma/furniture_img7.jpg" alt="" id="main-image">
-                </div>
-                <div class="product-img-bottom">
-                  <div class="muli selected" onclick="changeBorder(this)">
-                    <img src="./assets/images/ImagesFigma/furniture_img1.jpg" alt="" onclick="changeImage(this)">
+    <div class="product-detail-main">
+      <div class="container">
+          <div class="row">
+              <div class="mb-md-0 mb-4 col-md-6 col-lg-6">
+                <div class="product-image">
+                  <div class="product-img-main">
+                    <img class="img" src="./assets/images/ImagesFigma/furniture_img7.jpg" alt="" id="main-image">
                   </div>
-                  <div class="muli" onclick="changeBorder(this)">
-                    <img src="./assets/images/ImagesFigma/furniture_img3.jpg" alt="" onclick="changeImage(this)">
-                  </div>
-                  <div class="muli" onclick="changeBorder(this)">
-                    <img src="./assets/images/ImagesFigma/furniture_img5.jpg" alt="" onclick="changeImage(this)">
-                  </div>
-                  <div class="muli" onclick="changeBorder(this)">
-                    <img src="./assets/images/ImagesFigma/furniture_img8.jpg" alt="" onclick="changeImage(this)">
+                  <div class="product-img-bottom">
+                    <div class="muli selected" onclick="changeBorder(this)">
+                      <img src="./assets/images/ImagesFigma/furniture_img1.jpg" alt="" onclick="changeImage(this)">
+                    </div>
+                    <div class="muli" onclick="changeBorder(this)">
+                      <img src="./assets/images/ImagesFigma/furniture_img3.jpg" alt="" onclick="changeImage(this)">
+                    </div>
+                    <div class="muli" onclick="changeBorder(this)">
+                      <img src="./assets/images/ImagesFigma/furniture_img5.jpg" alt="" onclick="changeImage(this)">
+                    </div>
+                    <div class="muli" onclick="changeBorder(this)">
+                      <img src="./assets/images/ImagesFigma/furniture_img8.jpg" alt="" onclick="changeImage(this)">
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6 col-lg-6">
-                <div class="pr-detail">
-                    <div class="product-description">
-                        <h4 class="prduct-title">ROCKING CHAIR LAZY C301</h4>
-                        <div class="product-price">
-                            <div class="pr-pr">
-                                <span class="price">$45.00</span>
-                                <del>$55.00</del>
-                                <div class="sale">
-                                    <span>35% Off</span>
-                                </div>
-                            </div>
-                            <div class="rating-wrap">
-                                <div class="rating">
-                                  <i class="fa-solid fa-star"></i>
-                                  <i class="fa-solid fa-star"></i>
-                                  <i class="fa-solid fa-star"></i>
-                                  <i class="fa-solid fa-star"></i>
-                                  <i class="fa-regular fa-star-half-stroke"></i>
-                                </div>
-                                <span class="rating-num">(21)</span>
-                            </div>
-                        </div>
-                        <div class="pr-decs">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
-                        </div>
-                        <div class="product-info">
-                          <ul class="info-pr">
-                            <li>
-                              <i class="fa-regular fa-circle-check"></i>
-                              1 Year AL Jazeera Brand Warranty
-                            </li>
-                            <li>
-                              <i class="fa-solid fa-arrows-rotate"></i>
-                              30 Day Return Policy
-                            </li>
-                            <li>
-                              <i class="fa-solid fa-sack-dollar"></i>
-                              Cash on Delivery available
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="swith-color">
-                          <span class="swith-lable">Color</span>
-                          <div class="product-color">
-                            <span class="choose-color" style="background-color: #87554B;"></span>
-                            <span class="choose-color" style="background-color: #333333;"></span>
-                            <span class="choose-color" style="background-color: #DA323F;"></span>
+              <div class="col-md-6 col-lg-6">
+                  <div class="pr-detail">
+                      <div class="product-description">
+                          <h4 class="prduct-title">ROCKING CHAIR LAZY C301</h4>
+                          <div class="product-price">
+                              <div class="pr-pr">
+                                  <span class="price">$45.00</span>
+                                  <del>$55.00</del>
+                                  <div class="sale">
+                                      <span>35% Off</span>
+                                  </div>
+                              </div>
+                              <div class="rating-wrap">
+                                  <div class="rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star-half-stroke"></i>
+                                  </div>
+                                  <span class="rating-num">(21)</span>
+                              </div>
                           </div>
-                        </div>
-                        <div class="add-to-card">
-                          <div class="add-product">
-                            <button onclick="decrease()">-</button>
-                            <input type="number" id="quantity" value="1" min="1" max="10">
-                            <button onclick="increase()">+</button>
+                          <div class="pr-decs">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
                           </div>
-                          <button class="custom-btn btn-3">
-                            <span>
-                                <i class="fa-solid fa-cart-arrow-down"></i>Add To Cart
-                            </span>
-                          </button>
-                          <div class="wish-lish">
-                            <i class="fa-regular fa-heart" id="icon"></i>
-                          </div>
-                        </div>
-                        <div class="main-tags">
-                          <div class="swith-color">
-                            <span class="swith-lable">SKU: </span>
-                            <p>BE45VGRT</p>
+                          <div class="product-info">
+                            <ul class="info-pr">
+                              <li>
+                                <i class="fa-regular fa-circle-check"></i>
+                                1 Year AL Jazeera Brand Warranty
+                              </li>
+                              <li>
+                                <i class="fa-solid fa-arrows-rotate"></i>
+                                30 Day Return Policy
+                              </li>
+                              <li>
+                                <i class="fa-solid fa-sack-dollar"></i>
+                                Cash on Delivery available
+                              </li>
+                            </ul>
                           </div>
                           <div class="swith-color">
-                            <span class="swith-lable">Material: </span>
-                            <p>Wood, Leather, Fabric</p>
-                          </div>
-                          <div class="swith-color">
-                            <span class="swith-lable">Tages: </span>
-                            <p>Cloth, printed</p>
-                          </div>
-                          </div>
-                          <div class="share">
-                            <span class="swith-lable">Share: </span>
-                            <div class="icons-share">
-                              <i class="fa-brands fa-facebook-f"></i>
-                              <i class="fa-brands fa-twitter"></i>
-                              <i class="fa-brands fa-google-plus-g"></i>
-                              <i class="fa-brands fa-youtube"></i>
-                              <i class="fa-solid fa-camera-retro"></i>
+                            <span class="swith-lable">Color</span>
+                            <div class="product-color">
+                              <span class="choose-color" style="background-color: #87554B;"></span>
+                              <span class="choose-color" style="background-color: #333333;"></span>
+                              <span class="choose-color" style="background-color: #DA323F;"></span>
                             </div>
                           </div>
-                        </div>
+                          <div class="add-to-card">
+                            <div class="add-product">
+                              <button onclick="decrease()">-</button>
+                              <input type="number" id="quantity" value="1" min="1" max="10">
+                              <button onclick="increase()">+</button>
+                            </div>
+                            <button class="custom-btn btn-3">
+                              <span>
+                                  <i class="fa-solid fa-cart-arrow-down"></i>Add To Cart
+                              </span>
+                            </button>
+                            <div class="wish-lish">
+                              <i class="fa-regular fa-heart" id="icon"></i>
+                            </div>
+                          </div>
+                          <div class="main-tags">
+                            <div class="swith-color">
+                              <span class="swith-lable">SKU: </span>
+                              <p>BE45VGRT</p>
+                            </div>
+                            <div class="swith-color">
+                              <span class="swith-lable">Material: </span>
+                              <p>Wood, Leather, Fabric</p>
+                            </div>
+                            <div class="swith-color">
+                              <span class="swith-lable">Tages: </span>
+                              <p>Cloth, printed</p>
+                            </div>
+                            </div>
+                            <div class="share">
+                              <span class="swith-lable">Share: </span>
+                              <div class="icons-share">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-google-plus-g"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                                <i class="fa-solid fa-camera-retro"></i>
+                              </div>
+                            </div>
+                          </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!-- RELATED PRODUCTS -->
+    <div class="related-products">
+      <div class="container">
+            <div class="row products-title">
+                <div class="col-md-6 re-pr">
+                    <h2>Related products</h2>
                 </div>
             </div>
-        </div>
+            <div class="owl-carousel owl-theme" id="slide-cr">
+              <div class="item">
+                <div class="card-item">
+                  <div class="product-img">
+                    <a href="#">
+                      <img src="./assets/images/ImagesFigma/furniture_img3.jpg" alt="">
+                    </a>
+                    <div class="product-action-box">
+                      <div class="pr-dc">
+                        <a href="#" class="detail-product">
+                          <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                <div class="product-info">
+                  <h6 class="pro-title">enim expedita sed</h6>
+                  <div class="product-price">
+                    <span class="price">$45.00</span>
+                    <del>$55.00</del>
+                  </div>
+                  <div class="rating-wrap">
+                    <div class="rating">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <span class="rating-num">(21)</span>
+                  </div>
+                  <div class="add-to-cart">
+                    <a href="#" class="btn-radius"">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <span class="adtoca">Add To Cart</span>
+                    </a>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card-item">
+                  <div class="product-img">
+                    <a href="#">
+                      <img src="./assets/images/ImagesFigma/furniture_img3.jpg" alt="">
+                    </a>
+                    <div class="product-action-box">
+                      <div class="pr-dc">
+                        <a href="#" class="detail-product">
+                          <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                <div class="product-info">
+                  <h6 class="pro-title">enim expedita sed</h6>
+                  <div class="product-price">
+                    <span class="price">$45.00</span>
+                    <del>$55.00</del>
+                  </div>
+                  <div class="rating-wrap">
+                    <div class="rating">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <span class="rating-num">(21)</span>
+                  </div>
+                  <div class="add-to-cart">
+                    <a href="#" class="btn-radius"">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <span class="adtoca">Add To Cart</span>
+                    </a>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card-item">
+                  <div class="product-img">
+                    <a href="#">
+                      <img src="./assets/images/ImagesFigma/furniture_img3.jpg" alt="">
+                    </a>
+                    <div class="product-action-box">
+                      <div class="pr-dc">
+                        <a href="#" class="detail-product">
+                          <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                <div class="product-info">
+                  <h6 class="pro-title">enim expedita sed</h6>
+                  <div class="product-price">
+                    <span class="price">$45.00</span>
+                    <del>$55.00</del>
+                  </div>
+                  <div class="rating-wrap">
+                    <div class="rating">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <span class="rating-num">(21)</span>
+                  </div>
+                  <div class="add-to-cart">
+                    <a href="#" class="btn-radius"">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <span class="adtoca">Add To Cart</span>
+                    </a>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card-item">
+                  <div class="product-img">
+                    <a href="#">
+                      <img src="./assets/images/ImagesFigma/furniture_img3.jpg" alt="">
+                    </a>
+                    <div class="product-action-box">
+                      <div class="pr-dc">
+                        <a href="#" class="detail-product">
+                          <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                <div class="product-info">
+                  <h6 class="pro-title">enim expedita sed</h6>
+                  <div class="product-price">
+                    <span class="price">$45.00</span>
+                    <del>$55.00</del>
+                  </div>
+                  <div class="rating-wrap">
+                    <div class="rating">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <span class="rating-num">(21)</span>
+                  </div>
+                  <div class="add-to-cart">
+                    <a href="#" class="btn-radius"">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <span class="adtoca">Add To Cart</span>
+                    </a>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+      </div> 
+
     </div>
   </main>
+
+
+
   <footer class="footer">
     <div class="footer-top">
       <div class="container">
@@ -344,7 +524,12 @@
       </div>
     </div>
   </footer>
-  
+  <!-- Import jquery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
+  <!-- Import jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- Import js bootstrap -->
   <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Import product_detail.js -->
