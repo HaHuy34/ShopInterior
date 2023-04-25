@@ -556,6 +556,12 @@ span.choose-color:first-child {
   right: 0;
 }
 
+
+
+
+
+
+
 .card-item {
   position: relative;
   text-align: center !important;
@@ -579,13 +585,28 @@ span.choose-color:first-child {
   justify-content: center;
 }
 
-.product-img img {
-  height: 101%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
+.item-img {
+  background-image: url(./assets/images/ImagesFigma/furniture_img3.jpg);
+  background-size: cover;
+  padding-top: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .product-img::before {
   content: "";
@@ -620,6 +641,7 @@ span.choose-color:first-child {
 .pr-dc {
   position: absolute;
   bottom: -100%;
+  right: 210%;
   width: 60px;
   height: 60px;
   background-color: rgb(255, 255, 255);
@@ -760,6 +782,31 @@ a.btn-radius i {
   width: 100%;
   margin-top: 20px;
 }
+
+.owl-dots {
+    display: none;
+}
+
+.owl-nav {
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+}
+
+.owl-carousel .owl-nav.disabled {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  position: absolute;
+  bottom: -28px;
+  right: 45%;
+}
+
+.item{
+  display: flex;
+}
+
 
 
 

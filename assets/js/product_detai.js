@@ -87,8 +87,8 @@ $(".owl-carousel").owlCarousel({
   loop: true,
   margin: 10,
   nav: true,
-  autoplay: true,
-  autoplayTimeout: 300,
+  // autoplay: true,
+  // autoplayTimeout: 1000,
   responsive: {
     0: {
       items: 1,
@@ -101,3 +101,15 @@ $(".owl-carousel").owlCarousel({
     },
   },
 });
+
+//Todo: Replace span with another statement
+// // Lấy phần tử HTML bằng lớp
+// const elementToReplace = document.querySelector(".owl-prev");
+
+// // Tạo đoạn mã HTML mới để thay thế
+// const newHTML =
+//   '<button type="button" role="presentation" class="owl-prev">' +
+//   '<span aria-label="Previous">←</span>' +
+//   "</button>";
+// // Thay thế đoạn mã HTML cũ bằng đoạn mã HTML mới
+// elementToReplace.outerHTML = newHTML;
