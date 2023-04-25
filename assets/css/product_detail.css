@@ -294,8 +294,8 @@ main .container {
 }
 
 h4.prduct-title {
-  font-size: 1.9em;
-  font-weight: 700;
+  font-size: 2.3em;
+  font-weight: 500;
 }
 
 .product-price {
@@ -358,6 +358,7 @@ ul.info-pr li {
 ul.info-pr li i{
   color: red;
   margin-right: 10px;
+  font-size: 19px;
 }
 
 .swith-color {
