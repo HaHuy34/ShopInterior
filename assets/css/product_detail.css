@@ -284,7 +284,13 @@ h4.prduct-title {
     justify-content: space-between;
 }
 
-span.price {
+.pr-pr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.pr-pr span.price {
   font-size: 25px;
   font-weight: 500;
   color: red;
@@ -585,8 +591,12 @@ span.choose-color:first-child {
   justify-content: center;
 }
 
+.img-pr-detail {
+  display: flex;
+}
+
 .item-img {
-  background-image: url(./assets/images/ImagesFigma/furniture_img3.jpg);
+  background-image: url(https://bestwebcreator.com/shopwise/demo/assets/images/furniture_img5.jpg);
   background-size: cover;
   padding-top: 100%;
 }
