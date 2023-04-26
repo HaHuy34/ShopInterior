@@ -281,7 +281,7 @@ h4.prduct-title {
 
 .product-price {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .pr-pr {
@@ -593,9 +593,10 @@ span.choose-color:first-child {
 
 .img-pr-detail {
   display: flex;
+  
 }
 
-.item-img {
+.product-img {
   background-image: url(https://bestwebcreator.com/shopwise/demo/assets/images/furniture_img5.jpg);
   background-size: cover;
   padding-top: 100%;
@@ -701,14 +702,6 @@ a.detail-product i {
   opacity: 0;
 }
 
-.product-info {
-  height: 25%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7px;
-}
 
 h6.pro-title {
   text-transform: capitalize;
@@ -745,8 +738,10 @@ span.rating-num {
 
 .add-to-cart {
   position: absolute;
-  bottom: -50px;
+  bottom: -100px;
   width: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 40px;
   padding: 12px 0;
   background-color: red;
@@ -784,7 +779,7 @@ a.btn-radius i {
 .card-item:hover .add-to-cart {
   opacity: 1;
   visibility: visible;
-  bottom: 18px;
+  bottom: 0px;
 }
 
 #slide-cr {
@@ -797,11 +792,11 @@ a.btn-radius i {
     display: none;
 }
 
-.owl-nav {
+/* .owl-nav {
   width: 40px;
   height: 40px;
   font-size: 25px;
-}
+} */
 
 .owl-carousel .owl-nav.disabled {
   display: flex;
