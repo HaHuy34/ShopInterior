@@ -71,3 +71,7 @@ $(".cooperate-main").slick({
   autoplay: true,
   autoplaySpeed: 3000,
 });
+
+function redirect() {
+  window.location.href = "product_detail.html";
+}

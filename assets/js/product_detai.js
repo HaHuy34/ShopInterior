@@ -102,6 +102,7 @@ $(".owl-carousel").owlCarousel({
   },
 });
 
+
 //slide Trending Items
 
 //Todo: Replace span with another statement
