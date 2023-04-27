@@ -88,7 +88,7 @@ $(".owl-carousel").owlCarousel({
   margin: 10,
   nav: true,
   autoplay: true,
-  autoplayTimeout: 1000,
+  autoplayTimeout: 3000,
   responsive: {
     0: {
       items: 1,
@@ -101,6 +101,8 @@ $(".owl-carousel").owlCarousel({
     },
   },
 });
+
+//slide Trending Items
 
 //Todo: Replace span with another statement
 // // Lấy phần tử HTML bằng lớp

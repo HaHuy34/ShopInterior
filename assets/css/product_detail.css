@@ -542,9 +542,9 @@ span.choose-color:first-child {
   transition: all .3s;
 }
 
-/* RELATED PRODUCT */
-.related-products {
-  margin-top: -20px;
+/* START RELATED PRODUCT */
+.related-products .products-title {
+  margin-bottom: 40px;
 }
 
 .re-pr {
@@ -561,12 +561,6 @@ span.choose-color:first-child {
   bottom: 0;
   right: 0;
 }
-
-
-
-
-
-
 
 .card-item {
   position: relative;
@@ -591,33 +585,13 @@ span.choose-color:first-child {
   justify-content: center;
 }
 
-.img-pr-detail {
-  display: flex;
-  
-}
 
 .product-img {
   background-image: url(https://bestwebcreator.com/shopwise/demo/assets/images/furniture_img5.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   padding-top: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .product-img::before {
   content: "";
@@ -638,10 +612,9 @@ span.choose-color:first-child {
   position: relative;
   width: 60px;
   height: 60px;
-  top: 8%;
-  left: 0;
-  right: 0;
-  transform: translate(0, -50%);
+  bottom: 50%;
+  top: 50%;
+  transform: translate(0, -200%);
   text-align: center;
   z-index: 2;
   display: flex;
@@ -652,7 +625,6 @@ span.choose-color:first-child {
 .pr-dc {
   position: absolute;
   bottom: -100%;
-  right: 210%;
   width: 60px;
   height: 60px;
   background-color: rgb(255, 255, 255);
@@ -783,8 +755,6 @@ a.btn-radius i {
 }
 
 #slide-cr {
-  display: flex;
-  width: 100%;
   margin-top: 20px;
 }
 
@@ -792,11 +762,6 @@ a.btn-radius i {
     display: none;
 }
 
-/* .owl-nav {
-  width: 40px;
-  height: 40px;
-  font-size: 25px;
-} */
 
 .owl-carousel .owl-nav.disabled {
   display: flex;
@@ -811,8 +776,47 @@ a.btn-radius i {
 .item{
   display: flex;
 }
+/* END RELATED PRODUCTS */
+
+/* START TRENDING ITEM*/
+.trending-item .products-title {
+  position: relative;
+}
+
+.products-title .text-center {
+  width: 100%;
+  display: flex;
+  justify-content: center !important;
+  margin-bottom: 20px;
+}
+
+.text-center::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 1px;
+  background-color: #ff324d;
+  bottom: 22px;
+  right: 0;
+  margin: 0 auto;
+}
+
+.trending-item .owl-carousel .owl-nav.disabled {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 107%;
+    font-size: 25px;
+}
 
 
+
+
+/* END TRENDING ITEM*/
 
 
 
