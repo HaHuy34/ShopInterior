@@ -28,16 +28,18 @@ body {
   background: #888;
 }
 
+/* START HEADER */
 .header {
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
-nav.header-top {
+.header-top {
   display: flex;
   height: 80px;
   width: 100%;
+  position: relative;
 }
 
 .logo {
@@ -61,7 +63,7 @@ h2.title-logo {
   height: 100%;
 }
 
-ul.menu {
+ul.menu-cher {
   width: 100%;
   height: 100%;
   display: flex;
@@ -71,7 +73,7 @@ ul.menu {
   font-weight: 500;
 }
 
-ul.menu li {
+ul.menu-cher li.ic {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,11 +81,97 @@ ul.menu li {
   cursor: pointer;
 }
 
-ul.menu li:hover,
-ul.icon-link li:hover {
+ul.menu-cher li.ic:hover,
+ul.icon-link li.ic:hover,
+.mega-menu-col a:hover {
   color: red;
   transition: all 0.3s;
 }
+
+
+
+/* MULI */
+.prd-muli i {
+  margin-left: 7px;
+  
+}
+
+.prd-muli {
+  height: 80px; 
+} 
+
+.dropdown-menu {
+  position: absolute;
+  top: 150%;
+  width: 105%;
+  display: block;
+  overflow: hidden;
+  margin-left: -20px;
+  border: #fff;
+  box-shadow: 0 13px 42px 11px rgba(0,0,0,.05);
+  opacity: 0;
+  transition: all .4s;
+}
+
+.prd-muli:hover .dropdown-menu {
+    opacity: 1;
+    top: 100%;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.mega-menu-col {
+  border-right: 1px solid #ddd;
+  text-align: left;
+  width: 25%;
+}
+
+.mega-menu-col:first-child {
+  margin-left: 20px;
+}
+
+.mega-menu-col:last-child {
+  border-right: 0px !important;
+}
+
+ul.menu-mega {
+  display: flex;
+  gap: 20px;
+}
+
+ul.menu-mega,
+ul.menu-mega ul {
+  padding: 0;
+}
+
+.dropdown-header {
+  margin-top: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0;
+  color: #000;
+}
+
+.image-dropdown {
+  width: 100%;
+  display: flex;
+}
+
+.header-image-drop-banner {
+  margin: 20px 0 0 20px;
+}
+
+/* MULI */
+
+
+
+
 
 .icons {
   width: 7%;
@@ -121,13 +209,6 @@ ul.icon-link li.bars {
 a.btn-text {
   text-decoration: none;
 }
-
-/* .owl-slide-animated {
-  transition: all 0.5s;
-  transform: translateX(20px);
-  opacity: 1;
-  overflow: hidden;
-} */
 
 .owl-nav {
   display: none;
@@ -317,6 +398,7 @@ button.search-icons i {
 .search-main span {
   font-weight: 500;
 }
+/* END HEADER */
 
 /* PRODUCTS */
 .products-title {
@@ -542,7 +624,6 @@ a.btn-radius i {
 }
 
 /* START SECTION BANNER */
-
 .banner {
   display: flex;
   flex-direction: row;
