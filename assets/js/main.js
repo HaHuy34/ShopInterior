@@ -1,8 +1,12 @@
 // Todo: Search
 var search = document.querySelector(".search");
 var searchBtn = document.querySelector(".search-btn");
-search.addEventListener("click", function() {
-     searchBtn.classList.add("sebtn");
+document.addEventListener("click", function(event) {
+     if (event.target == search) {
+       searchBtn.classList.add("sebtn");
+     } else {
+       searchBtn.style.display = "none";
+     }
  });
 
 // Todo: Slider banner header
