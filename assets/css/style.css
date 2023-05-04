@@ -109,14 +109,14 @@ ul.icon-link li.ic:hover,
   margin-left: -20px;
   border: #fff;
   box-shadow: 0 13px 42px 11px rgba(0,0,0,.05);
-  opacity: 0;
+  opacity: 1;
   transition: all .4s;
 }
 
-.prd-muli:hover .dropdown-menu {
+/* li.prd-muli.ic:hover .dropdown-menu {
     opacity: 1;
     top: 100%;
-}
+} */
 
 .dropdown-menu a {
   text-decoration: none;
@@ -164,7 +164,23 @@ ul.menu-mega ul {
 }
 
 .header-image-drop-banner {
-  margin: 20px 0 0 20px;
+  margin: 20px 20px;
+  position: relative;
+
+}
+
+.info5 {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  display: flex;
+  transform: translateY(-50%);
+  flex-direction: column;
+}
+
+h6.banner {
+  font-size: 16px;
+  color: red;
 }
 
 /* MULI */
