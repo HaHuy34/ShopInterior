@@ -132,6 +132,7 @@ ul.icon-link li.bars {
 .name-product {
     font-size: 19px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .meli-product {
@@ -143,6 +144,10 @@ ul.product-detail {
     display: flex;
     height: 100%;
     align-items: center;
+}
+
+ul.product-detail li {
+    cursor: pointer;
 }
 
 ul.product-detail li i{
