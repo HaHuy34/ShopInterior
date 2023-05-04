@@ -8,6 +8,20 @@ document.addEventListener("click", function(event) {
        searchBtn.style.display = "none";
      }
  });
+// Todo: Reponsive Bars
+ function myFunction(x) {
+   x.classList.toggle("change");
+ }
+
+ var close = document.querySelector(".close");
+ var dropDow = document.querySelector(".dropdow-menu");
+ close.addEventListener("click", function(){
+  if(dropDow.style.display === "block"){
+    dropDow.style.display = "none";
+  }else{
+    dropDow.style.display = "block";
+  }
+ })
 
 // Todo: Slider banner header
 $(".owl-carousel").owlCarousel({
