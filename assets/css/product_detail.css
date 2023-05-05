@@ -219,27 +219,7 @@ main .container {
   height: 100%;
 }
 
-.product-img-main {
-  height: 100%;
-  overflow: hidden;
-}
 
-.product-img-main img{
-  transition: transform .3s ease;
-}
-
-.product-img-main {
-  height: 65%;
-  padding: 10px 0;
-  border: 1px solid #ddd;
-  display: flex;
-  justify-content: center;
-}
-
-.product-img-main img {
-  max-width: 100%;
-  height: auto;
-}
 
 .product-img-bottom {
   width: 100%;
@@ -980,6 +960,43 @@ ul.payment li {
 
 /* REPONSIVE */
 /* TABLET */
+@media (min-width: 993px) {
+  * {box-sizing: border-box;}
+
+.img-zoom-container {
+  position: relative;
+  display: flex;
+}
+
+.img-zoom-container img {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  top: 0;
+  left: 104%;
+  display: none;
+}
+
+.img-zoom-container:hover .img-zoom-result {
+  display: block;
+}
+}
+
 @media (min-width: 768px) and (max-width: 992px) {
   .container {
     --bs-gutter-x: 0;
@@ -1016,6 +1033,7 @@ ul.payment li {
 }
 
 @media screen and (max-width: 768px) {
+  
   .container {
     max-width: 700px;
   }
