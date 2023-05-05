@@ -421,6 +421,7 @@ p.ct {
   opacity: 1;
   visibility: hidden;
   transition: all .4s;
+  z-index: 9999999999999;
 }
 
 .se-input {
@@ -1049,8 +1050,13 @@ ul.payment li {
     font-weight: 400;
   }
 
+   .main-dropdow a {
+    text-decoration: none;
+    color: #000;
+   }
+
   .dr-header {
-    z-index: 99999999;
+    z-index: 9;
     overflow-y: auto;
   }
 
