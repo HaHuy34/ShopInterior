@@ -1,3 +1,13 @@
+// Todo: Loader
+function loader() {
+  document.querySelector(".loader-container").classList.add("fade-out");
+}
+
+function fadeOut() {
+  setInterval(loader, 3000);
+}
+
+window.onload = fadeOut;
 //todo: Close and Open Search
 const search = document.querySelector(".search");
 const openSearch = document.querySelector(".open-search");

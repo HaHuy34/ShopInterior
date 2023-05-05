@@ -1,3 +1,13 @@
+// Todo: Loader
+function loader() {
+  document.querySelector(".loader-container").classList.add("fade-out");
+}
+
+function fadeOut() {
+  setInterval(loader, 3000);
+}
+window.onload = fadeOut;
+
 //todo: Close and Open Search
 const search = document.querySelector(".search");
 const openSearch = document.querySelector(".open-search");
@@ -30,16 +40,56 @@ $(".owl-carousel").owlCarousel({
 });
 
 const sanPham = [
-  { ten: "Sản phẩm 1", price: 45, image: "./assets/images/ImagesFigma/furniture_img1.jpg" },
-  { ten: "Sản phẩm 2", price: 20, image: "./assets/images/ImagesFigma/furniture_img2.jpg" },
-  { ten: "Sản phẩm 3", price: 2, image: "./assets/images/ImagesFigma/furniture_img3.jpg" },
-  { ten: "Sản phẩm 4", price: 99, image: "./assets/images/ImagesFigma/furniture_img4.jpg" },
-  { ten: "Sản phẩm 5", price: 30, image: "./assets/images/ImagesFigma/furniture_img5.jpg" },
-  { ten: "Sản phẩm 6", price: 40, image: "./assets/images/ImagesFigma/furniture_img6.jpg" },
-  { ten: "Sản phẩm 7", price: 5, image: "./assets/images/ImagesFigma/furniture_img7.jpg" },
-  { ten: "Sản phẩm 8", price: 8, image: "./assets/images/ImagesFigma/furniture_img8.jpg" },
-  { ten: "Sản phẩm 9", price: 11, image: "./assets/images/ImagesFigma/furniture_img1.jpg" },
-  { ten: "Sản phẩm 10", price: 15, image: "./assets/images/ImagesFigma/furniture_img5.jpg" },
+  {
+    ten: "Sản phẩm 1",
+    price: 45,
+    image: "./assets/images/ImagesFigma/furniture_img1.jpg",
+  },
+  {
+    ten: "Sản phẩm 2",
+    price: 20,
+    image: "./assets/images/ImagesFigma/furniture_img2.jpg",
+  },
+  {
+    ten: "Sản phẩm 3",
+    price: 2,
+    image: "./assets/images/ImagesFigma/furniture_img3.jpg",
+  },
+  {
+    ten: "Sản phẩm 4",
+    price: 99,
+    image: "./assets/images/ImagesFigma/furniture_img4.jpg",
+  },
+  {
+    ten: "Sản phẩm 5",
+    price: 30,
+    image: "./assets/images/ImagesFigma/furniture_img5.jpg",
+  },
+  {
+    ten: "Sản phẩm 6",
+    price: 40,
+    image: "./assets/images/ImagesFigma/furniture_img6.jpg",
+  },
+  {
+    ten: "Sản phẩm 7",
+    price: 5,
+    image: "./assets/images/ImagesFigma/furniture_img7.jpg",
+  },
+  {
+    ten: "Sản phẩm 8",
+    price: 8,
+    image: "./assets/images/ImagesFigma/furniture_img8.jpg",
+  },
+  {
+    ten: "Sản phẩm 9",
+    price: 11,
+    image: "./assets/images/ImagesFigma/furniture_img1.jpg",
+  },
+  {
+    ten: "Sản phẩm 10",
+    price: 15,
+    image: "./assets/images/ImagesFigma/furniture_img5.jpg",
+  },
 ];
 
 function hienThiSanPham() {
@@ -215,7 +265,6 @@ function hienThiSanPham() {
   });
 }
 
-
 function sapXepSanPham(price) {
   if (price === "thap") {
     sanPham.sort((a, b) => a.price - b.price);
@@ -229,5 +278,3 @@ const selectGia = document.getElementById("gia");
 selectGia.addEventListener("change", function () {
   sapXepSanPham(this.value);
 });
-
-

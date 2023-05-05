@@ -31,7 +31,6 @@ body {
 /* START HEADER */
 .header {
   width: 100%;
-  /* overflow: hidden; */
 }
 
 .header-top {
@@ -59,6 +58,11 @@ h2.title-logo {
 
 .link-home {
   width: 78%;
+}
+
+.link-home a {
+  text-decoration: none;
+  color: #000;
 }
 
 ul.menu-cher {
@@ -383,6 +387,29 @@ p.content-title {
 p.ct {
   color: #687188;
   font-size: 14px;
+}
+
+/* LOADER */
+.loader-container{
+    position: fixed;
+    top:0; left:0;
+    height:100%; 
+    width:100%;
+    z-index: 10000;
+    background:rgb(25, 31, 38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loader-container img{
+    width:35rem;
+}
+
+.loader-container.fade-out{
+    top:-110%;
+    opacity:0;
 }
 
 /* SEARCH */
