@@ -163,18 +163,18 @@ $(".owl-carousel").owlCarousel({
   },
 });
 
+// Todo: Click Color
+const colorSpans = document.querySelectorAll(".choose-color");
 
-//slide Trending Items
-
-//Todo: Replace span with another statement
-// // Lấy phần tử HTML bằng lớp
-// const elementToReplace = document.querySelector(".owl-prev");
-
-// // Tạo đoạn mã HTML mới để thay thế
-// const newHTML =
-//   '<button type="button" role="presentation" class="owl-prev">' +
-//   '<span aria-label="Previous">←</span>' +
-//   "</button>";
-// // Thay thế đoạn mã HTML cũ bằng đoạn mã HTML mới
-// elementToReplace.outerHTML = newHTML;
-
+colorSpans.forEach((colorSpan) => {
+  colorSpan.addEventListener("click", () => {
+    colorSpans.forEach((otherSpan) => {
+      if (otherSpan !== colorSpan) {
+        otherSpan.classList.remove("selected");
+        otherSpan.innerHTML = "";
+      }
+    });
+    colorSpan.classList.add("selected");
+    colorSpan.innerHTML = "&#10003;";
+  });
+});
