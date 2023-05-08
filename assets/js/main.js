@@ -167,10 +167,10 @@ for (var i = 0; i < addToCartButtons.length; i++) {
       toast.classList.add("tot");
       toast.innerHTML = `
           <div class="toast__icon">
-            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
           </div>
           <div class="toast__body">
-            <h3 class="toast__title">Thất bại!</h3>
+            <h3 class="toast__title">Xin lỗi!</h3>
             <p class="toast__msg">Sản phẩm đã tồn tại trong giỏ hàng.</p>
           </div>
           <div class="toast__close">
