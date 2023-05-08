@@ -119,9 +119,72 @@ for (var i = 0; i < addToCartButtons.length; i++) {
     if (!itemExists) {
       itemsInCart.push({ name: itemName, price: itemPrice });
       cartCount.innerHTML = itemsInCart.length;
-      alert("Successfully added shopping carts");
+      const main = document.getElementById("toast");
+      const toast = document.createElement("div");
+      // Auto remove toast
+      const autoRemoveId = setTimeout(function () {
+        main.removeChild(toast);
+      }, 4000);
+
+      // Remove toast when clicked
+      toast.onclick = function (e) {
+        if (e.target.closest(".toast__close")) {
+          main.removeChild(toast);
+          clearTimeout(autoRemoveId);
+        }
+      };
+      const delay = (3).toFixed(2);
+      toast.classList.add("tot");
+      toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
+      toast.innerHTML = `
+          <div class="toast__icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="toast__body">
+            <h3 class="toast__title">Thành công!</h3>
+            <p class="toast__msg">Bạn đã thêm sản phẩm vào giỏ hàng.</p>
+          </div>
+          <div class="toast__close">
+            <i class="fas fa-times"></i>
+          </div>
+      `;
+      main.appendChild(toast);
     } else {
-      alert("The product has existed in the cart");
+      const main = document.getElementById("toast");
+      const toast = document.createElement("div");
+      // Auto remove toast
+      const autoRemoveId = setTimeout(function () {
+        main.removeChild(toast);
+      }, 9000);
+
+      // Remove toast when clicked
+      toast.onclick = function (e) {
+        if (e.target.closest(".toast__close")) {
+          main.removeChild(toast);
+          clearTimeout(autoRemoveId);
+        }
+      };
+      toast.classList.add("tot");
+      toast.innerHTML = `
+          <div class="toast__icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="toast__body">
+            <h3 class="toast__title">Thất bại!</h3>
+            <p class="toast__msg">Sản phẩm đã tồn tại trong giỏ hàng.</p>
+          </div>
+          <div class="toast__close">
+            <i class="fas fa-times"></i>
+          </div>
+      `;
+      main.appendChild(toast);
     }
   });
 }
+
+// Todo: Thong báo Add to cart
+
+// function toast(){
+//   var addToCartButtons = document.getElementsByClassName("add-to-cart");
+//   addToCartButtons.addEventListener 
+// }
