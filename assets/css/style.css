@@ -300,6 +300,23 @@ ul.icon-link li.bars {
   transform: translate(0, -6px) rotate(45deg);
 }
 
+.accordion-button::after {
+    display: none;
+}
+
+button.accordion-button.collapsed {
+    text-transform: uppercase;
+}
+
+.main-dropdow a {
+    text-decoration: none;
+    color: #000;
+}
+
+button#btn-drop {
+    text-transform: uppercase;
+}
+
 /* SLIDE BANNER IMAGE TOP*/
 .slide-bn {
   margin-top: 80px;
@@ -496,6 +513,7 @@ p.ct {
   opacity: 1;
   visibility: visible;
 }
+
 /* Add To cart */
 #toast {
   position: fixed;
@@ -574,8 +592,6 @@ p.ct {
   color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
-
-
 /* END HEADER */
 /* PRODUCTS */
 .products-title {
@@ -1110,30 +1126,11 @@ ul.payment li {
   opacity: 0;
 }
 
-.accordion-button::after {
-    display: none;
-}
-
-button.accordion-button.collapsed {
-    text-transform: uppercase;
-}
-
-.main-dropdow a {
-    text-decoration: none;
-    color: #000;
-}
-
-button#btn-drop {
-    text-transform: uppercase;
-}
-
 @media (min-width: 992px){
   .container {
     width: 100%;
   }  
 }
-
-  
 
 @media (min-width: 768px) and (max-width: 992px) {
   .container {
@@ -1305,7 +1302,7 @@ button#btn-drop {
 
   .dropdow-menu {
     width: 100%;
-    display: block;
+    display: none;
     z-index: 999;
     position: absolute;
     top: 100%;
