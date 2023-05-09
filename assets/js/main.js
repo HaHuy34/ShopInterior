@@ -4,7 +4,7 @@ function loader() {
 }
 
 function fadeOut() {
-  setInterval(loader, 3000);
+  setInterval(loader, 1000);
 }
 
 window.onload = fadeOut;
@@ -13,13 +13,18 @@ window.onload = fadeOut;
 var search = document.querySelector(".search");
 var searchBtn = document.querySelector(".search-btn");
 search.addEventListener("click", function (event) {
-  // if (event.target == search) {
-  //   searchBtn.classList.add("sebtn");
-  // } else {
-  //   searchBtn.style.display = "none";
   searchBtn.classList.add("sebtn");
-  // }
 });
+
+const searchElement = document.querySelector(".search");
+document.addEventListener("click", function (event) {
+  const isClickInsideSearch = searchElement.contains(event.target);
+
+  if (!isClickInsideSearch) {
+    searchElement.classList.remove("search");
+  }
+});
+
 // Todo: Reponsive Bars
 function myFunction(x) {
   x.classList.toggle("change");
