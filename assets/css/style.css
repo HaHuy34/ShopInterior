@@ -33,6 +33,14 @@ body {
   width: 100%;
 }
 
+.he-top-fix {
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 9999999;
+  width: 100%;
+}
+
 .header-top {
   display: flex;
   height: 80px;
@@ -294,6 +302,7 @@ ul.icon-link li.bars {
 
 /* SLIDE BANNER IMAGE TOP*/
 .slide-bn {
+  margin-top: 80px;
   width: 100%;
 }
 
@@ -441,7 +450,7 @@ p.ct {
     top:0; left:0;
     height:100%; 
     width:100%;
-    z-index: 10000;
+    z-index: 99999999999999999999999999;
     background:rgb(25, 31, 38);
     display: flex;
     align-items: center;
@@ -490,7 +499,7 @@ p.ct {
 /* Add To cart */
 #toast {
   position: fixed;
-  top: 32px;
+  top: 92px;
   right: 32px;
   z-index: 999999;
 }
@@ -568,7 +577,6 @@ p.ct {
 
 
 /* END HEADER */
-
 /* PRODUCTS */
 .products-title {
   position: relative;
@@ -1081,7 +1089,6 @@ ul.payment li {
 }
 
 /* COOPERATE IMAGE */
-
 .cooperate-main {
   display: flex;
   flex-direction: row;
@@ -1103,9 +1110,24 @@ ul.payment li {
   opacity: 0;
 }
 
-@media (min-width: 992px){
-  
+.accordion-button::after {
+    display: none;
+}
 
+button.accordion-button.collapsed {
+    text-transform: uppercase;
+}
+
+.main-dropdow a {
+    text-decoration: none;
+    color: #000;
+}
+
+button#btn-drop {
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px){
   .container {
     width: 100%;
   }  
@@ -1154,10 +1176,6 @@ ul.payment li {
     left: 0;
   }
 
-  .accordion-button::after {
-    display: none;
-  }
-
   .accordion-button {
     font-size: 19px;
     font-weight: 500;
@@ -1173,7 +1191,7 @@ ul.payment li {
   }
 
   .main-dropdow {
-    font-style: 16px;
+    font-size: 16px;
     font-weight: 400;
   }
 
@@ -1231,6 +1249,7 @@ ul.payment li {
   }
 
   .header-top {
+    position: relative;
     display: flex;
     justify-content: space-between;
   }
@@ -1283,6 +1302,38 @@ ul.payment li {
   .single-banner-02 img {
     width: 100%;
   }
+
+  .dropdow-menu {
+    width: 100%;
+    display: block;
+    z-index: 999;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .tck {
+    margin-bottom: 0;
+   }
+
+  #btn-drop::after {
+    display: block;
+  }
+
+  .main-dropdow{
+    font-size: 16px;
+  }
+
+  .dr-header h5 {
+    font-size: 17px;
+  }
+  
+  #scroll-hea {
+    padding-right: 0;
+    width: 100%;
+    height: 150px;
+    overflow-y: auto;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -1331,12 +1382,12 @@ ul.payment li {
   }
 
   .link-home {
-    width: 58%;
+    width: 51%;
     display: none;
   }
 
   .icons {
-    width: 20%;
+    width: 27%;
   }
 
   .products-list .col-6 {

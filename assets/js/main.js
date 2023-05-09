@@ -182,9 +182,5 @@ for (var i = 0; i < addToCartButtons.length; i++) {
   });
 }
 
-// Todo: Thong báo Add to cart
+// Todo: Fixed header
 
-// function toast(){
-//   var addToCartButtons = document.getElementsByClassName("add-to-cart");
-//   addToCartButtons.addEventListener 
-// }
