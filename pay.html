@@ -40,7 +40,7 @@
       rel="stylesheet"
     />
     <!-- Import style.css -->
-    <link rel="stylesheet" href="./assets/css/cart.css" />
+    <link rel="stylesheet" href="./assets/css/pay.css" />
     <title>Shop Interior</title>
   </head>
 
@@ -275,7 +275,7 @@
       </div>
       <div class="header-bottom">
         <div class="container">
-            <div class="name-product">Home</div>
+            <div class="name-product">Pay the bill</div>
             <div class="meli-product">
                 <ul class="product-detail">
                     <li>Home</li>
@@ -296,156 +296,263 @@
         <img src="./assets/images/ImagesFigma/Image_Blogs/R.gif" alt="" />
       </div>
       <!-- CART-MAIN -->
-      <div class="wish-list-main">
-        <div class="container">
-            <div class="wish-list-content">
-                <img src="./assets/images/ImagesFigma/cart_null.png" alt="">
-                <h2 class="wish-list-title">This cart is empty.</h2>
-                <div class="wi-li-co">
-                    <span class="wlc">You don't have any products in the cart yet.</span>
-                    <span class="lwl">You will find a lot of interesting products on our "Shop" page.</span>
-                </div>
-                <a href="./index.html">
-                    <div class="btn-return-shop">
-                        <span class="btn-shop">Return To Shop</span>
+      <div class="container">
+        <div class="wrap-main">
+                <div class="main-content">
+                    <div class="container">
+                        <article class="floating-lable row">
+                            <div class="col col--two" id="repo">
+                                <section class="section">
+                                    <div class="section-header">
+                                        <div class="layout-flex">
+                                            <h2 class="section-title">Delivery information</h2>
+                                            <a href="#">
+                                                <img src="./assets/images/ImagesFigma/User.svg" alt="">
+                                                <span>Log in</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="section-content">
+                                        <div class="fieldset">
+                                            <div class="field">
+                                                <div class="field-input-wrapper">
+                                                    <input type="email" placeholder="Email" class="input-email" name="username">
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="field-input-wrapper">
+                                                    <input type="text" placeholder="First and last name" class="input-name" name="username">
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="field-input-wrapper">
+                                                    <input type="number" placeholder="Phone number (optional)" class="input-email" name="username" required>
+                                                    <div class="se-le">
+                                                        <div class="img-befo">
+                                                            <img src="./assets/images/ImagesFigma/flag.png" alt="">
+                                                            <div class="imgbe"></div>
+                                                        </div>
+                                                        <select name="billingPhoneRegion" id="select-phone">
+                                                            <option value="AF">Afghanistan (+93)</option>
+                                                            <option value="AL">Albania (+355)</option>
+                                                            <option value="AD">Andorra (+376)</option>
+                                                            <option value="AR">Argentina (+54)</option>
+                                                            <option value="DZ">Algeria (+213)</option>
+                                                            <option value="AT">Austria (+43)</option>
+                                                            <option value="AU">Australia (+61)</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="field-input-wrapper">
+                                                    <input type="email" placeholder="Province" class="input-email" required>
+                                                    <div class="se-le" style="margin-top: 3px;">
+                                                        <div class="img-befo">
+                                                            <div class="imbeh"></div>
+                                                        </div>
+                                                        <select name="billingPhoneRegion" id="select-phone">
+                                                            <option value="AF">Hà Nội</option>
+                                                            <option value="AL">Hồ Chí Minh</option>
+                                                            <option value="AD">Hải Dương</option>
+                                                            <option value="AR">Hải Phòng</option>
+                                                            <option value="DZ">Hưng Yên</option>
+                                                            <option value="AT">Đà Nẵng</option>
+                                                            <option value="AU">Quảng Trị</option>
+                                                            <option value="AT">Huế</option>
+                                                            <option value="AU">An Giang</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="field-input-wrapper">
+                                                    <input type="email" placeholder="District (optional)" class="input-email" required>
+                                                    <div class="se-le" style="margin-top: 3px;">
+                                                        <div class="img-befo">
+                                                            <div class="imbeh"></div>
+                                                        </div>
+                                                        <select name="billingPhoneRegion" id="select-phone">
+                                                            <option value="AF">Hà Nội</option>
+                                                            <option value="AL">Hồ Chí Minh</option>
+                                                            <option value="AD">Hải Dương</option>
+                                                            <option value="AR">Hải Phòng</option>
+                                                            <option value="DZ">Hưng Yên</option>
+                                                            <option value="AT">Đà Nẵng</option>
+                                                            <option value="AU">Quảng Trị</option>
+                                                            <option value="AT">Huế</option>
+                                                            <option value="AU">An Giang</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <div class="field-input-wrapper">
+                                                    <input type="email" placeholder="Ward (optional)" class="input-email" required>
+                                                    <div class="se-le" style="margin-top: 3px;">
+                                                        <div class="img-befo">
+                                                            <div class="imbeh"></div>
+                                                        </div>
+                                                        <select name="billingPhoneRegion" id="select-phone">
+                                                            <option value="AF">Hà Nội</option>
+                                                            <option value="AL">Hồ Chí Minh</option>
+                                                            <option value="AD">Hải Dương</option>
+                                                            <option value="AR">Hải Phòng</option>
+                                                            <option value="DZ">Hưng Yên</option>
+                                                            <option value="AT">Đà Nẵng</option>
+                                                            <option value="AU">Quảng Trị</option>
+                                                            <option value="AT">Huế</option>
+                                                            <option value="AU">An Giang</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="field">
+                                                <textarea name="" id="" cols="30" rows="3" placeholder="Note (optional)"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="col col--two" id="two-style">
+                                <div class="transport-main" style="margin-bottom: 20px;">
+                                    <div class="transport">
+                                        <h2 class="section-title">Transport</h2>
+                                    </div>
+                                    <div class="shippingMethodList">
+                                        Enter delivery information
+                                    </div>
+                                </div>
+
+                                <div class="money-transport" for="">
+                                    <div class="transport">
+                                        <h2 class="section-title">Pay</h2>
+                                    </div>
+                                    <div class="money-transport-content">
+                                        <div class="mo-rec-row">
+                                            <div class="radio-check">
+                                                <input type="radio" class="paymentMethod">
+                                            </div>
+                                            <label class="radio-label">
+                                                <span class="radio-label-pr">Payment on Delivery (COD)</span>
+                                                <span class="radio-label-acc">
+                                                    <img src="./assets/images/ImagesFigma/money_tran.png" alt="">
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="content-bow-row">
+                                        <p class="ct-box">You only pay when receiving the goods</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                </a>
-            </div>
-        </div>
-      </div>
-      <div class="cart-table-main">
-        <div class="container">
-            <table class="form-cart">
-                <thead>
-                    <tr>
-                        <th class="product-image">Image Product</th>
-                        <th class="product-name">Product's Name</th>
-                        <th class="product-rice">Unit Price</th>
-                        <th class="product-quantity">Quantity</th>
-                        <th class="product-subtotal">Into Money</th>
-                        <th class="product-close">Delete</th>
-                    </tr>
-                </thead>
-                <tbody id="table">
-                    <tr class="cart-item">
-                        <td class="product-imag pr">
-                            <div class="img-pr-main" style="background-image: url(./assets/images/ImagesFigma/furniture_img3.jpg);">
-                            </div>
-                        </td>
-                        <td class="product-na pr">
-                            <a href="./product_detail.html">Internet Tend To Repeat</a>
-                        </td>
-                        <td class="product-ri pr">
-                            <span class="amount">20000000</span>
-                        </td>
-                        <td class="product-qatity pr">
-                            <div class="quantity">
-                                <button class="minus-btn btnpr">-</button>
-                                <span class="qtity">2</span>
-                                <button class="plus-btn btnpr">+</button>
-                            </div>
-                        </td>
-                        <td class="product-sub pr">
-                            <span class="sub-amu">20000000</span>
-                        </td>
-                        <td class="product-cl pr">
-                            <a href="#" class="cart-item-actions">
-                                <i class="fa-solid fa-trash-can"></i>
+                </div>
+                <aside class="sidebar">
+                    <div class="sidebar-header">
+                        <h3 class="sidebar-header-title">Order</h3>
+                    </div>
+                    <div class="sidebar-content">
+                        <div class="order-summary">
+                            <table class="product-table">
+                                <thead class="prduct-table-header">
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </thead>
+                                <tbody>
+                                    <tr class="pr-main">
+                                        <td class="prduct-image">
+                                            <div class="prduct-thumbnail">
+                                                <div class="prduct-img-thum">
+                                                    <img src="./assets/images/ImagesFigma/furniture_img5.jpg" alt="">
+                                                </div>
+                                                <span class="pr-thum-quan">2</span>
+                                            </div>
+                                        </td>
+                                        <td class="prduct-des">
+                                            <span class="prduct-des-name">Randomised Humour Words</span>
+                                        </td>
+                                        <td class="prduct-quantity"></td>
+                                        <td class="prduct-price">400.000₫</td>
+                                    </tr>
+                                    <tr class="pr-main">
+                                        <td class="prduct-image">
+                                            <div class="prduct-thumbnail">
+                                                <div class="prduct-img-thum">
+                                                    <img src="./assets/images/ImagesFigma/furniture_img3.jpg" alt="">
+                                                </div>
+                                                <span class="pr-thum-quan">1</span>
+                                            </div>
+                                        </td>
+                                        <td class="prduct-des">
+                                            <span class="prduct-des-name">Injected Humour Repetition</span>
+                                        </td>
+                                        <td class="prduct-quantity"></td>
+                                        <td class="prduct-price">800.000₫</td>
+                                    </tr>
+                                    <tr class="pr-main">
+                                        <td class="prduct-image">
+                                            <div class="prduct-thumbnail">
+                                                <div class="prduct-img-thum">
+                                                    <img src="./assets/images/ImagesFigma/furniture_img2.jpg" alt="">
+                                                </div>
+                                                <span class="pr-thum-quan">3</span>
+                                            </div>
+                                        </td>
+                                        <td class="prduct-des">
+                                            <span class="prduct-des-name">Itaque Earum Rerum</span>
+                                        </td>
+                                        <td class="prduct-quantity"></td>
+                                        <td class="prduct-price">1.200.000₫</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="sale-sum">
+                            <input type="text" placeholder="Enter discount code" class="input-sale">
+                            <button class="btn-sale">Apply</button>
+                        </div>
+                    </div>
+                    <div class="total-order-sum">
+                        <table class="totale-table-sum">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </thead>
+                            <tbody class="tlt-total">
+                                <tr>
+                                    <th class="tlt-total-name">Transport fee</th>
+                                    <td class="tlt-total-price">- - -</td>
+                                </tr>
+                                <tr>
+                                    <th class="tlt-total-payment-name">Total</th>
+                                    <td class="tlt-total-payment-price">2.182.222₫</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="back-to-cart">
+                        <a href="./cart.html">
+                            <i class="fa-solid fa-chevron-left"></i>
+                            <span>Back to cart</span>
+                        </a>
+                        <div class="btn-order">
+                            <a href="./">
+                                <button class="btn-or-next">ORDER</button>
                             </a>
-                        </td>
-                    </tr>
-                    <tr class="cart-item">
-                        <td class="product-imag pr">
-                            <div class="img-pr-main" style="background-image: url(./assets/images/ImagesFigma/furniture_img1.jpg);">
-                            </div>
-                        </td>
-                        <td class="product-na pr">
-                            <a href="./product_detail.html">Internet Tend To Repeat</a>
-                        </td>
-                        <td class="product-ri pr">
-                            <span class="amount">20000000</span>
-                        </td>
-                        <td class="product-qatity pr">
-                            <div class="quantity">
-                                <button class="minus-btn btnpr">-</button>
-                                <span class="qtity">2</span>
-                                <button class="plus-btn btnpr">+</button>
-                            </div>
-                        </td>
-                        <td class="product-sub pr">
-                            <span class="sub-amu">20000000</span>
-                        </td>
-                        <td class="product-cl pr">
-                            <a href="#" class="cart-item-actions">
-                                <i class="fa-solid fa-trash-can"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr class="cart-item">
-                        <td class="product-imag pr">
-                            <div class="img-pr-main" style="background-image: url(./assets/images/ImagesFigma/furniture_img4.jpg);">
-                            </div>
-                        </td>
-                        <td class="product-na pr">
-                            <a href="./product_detail.html">Internet Tend To Repeat</a>
-                        </td>
-                        <td class="product-ri pr">
-                            <span class="amount">20000000</span>
-                        </td>
-                        <td class="product-qatity pr">
-                            <div class="quantity">
-                                <button class="minus-btn btnpr">-</button>
-                                <span class="qtity">2</span>
-                                <button class="plus-btn btnpr">+</button>
-                            </div>
-                        </td>
-                        <td class="product-sub pr">
-                            <span class="sub-amu"></span>
-                        </td>
-                        <td class="product-cl pr">
-                            <a href="#" class="cart-item-actions">
-                                <i class="fa-solid fa-trash-can"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr >
-                      <td class="con-shop">
-                        <div class="continue-shopping">
-                          <a href="./index.html">CONTINUE SHOPPING</a>
                         </div>
-                      </td>
-                      <td></td>
-                      <td></td>
-                      <td class="title-total">
-                        <div class="ti-to">
-                          Total Payment
-                        </div>
-                      </td>
-                      <td colspan="2" class="total-price">
-                        <div class="to-pr">
-                          8,000,000
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td colspan="2">
-                        <div class="ma-apay">
-                          <a href="./pay.html">MAKE A PAYMENT</a>
-                        </div>
-                      </td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                  
-                </tfoot>
-            </table>
+                    </div>
+                </aside>
         </div>
       </div>
     </main>
+    
     <footer class="footer">
       <div class="footer-top">
         <div class="container">
@@ -636,6 +743,6 @@
     <!-- Import js bootstrap -->
     <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Import main.js -->
-    <script src="./assets/js/cart.js"></script>
+    <script src="./assets/js/pay.js"></script>
   </body>
 </html>
