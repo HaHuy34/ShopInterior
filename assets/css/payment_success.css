@@ -776,62 +776,6 @@ th.tlt-total-payment-name {
   height: 92px;
 }
 
-/* .main-content .row {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.col--primary:first-child {
-  order: 0;
-  background-color: red;
-  width: 60%;
-}
-
-.col--secons {
-  order: 2;
-  width: 40%;
-  float: left;
-}
-
-.main-content .col {
-  float: right;
-  box-sizing: border-box;
-}
-
-.col--primary:last-child {
-  order: 3;
-  background-color: black;
-} */
-
-
-/* #reponsi {
-        position: absolute;
-        top: 0;
-    } */
-/* #sadasd {
-  margin-top: -230px;
-} */
-
-/* aside.sidebar {
-  max-width: 376px;
-} */
-
-@media (min-width: 1200px){
-  #sadasd {
-    margin-top: -230px;
-  }
-}
-
-@media (min-width: 531px) and (max-width: 576px){
-  article.row {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-
-
 
 /* END MAIN */
 
@@ -993,6 +937,19 @@ ul.payment li {
 ::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@media (min-width: 1200px){
+  #sadasd {
+    margin-top: -230px;
+  }
+}
+
+@media (min-width: 531px) and (max-width: 576px){
+  article.row {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 992px){

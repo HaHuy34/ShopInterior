@@ -23,19 +23,18 @@ search.addEventListener("click", function (event) {
 });
 
 // Todo: Pay
+const contentBow = document.querySelector(".ct-box");
 const payBoxCheck = document.querySelector(".content-bow-row");
 const checkInput = document.querySelector(".paymentMethod");
 const transportCotent = document.querySelector(".money-transport-content");
 checkInput.addEventListener("click", () => {
-  payBoxCheck.classList.add("active");
+  contentBow.textContent = "You only pay when receiving the goods";
 })
 
 transportCotent.addEventListener("click", () => {
-  payBoxCheck.classList.add("active");
+  contentBow.textContent = "You only pay when receiving the goods";
   checkInput.checked = true;
 });
-
-
 
 // Todo: Reponsive Bars
 function myFunction(x) {
@@ -59,70 +58,67 @@ links.forEach((link) => {
   });
 });
 
-// Todo: Xóa thông tin giỏ hàng
-const deleteBtn = document.querySelectorAll(".cart-item-actions");
-deleteBtn.forEach((i) => {
-  i.addEventListener("click", () => {
-    const cartItemElement = i.closest(".cart-item");
-    cartItemElement.remove();
-    updateCartInfor();
-    alert("Do you definitely want to delete this product?");
-  });
-});
 
-// Todo: Cập nhật số lượng
-const dowBtn = document.querySelectorAll(".minus-btn");
-dowBtn.forEach((button) => {
-  button.addEventListener("click", () => {
-    const quantityElement = button.nextElementSibling;
-    const current = +quantityElement.textContent;
-    if (current > 1) {
-      quantityElement.textContent = current - 1;
-      updateCartInfor();
-    }
-  });
-});
-
-const upBtn = document.querySelectorAll(".plus-btn");
-upBtn.forEach((button) => {
-  button.addEventListener("click", () => {
-    const quantityElement = button.previousElementSibling;
-    const current = +quantityElement.textContent;
-    quantityElement.textContent = current + 1;
-    updateCartInfor();
-  });
-});
-
-// Todo: Tăng giảm số lượng và cập nhật lại giá
-function updateCartInfor() {
-  const emtyCart = document.querySelector(".wish-list-main");
-  const cartTable = document.querySelector(".cart-table-main");
-  const cartItems = document.querySelectorAll(".cart-item");
-  const totalPriceElement = document.querySelector(".to-pr");
-  if (cartItems.length == 0) {
-    emtyCart.style.display = "block";
-    cartTable.style.display = "none";
-  } else {
-    emtyCart.style.display = "none";
-    cartTable.style.display = "block";
+// Todo: Check input sale
+const inputSale = document.querySelector(".input-sale");
+const btnSale = document.querySelector(".btn-sale");
+const messSale = document.querySelector(".mess-sale");
+btnSale.addEventListener("click", () => {
+  if(inputSale.value === ''){
+    messSale.textContent = "Please enter the discount code";
+  }else{
+    messSale.textContent = "Successfully pounded reducing codes";
   }
+})
 
-  let totalPrice = 0;
-  cartItems.forEach((cartItem) => {
-    const price = +cartItem
-      .querySelector(".amount")
-      .textContent.replace(",", "")
-      .replace("đ", "");
-    const quantity = +cartItem.querySelector(".qtity").textContent;
-    const total = cartItem.querySelector(".sub-amu");
-    const dowBtn = document.querySelector(".minus-btn");
+// Todo: Check input value click order
+document.querySelector(".btn-order").addEventListener("click", () => {
+  var inputEmail = document.querySelector(".input-email");
+  var inputName = document.querySelector(".input-name");
+  var inputNumber = document.querySelector(".input-number");
+  var inputAddr = document.querySelector(".input-addr");
+  var inputDistrict = document.querySelector(".input-district");
+  var inputWard = document.querySelector(".input-ward");
+  if (!inputEmail.value) {
+    alert("Please enter your message.");
+    inputEmail.focus();
+    return false;
+  }
+  if (!inputName.value) {
+    alert("Please enter your message.");
+    inputName.focus();
+    return false;
+  }
+  if (!inputNumber.value) {
+    alert("Please enter your message.");
+    inputNumber.focus();
+    return false;
+  }
+  if (!inputAddr.value) {
+    alert("Please enter your message.");
+    inputAddr.focus();
+    return false;
+  }
+  if (!inputDistrict.value) {
+    alert("Please enter your message.");
+    inputDistrict.focus();
+    return false;
+  }
+  if (!inputWard.value) {
+    alert("Please enter your message.");
+    inputWard.focus();
+    return false;
+  }
+  alert("Thank you for your message!");
+  window.location.href = "./payment_success.html";
+  return true;
+});
 
-    // Cập nhật giá tiền cho Item
-    total.textContent = price * quantity;
-    totalPrice += price * quantity;
-  });
+// Todo: Input option value click order
+const selectName = document.querySelector("#select-phone");
+const inputSelect = document.getElementById("ip-select");
+selectName.addEventListener("change", () => {
+  const selectedOption = selectName.options[selectName.selectedIndex];
+  inputSelect.value = selectedOption.value;
+})
 
-  totalPriceElement.textContent = totalPrice;
-}
-
-updateCartInfor();

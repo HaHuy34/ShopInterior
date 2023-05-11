@@ -313,40 +313,40 @@
                                         </div>
                                     </div>
                                     <div class="section-content">
-                                        <div class="fieldset">
+                                        <form class="fieldset">
                                             <div class="field">
                                                 <div class="field-input-wrapper">
-                                                    <input type="email" placeholder="Email" class="input-email" name="username">
+                                                    <input type="email" placeholder="Email" class="input-email">
                                                 </div>
                                             </div>
                                             <div class="field">
                                                 <div class="field-input-wrapper">
-                                                    <input type="text" placeholder="First and last name" class="input-name" name="username">
+                                                    <input required type="text" placeholder="First and last name" class="input-name">
                                                 </div>
                                             </div>
                                             <div class="field">
                                                 <div class="field-input-wrapper">
-                                                    <input type="number" placeholder="Phone number (optional)" class="input-email" name="username" required>
+                                                    <input type="text" placeholder="Phone number (optional)" class="input-number" id="ip-select">
                                                     <div class="se-le">
                                                         <div class="img-befo">
                                                             <img src="./assets/images/ImagesFigma/flag.png" alt="">
                                                             <div class="imgbe"></div>
                                                         </div>
                                                         <select name="billingPhoneRegion" id="select-phone">
-                                                            <option value="AF">Afghanistan (+93)</option>
-                                                            <option value="AL">Albania (+355)</option>
-                                                            <option value="AD">Andorra (+376)</option>
-                                                            <option value="AR">Argentina (+54)</option>
-                                                            <option value="DZ">Algeria (+213)</option>
-                                                            <option value="AT">Austria (+43)</option>
-                                                            <option value="AU">Australia (+61)</option>
+                                                            <option value="+93">Afghanistan (+93)</option>
+                                                            <option value="+355">Albania (+355)</option>
+                                                            <option value="+376">Andorra (+376)</option>
+                                                            <option value="+54">Argentina (+54)</option>
+                                                            <option value="+213">Algeria (+213)</option>
+                                                            <option value="+43">Austria (+43)</option>
+                                                            <option value="+61">Australia (+61)</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="field">
                                                 <div class="field-input-wrapper">
-                                                    <input type="email" placeholder="Province" class="input-email" required>
+                                                    <input type="text" placeholder="Province" class="input-addr" id="ip-select">
                                                     <div class="se-le" style="margin-top: 3px;">
                                                         <div class="img-befo">
                                                             <div class="imbeh"></div>
@@ -367,28 +367,28 @@
                                             </div>
                                             <div class="field">
                                                 <div class="field-input-wrapper">
-                                                    <input type="email" placeholder="District (optional)" class="input-email" required>
+                                                    <input type="text" placeholder="District (optional)" class="input-district" id="ip-select">
                                                     <div class="se-le" style="margin-top: 3px;">
                                                         <div class="img-befo">
                                                             <div class="imbeh"></div>
                                                         </div>
                                                         <select name="billingPhoneRegion" id="select-phone">
-                                                            <option value="AF">Hà Nội</option>
-                                                            <option value="AL">Hồ Chí Minh</option>
-                                                            <option value="AD">Hải Dương</option>
-                                                            <option value="AR">Hải Phòng</option>
-                                                            <option value="DZ">Hưng Yên</option>
-                                                            <option value="AT">Đà Nẵng</option>
-                                                            <option value="AU">Quảng Trị</option>
-                                                            <option value="AT">Huế</option>
-                                                            <option value="AU">An Giang</option>
+                                                            <option value="Thị Xã Tây Sơn">Thị Xã Tây Sơn</option>
+                                                            <option value="Quận Ba Đình">Quận Ba Đình</option>
+                                                            <option value="Quận Cầu Giấy">Quận Cầu Giấy</option>
+                                                            <option value="Quận Đống Đa">Quận Đống Đa</option>
+                                                            <option value="Quận Hà Đông">Quận Hà Đông</option>
+                                                            <option value="Quận Hoàn Kiếm">Quận Hoàn Kiếm</option>
+                                                            <option value="Quận Thanh Xuân">Quận Thanh Xuân</option>
+                                                            <option value="AQuận Quốc Oai">Quận Quốc Oai</option>
+                                                            <option value="Quận Bắc Từ Liêm">Quận Bắc Từ Liêm</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="field">
                                                 <div class="field-input-wrapper">
-                                                    <input type="email" placeholder="Ward (optional)" class="input-email" required>
+                                                    <input type="text" placeholder="Ward (optional)" class="input-ward" id="ip-select">
                                                     <div class="se-le" style="margin-top: 3px;">
                                                         <div class="img-befo">
                                                             <div class="imbeh"></div>
@@ -410,7 +410,7 @@
                                             <div class="field">
                                                 <textarea name="" id="" cols="30" rows="3" placeholder="Note (optional)"></textarea>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </section>
                             </div>
@@ -442,7 +442,7 @@
                                         </div>
                                     </div>
                                     <div class="content-bow-row">
-                                        <p class="ct-box">You only pay when receiving the goods</p>
+                                        <p class="ct-box"></p>
                                     </div>
                                 </div>
                             </div>
@@ -468,8 +468,8 @@
                                             <div class="prduct-thumbnail">
                                                 <div class="prduct-img-thum">
                                                     <img src="./assets/images/ImagesFigma/furniture_img5.jpg" alt="">
+                                                    <span class="pr-thum-quan">2</span>
                                                 </div>
-                                                <span class="pr-thum-quan">2</span>
                                             </div>
                                         </td>
                                         <td class="prduct-des">
@@ -483,8 +483,8 @@
                                             <div class="prduct-thumbnail">
                                                 <div class="prduct-img-thum">
                                                     <img src="./assets/images/ImagesFigma/furniture_img3.jpg" alt="">
+                                                    <span class="pr-thum-quan">1</span>
                                                 </div>
-                                                <span class="pr-thum-quan">1</span>
                                             </div>
                                         </td>
                                         <td class="prduct-des">
@@ -498,8 +498,8 @@
                                             <div class="prduct-thumbnail">
                                                 <div class="prduct-img-thum">
                                                     <img src="./assets/images/ImagesFigma/furniture_img2.jpg" alt="">
+                                                    <span class="pr-thum-quan">3</span>
                                                 </div>
-                                                <span class="pr-thum-quan">3</span>
                                             </div>
                                         </td>
                                         <td class="prduct-des">
@@ -512,8 +512,11 @@
                             </table>
                         </div>
                         <div class="sale-sum">
-                            <input type="text" placeholder="Enter discount code" class="input-sale">
-                            <button class="btn-sale">Apply</button>
+                            <div class="sale-ipbtn">
+                              <input type="text" placeholder="Enter discount code" class="input-sale">
+                              <button class="btn-sale">Apply</button>
+                            </div>
+                            <div class="mess-sale"></div>
                         </div>
                     </div>
                     <div class="total-order-sum">
@@ -543,7 +546,7 @@
                             <span>Back to cart</span>
                         </a>
                         <div class="btn-order">
-                            <a href="./payment_success.html">
+                            <a>
                                 <button class="btn-or-next">ORDER</button>
                             </a>
                         </div>
