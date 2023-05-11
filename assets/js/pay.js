@@ -80,32 +80,32 @@ document.querySelector(".btn-order").addEventListener("click", () => {
   var inputDistrict = document.querySelector(".input-district");
   var inputWard = document.querySelector(".input-ward");
   if (!inputEmail.value) {
-    alert("Please enter your message.");
+    alert("Please enter your email.");
     inputEmail.focus();
     return false;
   }
   if (!inputName.value) {
-    alert("Please enter your message.");
+    alert("Please enter your name.");
     inputName.focus();
     return false;
   }
   if (!inputNumber.value) {
-    alert("Please enter your message.");
+    alert("Please enter your Phone.");
     inputNumber.focus();
     return false;
   }
   if (!inputAddr.value) {
-    alert("Please enter your message.");
+    alert("Please enter your address.");
     inputAddr.focus();
     return false;
   }
   if (!inputDistrict.value) {
-    alert("Please enter your message.");
+    alert("Please enter your district.");
     inputDistrict.focus();
     return false;
   }
   if (!inputWard.value) {
-    alert("Please enter your message.");
+    alert("Please enter your ward.");
     inputWard.focus();
     return false;
   }
@@ -115,10 +115,67 @@ document.querySelector(".btn-order").addEventListener("click", () => {
 });
 
 // Todo: Input option value click order
-const selectName = document.querySelector("#select-phone");
-const inputSelect = document.getElementById("ip-select");
-selectName.addEventListener("change", () => {
-  const selectedOption = selectName.options[selectName.selectedIndex];
-  inputSelect.value = selectedOption.value;
-})
+// const selectName = document.querySelector("#select-phone");
+// const inputSelect = document.getElementById("ip-select");
+// selectName.addEventListener("change", () => {
+//   const selectedOption = selectName.options[selectName.selectedIndex];
+//   inputSelect.value = selectedOption.value;
+// })
+
+// const inSelect = document.getElementById("ip-se");
+// selectName.addEventListener("change", () => {
+//   const selectedOption = selectName.options[selectName.selectedIndex];
+//   inSelect.value = selectedOption.value;
+// });
+
+// Todo: Select Option Input
+function selectInputMain() {
+  // Phone
+  const emailInput = document.querySelector("#ip-select");
+  const billingPhoneRegion = document.querySelector(
+    "select[name=billingPhoneRegion]"
+  );
+
+  billingPhoneRegion.addEventListener("change", () => {
+    const selectedOption =
+      billingPhoneRegion.options[billingPhoneRegion.selectedIndex];
+    emailInput.value = selectedOption.value;
+  });
+  // Province
+  const emailInput1 = document.querySelector("#ip-select1");
+  const billingProvinceRegion = document.querySelector(
+    "select[name=billingProvinceRegion]"
+  );
+
+  billingProvinceRegion.addEventListener("change", () => {
+    const selectedOption =
+      billingProvinceRegion.options[billingProvinceRegion.selectedIndex];
+    emailInput1.value = selectedOption.value;
+  });
+  // District
+  const emailInput2 = document.querySelector("#ip-select2");
+  const billingDistrictRegion = document.querySelector(
+    "select[name=billingDistrictRegion]"
+  );
+
+  billingDistrictRegion.addEventListener("change", () => {
+    const selectedOption =
+      billingDistrictRegion.options[billingDistrictRegion.selectedIndex];
+    emailInput2.value = selectedOption.value;
+  });
+  // Ward
+  const emailInput3 = document.querySelector("#ip-select3");
+  const billingWardRegion = document.querySelector(
+    "select[name=billingWardRegion]"
+  );
+
+  billingWardRegion.addEventListener("change", () => {
+    const selectedOption =
+      billingWardRegion.options[billingWardRegion.selectedIndex];
+    emailInput3.value = selectedOption.value;
+  });
+}
+
+selectInputMain();
+
 

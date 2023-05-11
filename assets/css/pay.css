@@ -1117,6 +1117,7 @@ p.tc {
 }
 
 ul.payment {
+  padding: 0;
   display: flex;
   justify-content: end;
 }
@@ -1439,15 +1440,20 @@ aside.sidebar {
   article.floating-lable.row {
     display: flex;
     flex-direction: column;
-}
+  }
 
-aside.sidebar {
-    margin-top: 30px;
-}
+  aside.sidebar {
+      margin-top: 30px;
+  }
 
-#two-style {
-    padding-right: 0px;
-}
+  #two-style {
+      padding-right: 0px;
+  }
+
+  .footer-bottom .col-md-6 {
+    display: flex;
+    justify-content: center;
+  }
 
 
 }

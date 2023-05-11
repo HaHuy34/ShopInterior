@@ -561,6 +561,7 @@ p.tc {
 }
 
 ul.payment {
+  padding: 0;
   display: flex;
   justify-content: end;
 }
@@ -889,6 +890,11 @@ ul.payment li {
     width: 100%;
     height: 150px;
     overflow-y: auto;
+  }
+
+  .footer-bottom .col-md-6 {
+    display: flex;
+    justify-content: center;
   }
 }
 
