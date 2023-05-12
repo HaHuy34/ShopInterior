@@ -513,6 +513,11 @@ p.ct {
   visibility: visible;
 }
 
+.sebtnRemove {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* Add To cart */
 #toast {
   position: fixed;
@@ -820,6 +825,84 @@ a.btn-radius i {
   visibility: visible;
   bottom: 18px;
 }
+
+.title-price-name {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  position: relative;
+  border: 1px solid #e7e7e7;
+}
+
+.title-price-name i{
+  font-size: 10px;
+  margin: 3px 0 0 7px;
+}
+
+
+.sort-price {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 9;
+  right: 103%;
+  top: -1px;
+  border: 1px solid #e7e7e7;
+  display: none;
+}
+
+.sort-price button {
+  border: none;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+#sort-high {
+  margin-bottom: 10px;
+}
+
+#sort-buttons {
+  cursor: pointer;
+}
+
+/* Chuyển trang */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.pagination a {
+  color: #333;
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.pagination a.prev,
+.pagination a.next {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.pagination a.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* END CHAIR */
 
 /* FOOTER */
 ul li {

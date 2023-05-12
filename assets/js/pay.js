@@ -11,15 +11,23 @@ function fadeOut() {
 window.onload = fadeOut;
 
 // Todo: Search
-var search = document.querySelector(".search");
-var searchBtn = document.querySelector(".search-btn");
-search.addEventListener("click", function (event) {
-  // if (event.target == search) {
-  //   searchBtn.classList.add("sebtn");
-  // } else {
-  //   searchBtn.style.display = "none";
+const search = document.querySelector(".search");
+const searchBtn = document.querySelector(".search-btn");
+
+// Thêm sự kiện "click" cho phần tử "search"
+search.addEventListener("click", function () {
   searchBtn.classList.add("sebtn");
-  // }
+});
+
+// Thêm sự kiện "click" cho toàn bộ tài liệu (document)
+document.addEventListener("click", function (event) {
+  // Kiểm tra xem phần tử được nhấp chuột có nằm trong phần tử "search" hay không
+  const isClickInsideSearch = search.contains(event.target);
+
+  // Nếu phần tử được nhấp chuột không nằm trong phần tử "search", xóa lớp CSS "sebtn" khỏi "searchBtn"
+  if (!isClickInsideSearch) {
+    searchBtn.classList.remove("sebtn");
+  }
 });
 
 // Todo: Pay

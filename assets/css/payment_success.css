@@ -557,6 +557,11 @@ button#btn-drop {
   visibility: visible;
 }
 
+.sebtnRemove {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .header-bottom {
   margin-top: 80px;
   width: 100%;

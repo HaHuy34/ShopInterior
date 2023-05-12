@@ -10,20 +10,25 @@ function fadeOut() {
 window.onload = fadeOut;
 
 // Todo: Search
-var search = document.querySelector(".search");
-var searchBtn = document.querySelector(".search-btn");
-search.addEventListener("click", function (event) {
+const search = document.querySelector(".search");
+const searchBtn = document.querySelector(".search-btn");
+
+// Thêm sự kiện "click" cho phần tử "search"
+search.addEventListener("click", function () {
   searchBtn.classList.add("sebtn");
 });
 
-const searchElement = document.querySelector(".search");
+// Thêm sự kiện "click" cho toàn bộ tài liệu (document)
 document.addEventListener("click", function (event) {
-  const isClickInsideSearch = searchElement.contains(event.target);
+  // Kiểm tra xem phần tử được nhấp chuột có nằm trong phần tử "search" hay không
+  const isClickInsideSearch = search.contains(event.target);
 
+  // Nếu phần tử được nhấp chuột không nằm trong phần tử "search", xóa lớp CSS "sebtn" khỏi "searchBtn"
   if (!isClickInsideSearch) {
-    searchElement.classList.remove("search");
+    searchBtn.classList.remove("sebtn");
   }
 });
+
 
 // Todo: Reponsive Bars
 function myFunction(x) {
@@ -187,5 +192,29 @@ for (var i = 0; i < addToCartButtons.length; i++) {
   });
 }
 
-// Todo: Fixed header
+// Chặn load trang của thẻ a
+const btnRadius = document.querySelectorAll(".btn-radius");
+btnRadius.forEach((a) => {
+  a.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
+});
+
+// Todo: Giỏ hàng
+// Lấy icon giỏ hàng
+const cartIcon = document.querySelector(".cart");
+
+// Đính kèm sự kiện click cho icon giỏ hàng
+cartIcon.addEventListener('click', () => {
+  // Kiểm tra nếu giỏ hàng có sản phẩm
+  if (cartCount.textContent !== '0') {
+    // Chuyển hướng đến trang chứa thông tin giỏ hàng
+    window.location.href = "./cart.html";
+  } else {
+    // Hiển thị thông báo chưa có sản phẩm trong giỏ hàng
+    alert("There is no product in the cart!");
+  }
+});
+
+
 

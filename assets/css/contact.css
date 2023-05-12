@@ -598,6 +598,11 @@ ul.payment li {
   visibility: visible;
 }
 
+.sebtnRemove {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* END FOOTER */
 
 /* REPONSIVE */

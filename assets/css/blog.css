@@ -370,6 +370,12 @@ button#btn-drop {
   opacity: 1;
   visibility: visible;
 }
+
+.sebtnRemove {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* END HEADER */
 /* START MAIN */
 
