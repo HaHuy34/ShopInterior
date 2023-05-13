@@ -14,6 +14,7 @@ body {
   margin: 0 auto;
   display: block;
   width: 100%;
+  padding: 0 16px;
 }
 
 ::-webkit-scrollbar {
@@ -610,7 +611,6 @@ ul.product-detail li i{
 
 .blog-image-top {
    position: relative;
-   background-image: url(/assets/images/ImagesFigma/Image_Blogs/blog-grid-9.jpg.webp);
    background-repeat: no-repeat;
    background-size: cover;
    padding-top: 100%;
@@ -637,16 +637,19 @@ ul.product-detail li i{
 }
 
 .post-categories {
-    display: inline-block;
     position: absolute;
-    top: 98%;
-    transform: translateX(50%);
-    display: inline-block;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 0 10px;
     background-color: #83b735;
     color: #fff;
     font-size: 12px;
     font-weight: 600;
+    min-width: 207px;
+    min-height: 14px;
+    display: flex;
+    justify-content: center;
 }
 
 .blog-content {

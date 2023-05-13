@@ -139,7 +139,7 @@ $(".slide-banner-image").owlCarousel({
   margin: 10,
   nav: true,
   autoplay: true,
-  autoplayTimeout: 3000,
+  autoplayTimeout: 5000,
   responsive: {
     0: {
       items: 2,
