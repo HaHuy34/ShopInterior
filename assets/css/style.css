@@ -13,11 +13,12 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: block;
+  padding: 0 16px;
   width: 100%;
 }
 
 ::-webkit-scrollbar {
-  width: 1px;
+  width: 0px;
 }
 
 ::-webkit-scrollbar-track {
@@ -327,13 +328,8 @@ a.btn-text {
   text-decoration: none;
 }
 
-.owl-nav {
+.slider-banner-header .owl-nav {
   display: none;
-}
-
-.item {
-  height: 500px;
-  position: relative;
 }
 
 #agb {
@@ -534,7 +530,7 @@ p.ct {
   background-color: #fff;
   border-radius: 2px;
   padding: 20px 0;
-  min-width: 400px;
+  min-width: 300px;
   max-width: 450px;
   border-left: 4px solid #47d864;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
@@ -909,43 +905,42 @@ a.single-bn-link:hover {
   position: relative;
 }
 
-.trending-items .card-item {
-  position: relative;
-  text-align: center !important;
-  padding: 0 0 17px 0;
-  height: 450px;
+.trending-items .owl-nav {
+  position: absolute;
+  top: -65px;
   width: 100%;
-  border: 1px solid #d4d1d1;
-  border-radius: 7px;
-  overflow: hidden;
-  margin-bottom: 20px;
-  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 }
 
-.slick-next:before,
-.slick-prev:before {
-  font-family: fontawesome;
-  font-size: 30px;
-  line-height: 1;
-  color: #000000;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.trending-items .owl-dots {
+  display: none;
 }
 
-.slick-next {
-  position: absolute;
-  top: -50px;
-  right: 11px;
+.fa-arrow-right-long,
+.fa-arrow-left-long {
+  font-size: 20px;
 }
 
-.slick-prev {
-  position: absolute;
-  top: -50px;
-  left: 0;
+.trending-items.owl-theme .owl-nav [class*=owl-] {
+  margin: 0;
 }
+
+button.owl-next:hover {
+  background-color: #fff;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.slide-banner-image .owl-nav {
+    display: none;
+}
+
 
 /* FOOTER */
-
 ul li {
   list-style: none;
 }
@@ -1097,8 +1092,7 @@ ul.payment li {
 /* SLIDE BANNER IMAGE */
 .slide-banner-image {
   display: flex;
-  width: 100%;
-  height: 100%;
+  margin: 40px 0;
 }
 
 .img-nu {
@@ -1110,37 +1104,237 @@ ul.payment li {
   transition: 0.3s ease;
 }
 
-/* COOPERATE IMAGE */
 .cooperate-main {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 40px 0;
+  margin: 40px 0 60px 0;
 }
 
-.cooperate-img:first-child {
-  margin-left: 30px;
+.slide-banner-image .owl-dots,
+.cooperate-main .owl-dots {
+  display: none;
 }
 
-.slide-banner-image .slick-next,
-.cooperate-main .slick-next {
-  opacity: 0;
+.cooperate-main .owl-nav {
+  display: none;
 }
 
-.slide-banner-image .slick-prev,
-.cooperate-main .slick-prev {
-  opacity: 0;
+.cooperate-main .item {
+  margin: 0 10px;
 }
+
+
+/* Form Login */
+.form-login {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.5s;
+   z-index: 999999999;
+}
+
+.form-login::before {
+   content: '';
+   width: 100%;
+   height: 100%;
+   background-color: #000;
+   opacity: 0.9;
+   position: absolute;
+   display: inline-block;
+}
+
+.close-login i {
+   position: absolute;
+   top: 0;
+   right: 4px;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+.login-main {
+   display: flex;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: 500px;
+   width: 800px;
+   background-color: rgb(248, 245, 245);
+   z-index: 999999999;
+   border-radius: 5px;
+}
+
+.login-main-left {
+   width: 43%;
+   padding: 3px;
+}
+
+.login-main-img {
+  background-image: url(/assets/images/ImagesFigma/furniture8.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-position-x: -60px;
+}
+
+.login-main-right {
+   padding: 20px;
+   height: 100%;
+   width: 57%;
+}
+
+.logomain {
+   text-align: center;
+   width: 100%;
+   font-size: 45px;
+   padding: 0 0 4px 0;
+   margin-bottom: 15px;
+}
+
+.logomain i {
+   color: #ff6219;
+}
+
+.logomain span {
+   font-weight: bold;
+}
+
+.normal {
+   width: 100%;
+   height: 40px;
+}
+
+.normal h5 {
+   font-weight: 600;
+   font-size: 17px;
+}
+.input-email,
+.input-password {
+   position: relative;
+}
+
+.input-email input,
+.input-password input {
+   width: 100%;
+   height: 45px;
+   border-radius: 5px;
+   padding-left: 60px;
+   border: none;
+   outline: none;
+   margin: 5px 0 20px 0;
+   border: 1px solid rgb(224, 223, 223);
+}
+
+.input-email::after,
+.input-password::after {
+   content: '';
+   display: block;
+   width: 22px;
+   height: 22px;
+   background: url(/assets/images/ImagesFigma/login.png) no-repeat -2px -2px;
+   position: absolute;
+   top: 16px;
+   left: 10px;
+}
+
+.input-password::after {
+   background: url(/assets/images/ImagesFigma/login.png) no-repeat -2px -33px;
+}
+
+.input-email::before,
+.input-password::before {
+   content: '';
+   display: block;
+   width: 1px;
+   height: 30px;
+   background: #d4d4d4;
+   position: absolute;
+   left: 45px;
+   top: 13px;
+}
+
+.login-main ::placeholder {
+   color: #c1bebe;
+}
+
+.btn-login input {
+   width: 100%;
+   height: 45px;
+   border-radius: 5px;
+   background-color: #302b2b;
+   color: #fff;
+   font-weight: 900;
+   font-size: 19px;
+   margin-bottom: 20px;
+   border: none;
+   transition: all .2s;
+}
+
+.btn-login input:hover {
+   border: 1px solid #000;
+   background-color: #fff;
+   color: #000;
+}
+
+.forgot-password a {
+   text-decoration: none;
+}
+
+.forgot-password a:hover {
+   text-decoration: underline;
+   text-underline-position: under;
+}
+
+.forgot-password a:first-child {
+   font-size: 13px;
+   color: #848484;
+}
+
+.forgot-password a:last-child,
+.forgot-password p {
+   font-size: 14px;
+   color: blue;
+   cursor: pointer;
+}
+
+.input-password {
+  position: relative;
+}
+
+.icons-pass {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  transform: translate(0%, 50%);
+  cursor: pointer;
+}
+
+#show-pass {
+  margin-top: 5px;
+  display: none;
+}
+
+#hidden-pass {
+  margin-top: 5px;
+}
+
+/* End Form login */
+
+
+
 
 @media (min-width: 992px){
-  .container {
+  /* .container {
     width: 100%;
-  }  
+  }   */
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
   .container {
     --bs-gutter-x: 0;
+    
   }
 
   ul.menu {
@@ -1158,12 +1352,11 @@ ul.payment li {
   }
 
   .link-home {
-    width: 66%;
     display: none;
   }
 
   .icons {
-    width: 12%;
+    width: 13%;
   }
 
   ul.icon-link li.bars {
@@ -1271,7 +1464,7 @@ ul.payment li {
   }
 
   .icons {
-    width: 16%;
+    width: 17%;
   }
 
   ul.icon-link li.bars {
@@ -1437,3 +1630,24 @@ ul.payment li {
     width: 100%;
   }
 }
+
+
+/* Rep Icon */
+@media (min-width: 768px) and (max-width: 840px) {
+  .icons {
+      width: 16%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+  .icons {
+      width: 20%;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 380px) {
+  .icons {
+      width: 35%;
+  }
+}
+

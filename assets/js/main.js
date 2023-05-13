@@ -1,3 +1,45 @@
+//Todo: hide and show form login
+const account = document.querySelector(".account");
+const formLogin = document.querySelector(".form-login");
+account.addEventListener("click", function () {
+  formLogin.style.opacity = "1";
+  formLogin.style.visibility = "visible";
+});
+
+//Todo: Close form
+const closeLogin = document.querySelector(".close-login");
+closeLogin.addEventListener("click", function () {
+  formLogin.style.opacity = "0";
+  formLogin.style.visibility = "hidden";
+});
+
+// Todo: Functions are being added
+const addLoginFun = document.querySelector(".btn-login");
+const valueEmail = document.querySelector(".value-email");
+const valuePass = document.querySelector(".value-password");
+addLoginFun.addEventListener("click", function(){
+  alert("Tính năng này đang được cập nhật!");
+  formLogin.style.opacity = "0";
+  formLogin.style.visibility = "hidden";
+})
+
+// Todo: hodden and show pass
+const hiddenPass = document.querySelector("#hidden-pass");
+const showPass = document.querySelector("#show-pass");
+const iconsPass = document.querySelector(".icons-pass");
+iconsPass.addEventListener("click", function () {
+  if (valuePass.type === "password") {
+    valuePass.type = "text";
+    hiddenPass.style.display = "none";
+    showPass.style.display = "block";
+  } else {
+    valuePass.type = "password";
+    hiddenPass.style.display = "block";
+    showPass.style.display = "none";
+  }
+});
+
+
 // Todo: Loader
 function loader() {
   document.querySelector(".loader-container").classList.add("fade-out");
@@ -29,7 +71,6 @@ document.addEventListener("click", function (event) {
   }
 });
 
-
 // Todo: Reponsive Bars
 function myFunction(x) {
   x.classList.toggle("change");
@@ -46,7 +87,7 @@ close.addEventListener("click", function () {
 });
 
 // Todo: Slider banner header
-$(".owl-carousel").owlCarousel({
+$(".slider-banner-header").owlCarousel({
   loop: true,
   margin: 10,
   nav: true,
@@ -66,39 +107,70 @@ $(".owl-carousel").owlCarousel({
 });
 
 //Todo: Slide Trending Items
-$(".trending-items").slick({
-  slidesToShow: 4,
-  slidesToScroll: 1,
-});
-
-var filtered = false;
-
-$(".js-filter").on("click", function () {
-  if (filtered === false) {
-    $(".trending-items").slick("slickFilter", ":even");
-    $(this).text("Unfilter Slides");
-    filtered = true;
-  } else {
-    $(".trending-items").slick("slickUnfilter");
-    $(this).text("Filter Slides");
-    filtered = false;
-  }
-});
-
-// Todo: SLIDE BANNER IMAGE
-$(".slide-banner-image").slick({
-  slidesToShow: 6,
-  slidesToScroll: 1,
+$(".trending-items").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplayTimeout: 3000,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    500: {
+      items: 2,
+    },
+    767: {
+      items: 3,
+    },
+    1000: {
+      items: 4,
+    },
+  },
+});
+var nextButton = $('span[aria-label="Next"]');// Tìm phần tử span có thuộc tính aria-label="Next"
+nextButton.html('<i class="fa-solid fa-arrow-right-long"></i>');// Thay đổi nội dung của phần tử span
+var nextButton = $('span[aria-label="Previous"]');
+nextButton.html('<i class="fa-solid fa-arrow-left-long"></i>');
+
+//Todo: SLIDE BANNER IMAGE
+$(".slide-banner-image").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 6,
+    },
+  },
 });
 
-// Todo: SLIDE IMAGE COOPERATE
-$(".cooperate-main").slick({
-  slidesToShow: 5,
-  slidesToScroll: 1,
+//Todo: COOPERATE IMAGE
+$(".cooperate-main").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplayTimeout: 3000,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 6,
+    },
+  },
 });
 
 function redirect() {
@@ -205,9 +277,9 @@ btnRadius.forEach((a) => {
 const cartIcon = document.querySelector(".cart");
 
 // Đính kèm sự kiện click cho icon giỏ hàng
-cartIcon.addEventListener('click', () => {
+cartIcon.addEventListener("click", () => {
   // Kiểm tra nếu giỏ hàng có sản phẩm
-  if (cartCount.textContent !== '0') {
+  if (cartCount.textContent !== "0") {
     // Chuyển hướng đến trang chứa thông tin giỏ hàng
     window.location.href = "./cart.html";
   } else {
@@ -215,6 +287,3 @@ cartIcon.addEventListener('click', () => {
     alert("There is no product in the cart!");
   }
 });
-
-
-
