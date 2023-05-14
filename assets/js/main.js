@@ -223,8 +223,8 @@ for (var i = 0; i < addToCartButtons.length; i++) {
             <i class="fas fa-check-circle"></i>
           </div>
           <div class="toast__body">
-            <h3 class="toast__title">Thành công!</h3>
-            <p class="toast__msg">Bạn đã thêm sản phẩm vào giỏ hàng.</p>
+            <h3 class="toast__title">Success!</h3>
+            <p class="toast__msg">You have added products to the cart.</p>
           </div>
           <div class="toast__close">
             <i class="fas fa-times"></i>
@@ -252,8 +252,8 @@ for (var i = 0; i < addToCartButtons.length; i++) {
             <i class="fas fa-exclamation-circle"></i>
           </div>
           <div class="toast__body">
-            <h3 class="toast__title">Xin lỗi!</h3>
-            <p class="toast__msg">Sản phẩm đã tồn tại trong giỏ hàng.</p>
+            <h3 class="toast__title">Sorry!</h3>
+            <p class="toast__msg">The product has existed in the cart.</p>
           </div>
           <div class="toast__close">
             <i class="fas fa-times"></i>

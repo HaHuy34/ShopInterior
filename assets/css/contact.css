@@ -31,7 +31,7 @@ body {
 /* START HEADER */
 .header {
   width: 100%;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
 }
 
 .he-top-fix {
@@ -317,14 +317,44 @@ button.accordion-button.collapsed {
 button#btn-drop {
     text-transform: uppercase;
 }
+
+.header-bottom {
+    margin-top: 80px;
+    width: 100%;
+    height: 40px;
+    background-color: #F7F8FB;
+    display: block;
+}
+
+.header-bottom .container{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-product {
+    font-size: 19px;
+    font-weight: 700;
+}
+.meli-product {
+    height: 40px;
+    font-size: 15px;
+}
+
+ul.product-detail {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+ul.product-detail li i{
+    font-size: 11px;
+    margin: 0 4px 4px 4px;
+}
 /* END HEADER */
 
 /* START MAIN */
-
-.contact-top {
-  margin-top: 40px;
-}
-
 .contact-wrap {
   text-align: center;
   padding: 40px 20px;
@@ -372,7 +402,8 @@ button#btn-drop {
   border-radius: 4px;
 }
 
-textarea.form-con {
+textarea {
+  width: 100%;
   outline: none;
   padding: 8px 15px;
   border: 1px solid #ced4da;
@@ -613,7 +644,36 @@ ul.payment li {
   }  
 }
 
+@media (min-width: 992px) and (max-width: 1135px) {
+  .form-group.col-md-6 {
+    width: 100%;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  textarea.form-con {
+    width: 100% !important;
+  }
+
+}
+
 @media (min-width: 768px) and (max-width: 992px) {
+  .form-group input {
+    width: 88%;
+    outline: none;
+    padding: 8px 15px;
+    height: 50px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+
+  button.btn-fill-out {
+    font-size: 16px;
+    padding: 16px 27px;
+  }
+
   #scroll-hea {
     padding-right: 0;
     width: 100%;
@@ -842,10 +902,13 @@ ul.payment li {
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    max-width: 700px;
+  input[type="text"] {
+    width: 100%;
   }
 
+  textarea.form-con {
+    width: 100% !important;
+}
   .header-top {
     position: relative;
     display: flex;
@@ -976,9 +1039,6 @@ ul.payment li {
 }
 
 @media screen and (max-width: 500px) {
-  .container {
-    max-width: 400px;
-  }
 
   .logo {
     width: 22%;

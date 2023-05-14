@@ -164,7 +164,7 @@
                 </li>
                 <li class="cart">
                   <i class="fa-solid fa-cart-shopping"></i>
-                  <span id="cart-count">0</span>
+                  <span id="cart-count">3</span>
                 </li>
                 <li class="account">
                   <i class="fa-solid fa-user-large"></i>
@@ -271,6 +271,7 @@
       </div>
   </header>
   <main>
+    <div id="toast"></div>
     <!-- LOADER  -->
     <div class="loader-container">
     <img src="./assets/images/ImagesFigma/Image_Blogs/R.gif" alt="">
@@ -283,8 +284,8 @@
               <div class="mb-md-0 mb-4 col-md-6 col-lg-6">
                 <div class="product-image">
                   <div class="img-zoom-container">
-                    <img id="myimage" src="./assets/images/ImagesFigma/furniture_img7.jpg">
-                    <div id="myresult" class="img-zoom-result"></div>
+                      <img id="myimage" src="./assets/images/ImagesFigma/product-furniture1.jpg">
+                      <div id="myresult" class="img-zoom-result"></div>
                   </div>
                   <div class="product-img-bottom">
                     <div class="muli selected" onclick="changeBorder(this)">
@@ -358,7 +359,7 @@
                               <input type="number" id="quantity" value="1" min="1" max="10">
                               <button onclick="increase()">+</button>
                             </div>
-                            <button class="custom-btn btn-3">
+                            <button class="custom-btn btn-3" >
                               <span>
                                   <i class="fa-solid fa-cart-arrow-down"></i>Add To Cart
                               </span>
@@ -380,7 +381,6 @@
                               <span class="swith-lable">Tages: </span>
                               <p>Cloth, printed</p>
                             </div>
-                            </div>
                             <div class="share">
                               <span class="swith-lable">Share: </span>
                               <div class="icons-share">
@@ -390,6 +390,7 @@
                                 <i class="fa-brands fa-youtube"></i>
                                 <i class="fa-solid fa-camera-retro"></i>
                               </div>
+                            </div>
                             </div>
                           </div>
                   </div>
@@ -405,177 +406,501 @@
                     <h2>Related products</h2>
                 </div>
             </div>
-            <div class="owl-carousel owl-theme" id="slide-cr">
+            <div class="trending-items owl-carousel owl-theme">
               <div class="item">
-                  <div class="card-item">
-                      <div class="product-img">
-                          <div class="product-action-box">
-                            <div class="pr-dc">
-                              <a href="#" class="detail-product">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                              </a>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="product-info">
-                        <h6 class="pro-title">enim expedita sed</h6>
-                        <div class="product-price">
-                          <span class="price">$45.00</span>
-                          <del>$55.00</del>
-                        </div>
-                        <div class="rating-wrap">
-                          <div class="rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star-half-stroke"></i>
-                          </div>
-                          <span class="rating-num">(21)</span>
-                        </div>
-                        <div class="add-to-cart">
-                          <a href="#" class="btn-radius"">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span class="adtoca">Add To Cart</span>
+                <div class="card-item">
+                  <div class="product-img">
+                      <a href="#">
+                        <img src="./assets/images/ImagesFigma/furniture_img1.jpg" alt="">
+                      </a>
+                      <div class="product-action-box">
+                        <div class="pr-dc">
+                          <a href="#" class="detail-product" onclick="redirect()">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
                           </a>
                         </div>
                       </div>
-                  </div>
-              </div>
-              <div class="item">
-                  <div class="card-item">
-                      <div class="product-img">
-                          <div class="img-pr-detail">
-                            <div class="item-img">
-                              
-                            </div>
-                          </div>
-                          <div class="product-action-box">
-                            <div class="pr-dc">
-                              <a href="#" class="detail-product">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                              </a>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="product-info">
-                        <h6 class="pro-title">enim expedita sed</h6>
-                        <div class="product-price">
-                          <span class="price">$45.00</span>
-                          <del>$55.00</del>
-                        </div>
-                        <div class="rating-wrap">
-                          <div class="rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star-half-stroke"></i>
-                          </div>
-                          <span class="rating-num">(21)</span>
-                        </div>
-                        <div class="add-to-cart">
-                          <a href="#" class="btn-radius"">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span class="adtoca">Add To Cart</span>
-                          </a>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-            </div>       
-      </div> 
 
+                  </div>
+                  <div class="product-info">
+                    <h6 class="pro-title">enim expedita sed</h6>
+                    <div class="product-price">
+                      <span class="price">$45.00</span>
+                      <del>$55.00</del>
+                    </div>
+                    <div id="rating-wrap">
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                      </div>
+                      <span class="rating-num">(21)</span>
+                    </div>
+                    <div class="add-to-cart" data-name="Product 9" data-price="90.00">
+                      <a href="#" class="btn-radius"">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="adtoca">Add To Cart</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card-item">
+                  <div class="product-img">
+                      <a href="#">
+                        <img src="./assets/images/ImagesFigma/furniture_img2.jpg" alt="">
+                      </a>
+                      <div class="product-action-box">
+                        <div class="pr-dc">
+                          <a href="#" class="detail-product" onclick="redirect()">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="product-info">
+                    <h6 class="pro-title">Vivant Janus Charles</h6>
+                    <div class="product-price">
+                      <span class="price">$45.00</span>
+                      <del>$55.00</del>
+                    </div>
+                    <div id="rating-wrap">
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                      </div>
+                      <span class="rating-num">(21)</span>
+                    </div>
+                    <div class="add-to-cart" data-name="Product 8" data-price="80.00">
+                      <a href="#" class="btn-radius"">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="adtoca">Add To Cart</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card-item">
+                  <div class="product-img">
+                      <a href="#">
+                        <img src="./assets/images/ImagesFigma/furniture_img4.jpg" alt="">
+                      </a>
+                      <div class="product-action-box">
+                        <div class="pr-dc">
+                          <a href="#" class="detail-product" onclick="redirect()">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="product-info">
+                    <h6 class="pro-title">Classic Wooden Chair</h6>
+                    <div class="product-price">
+                      <span class="price">$45.00</span>
+                      <del>$55.00</del>
+                    </div>
+                    <div id="rating-wrap">
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                      </div>
+                      <span class="rating-num">(21)</span>
+                    </div>
+                    <div class="add-to-cart" data-name="Product 7" data-price="70.00">
+                      <a href="#" class="btn-radius"">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="adtoca">Add To Cart</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card-item">
+                  <div class="product-img">
+                      <a href="#">
+                        <img src="./assets/images/ImagesFigma/product-furniture-19.jpg" alt="">
+                      </a>
+                      <div class="product-action-box">
+                        <div class="pr-dc">
+                          <a href="#" class="detail-product" onclick="redirect()">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="product-info">
+                    <h6 class="pro-title">Panton Tunior Chair</h6>
+                    <div class="product-price">
+                      <span class="price">$45.00</span>
+                      <del>$55.00</del>
+                    </div>
+                    <div id="rating-wrap">
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                      </div>
+                      <span class="rating-num">(21)</span>
+                    </div>
+                    <div class="add-to-cart" data-name="Product 6" data-price="60.00">
+                      <a href="#" class="btn-radius"">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="adtoca">Add To Cart</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card-item">
+                  <div class="product-img">
+                      <a href="#">
+                        <img src="./assets/images/ImagesFigma/product-furniture1.jpg" alt="">
+                      </a>
+                      <div class="product-action-box">
+                        <div class="pr-dc">
+                          <a href="#" class="detail-product" onclick="redirect()">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="product-info">
+                    <h6 class="pro-title">Eames Plastic Side Chair</h6>
+                    <div class="product-price">
+                      <span class="price">$45.00</span>
+                      <del>$55.00</del>
+                    </div>
+                    <div id="rating-wrap">
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                      </div>
+                      <span class="rating-num">(21)</span>
+                    </div>
+                    <div class="add-to-cart" data-name="Product 5" data-price="50.00">
+                      <a href="#" class="btn-radius"">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="adtoca">Add To Cart</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card-item">
+                  <div class="product-img">
+                      <a href="#">
+                        <img src="./assets/images/ImagesFigma/product-furniture-8.jpg" alt="">
+                      </a>
+                      <div class="product-action-box">
+                        <div class="pr-dc">
+                          <a href="#" class="detail-product" onclick="redirect()">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="product-info">
+                    <h6 class="pro-title">Eames Lounge Chair</h6>
+                    <div class="product-price">
+                      <span class="price">$45.00</span>
+                      <del>$55.00</del>
+                    </div>
+                    <div id="rating-wrap">
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                      </div>
+                      <span class="rating-num">(21)</span>
+                    </div>
+                    <div class="add-to-cart" data-name="Product 4" data-price="40.00">
+                      <a href="#" class="btn-radius"">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="adtoca">Add To Cart</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>      
+      </div> 
     </div>
     <!-- TRENDING ITEM -->
     <div class="trending-item">
       <div class="container">
             <div class="row products-title">
                 <div class="col-md-6 text-center">
-                    <h2>Related products</h2>
+                    <h2>Trending Items</h2>
                 </div>
             </div>
-            <div class="owl-carousel owl-theme" id="slide-cr">
+            <div class="related-products owl-carousel owl-theme">
               <div class="item">
-                  <div class="card-item">
-                      <div class="product-img">
-                          <div class="product-action-box">
-                            <div class="pr-dc">
-                              <a href="#" class="detail-product">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                              </a>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="product-info">
-                        <h6 class="pro-title">enim expedita sed</h6>
-                        <div class="product-price">
-                          <span class="price">$45.00</span>
-                          <del>$55.00</del>
-                        </div>
-                        <div class="rating-wrap">
-                          <div class="rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star-half-stroke"></i>
-                          </div>
-                          <span class="rating-num">(21)</span>
-                        </div>
-                        <div class="add-to-cart">
-                          <a href="#" class="btn-radius"">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span class="adtoca">Add To Cart</span>
+                <div class="card-item">
+                  <div class="product-img">
+                      <a href="#">
+                        <img src="./assets/images/ImagesFigma/furniture_img1.jpg" alt="">
+                      </a>
+                      <div class="product-action-box">
+                        <div class="pr-dc">
+                          <a href="#" class="detail-product" onclick="redirect()">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
                           </a>
                         </div>
                       </div>
+
                   </div>
+                  <div class="product-info">
+                    <h6 class="pro-title">enim expedita sed</h6>
+                    <div class="product-price">
+                      <span class="price">$45.00</span>
+                      <del>$55.00</del>
+                    </div>
+                    <div id="rating-wrap">
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                      </div>
+                      <span class="rating-num">(21)</span>
+                    </div>
+                    <div class="add-to-cart" data-name="Product 10" data-price="100.00">
+                      <a href="#" class="btn-radius"">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="adtoca">Add To Cart</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="item">
-                  <div class="card-item">
-                      <div class="product-img">
-                          <div class="img-pr-detail">
-                            <div class="item-img">
-                              
-                            </div>
-                          </div>
-                          <div class="product-action-box">
-                            <div class="pr-dc">
-                              <a href="#" class="detail-product">
-                                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                              </a>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="product-info">
-                        <h6 class="pro-title">enim expedita sed</h6>
-                        <div class="product-price">
-                          <span class="price">$45.00</span>
-                          <del>$55.00</del>
-                        </div>
-                        <div class="rating-wrap">
-                          <div class="rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star-half-stroke"></i>
-                          </div>
-                          <span class="rating-num">(21)</span>
-                        </div>
-                        <div class="add-to-cart">
-                          <a href="#" class="btn-radius"">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                            <span class="adtoca">Add To Cart</span>
+                <div class="card-item">
+                  <div class="product-img">
+                      <a href="#">
+                        <img src="./assets/images/ImagesFigma/furniture_img2.jpg" alt="">
+                      </a>
+                      <div class="product-action-box">
+                        <div class="pr-dc">
+                          <a href="#" class="detail-product" onclick="redirect()">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
                           </a>
                         </div>
                       </div>
+
                   </div>
+                  <div class="product-info">
+                    <h6 class="pro-title">Vivant Janus Charles</h6>
+                    <div class="product-price">
+                      <span class="price">$45.00</span>
+                      <del>$55.00</del>
+                    </div>
+                    <div id="rating-wrap">
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                      </div>
+                      <span class="rating-num">(21)</span>
+                    </div>
+                    <div class="add-to-cart" data-name="Product 11" data-price="110.00">
+                      <a href="#" class="btn-radius"">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="adtoca">Add To Cart</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card-item">
+                  <div class="product-img">
+                      <a href="#">
+                        <img src="./assets/images/ImagesFigma/furniture_img4.jpg" alt="">
+                      </a>
+                      <div class="product-action-box">
+                        <div class="pr-dc">
+                          <a href="#" class="detail-product" onclick="redirect()">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="product-info">
+                    <h6 class="pro-title">Classic Wooden Chair</h6>
+                    <div class="product-price">
+                      <span class="price">$45.00</span>
+                      <del>$55.00</del>
+                    </div>
+                    <div id="rating-wrap">
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                      </div>
+                      <span class="rating-num">(21)</span>
+                    </div>
+                    <div class="add-to-cart" data-name="Product 12" data-price="12.00">
+                      <a href="#" class="btn-radius"">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="adtoca">Add To Cart</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card-item">
+                  <div class="product-img">
+                      <a href="#">
+                        <img src="./assets/images/ImagesFigma/product-furniture-19.jpg" alt="">
+                      </a>
+                      <div class="product-action-box">
+                        <div class="pr-dc">
+                          <a href="#" class="detail-product" onclick="redirect()">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="product-info">
+                    <h6 class="pro-title">Panton Tunior Chair</h6>
+                    <div class="product-price">
+                      <span class="price">$45.00</span>
+                      <del>$55.00</del>
+                    </div>
+                    <div id="rating-wrap">
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                      </div>
+                      <span class="rating-num">(21)</span>
+                    </div>
+                    <div class="add-to-cart" data-name="Product 13" data-price="130.00">
+                      <a href="#" class="btn-radius"">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="adtoca">Add To Cart</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card-item">
+                  <div class="product-img">
+                      <a href="#">
+                        <img src="./assets/images/ImagesFigma/product-furniture1.jpg" alt="">
+                      </a>
+                      <div class="product-action-box">
+                        <div class="pr-dc">
+                          <a href="#" class="detail-product" onclick="redirect()">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="product-info">
+                    <h6 class="pro-title">Eames Plastic Side</h6>
+                    <div class="product-price">
+                      <span class="price">$45.00</span>
+                      <del>$55.00</del>
+                    </div>
+                    <div id="rating-wrap">
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                      </div>
+                      <span class="rating-num">(21)</span>
+                    </div>
+                    <div class="add-to-cart" data-name="Product 14" data-price="140.00">
+                      <a href="#" class="btn-radius"">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="adtoca">Add To Cart</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="card-item">
+                  <div class="product-img">
+                      <a href="#">
+                        <img src="./assets/images/ImagesFigma/product-furniture-8.jpg" alt="">
+                      </a>
+                      <div class="product-action-box">
+                        <div class="pr-dc">
+                          <a href="#" class="detail-product" onclick="redirect()">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="product-info">
+                    <h6 class="pro-title">Eames Lounge Chair</h6>
+                    <div class="product-price">
+                      <span class="price">$45.00</span>
+                      <del>$55.00</del>
+                    </div>
+                    <div id="rating-wrap">
+                      <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                      </div>
+                      <span class="rating-num">(21)</span>
+                    </div>
+                    <div class="add-to-cart" data-name="Product 15" data-price="150.00">
+                      <a href="#" class="btn-radius"">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="adtoca">Add To Cart</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>       
-      </div> 
-
+      </div>
     </div>
   </main>
   <footer class="footer">

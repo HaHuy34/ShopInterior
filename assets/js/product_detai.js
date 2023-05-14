@@ -28,6 +28,59 @@ document.addEventListener("click", function (event) {
   }
 });
 
+function redirect() {
+  window.location.href = "product_detail.html";
+}
+
+//Todo: Slide Trending Items
+$(".trending-items").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    500: {
+      items: 2,
+    },
+    700: {
+      items: 3,
+    },
+    950: {
+      items: 4,
+    },
+  },
+});
+
+$(".related-products").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    500: {
+      items: 2,
+    },
+    700: {
+      items: 3,
+    },
+    950: {
+      items: 4,
+    },
+  },
+});
+var nextButton = $('span[aria-label="Next"]');// Tìm phần tử span có thuộc tính aria-label="Next"
+nextButton.html('<i class="fa-solid fa-arrow-right-long"></i>');// Thay đổi nội dung của phần tử span
+var nextButton = $('span[aria-label="Previous"]');
+nextButton.html('<i class="fa-solid fa-arrow-left-long"></i>');
+
 //Todo: PRODUCT IMAGE DETAIL
 /*Box*/
 function changeBorder(box) {
@@ -109,6 +162,7 @@ function imageZoom(imgID, resultID) {
     return { x: x, y: y };
   }
 }
+
 // Initiate zoom effect:
 imageZoom("myimage", "myresult");
 
@@ -150,27 +204,6 @@ addToCart.addEventListener("click", function(){
   alert("Successfully added shopping carts");
 })
 
-
-// Todo: SlideRelatedProducts
-$(".owl-carousel").owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  autoplay: true,
-  autoplayTimeout: 3000,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 3,
-    },
-    1000: {
-      items: 4,
-    },
-  },
-});
-
 // Todo: Click Color
 const colorSpans = document.querySelectorAll(".choose-color");
 
@@ -184,5 +217,114 @@ colorSpans.forEach((colorSpan) => {
     });
     colorSpan.classList.add("selected");
     colorSpan.innerHTML = "&#10003;";
+  });
+});
+
+var addToCartButtons = document.getElementsByClassName("add-to-cart");
+var cartCount = document.getElementById("cart-count");
+
+var itemsInCart = [];
+
+for (var i = 0; i < addToCartButtons.length; i++) {
+  addToCartButtons[i].addEventListener("click", function () {
+    var itemName = this.getAttribute("data-name");
+    var itemPrice = parseFloat(this.getAttribute("data-price"));
+    var itemExists = false;
+
+    // Kiểm tra sản phẩm đã tồn tại trong danh sách hay chưa
+    for (var j = 0; j < itemsInCart.length; j++) {
+      if (itemsInCart[j].name === itemName) {
+        itemExists = true;
+        break;
+      }
+    }
+
+    // Nếu sản phẩm chưa tồn tại, thêm sản phẩm vào danh sách
+    if (!itemExists) {
+      itemsInCart.push({ name: itemName, price: itemPrice });
+      cartCount.innerHTML = itemsInCart.length;
+      const main = document.getElementById("toast");
+      const toast = document.createElement("div");
+      // Auto remove toast
+      const autoRemoveId = setTimeout(function () {
+        main.removeChild(toast);
+      }, 4000);
+
+      // Remove toast when clicked
+      toast.onclick = function (e) {
+        if (e.target.closest(".toast__close")) {
+          main.removeChild(toast);
+          clearTimeout(autoRemoveId);
+        }
+      };
+      const delay = (3).toFixed(2);
+      toast.classList.add("tot");
+      toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
+      toast.innerHTML = `
+          <div class="toast__icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="toast__body">
+            <h3 class="toast__title">Success!</h3>
+            <p class="toast__msg">You have added products to the cart.</p>
+          </div>
+          <div class="toast__close">
+            <i class="fas fa-times"></i>
+          </div>
+      `;
+      main.appendChild(toast);
+    } else {
+      const main = document.getElementById("toast");
+      const toast = document.createElement("div");
+      // Auto remove toast
+      const autoRemoveId = setTimeout(function () {
+        main.removeChild(toast);
+      }, 9000);
+
+      // Remove toast when clicked
+      toast.onclick = function (e) {
+        if (e.target.closest(".toast__close")) {
+          main.removeChild(toast);
+          clearTimeout(autoRemoveId);
+        }
+      };
+      toast.classList.add("tot");
+      toast.innerHTML = `
+          <div class="toast__icon">
+            <i class="fas fa-exclamation-circle"></i>
+          </div>
+          <div class="toast__body">
+            <h3 class="toast__title">Sorry!</h3>
+            <p class="toast__msg">The product has existed in the cart.</p>
+          </div>
+          <div class="toast__close">
+            <i class="fas fa-times"></i>
+          </div>
+      `;
+      main.appendChild(toast);
+    }
+  });
+}
+
+// Todo: Reponsive Bars
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+
+var close = document.querySelector(".close");
+var dropDow = document.querySelector(".dropdow-menu");
+close.addEventListener("click", function () {
+  if (dropDow.style.display === "block") {
+    dropDow.style.display = "none";
+  } else {
+    dropDow.style.display = "block";
+  }
+});
+
+// Chặn load trang của thẻ a
+const btnRadius = document.querySelectorAll(".btn-radius");
+btnRadius.forEach((a) => {
+  a.addEventListener("click", (e) => {
+    e.preventDefault();
   });
 });
