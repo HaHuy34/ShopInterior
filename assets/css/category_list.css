@@ -14,6 +14,7 @@ body {
   margin: 0 auto;
   display: block;
   width: 100%;
+  padding: 0 16px;
 }
 
 ::-webkit-scrollbar {
@@ -1060,6 +1061,12 @@ ul.payment li {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+  #scroll-hea {
+    padding-right: 0;
+    width: 100%;
+    height: 250px;
+    overflow-y: auto;
+  }
   .container {
     --bs-gutter-x: 0;
   }
@@ -1164,6 +1171,34 @@ ul.payment li {
   a.single-bn-link {
     color: #292b2c;
     font-size: 15px;
+  }
+  .content-main {
+    border: none;
+  }
+
+  .gutters .col-12 {
+    border: 1px solid #e2dcdc;
+  }
+
+  .gutters .col-12:first-child {
+    border-right: 0;
+    border-bottom: 1px solid #e2dcdc;
+  }
+  .gutters .col-12:last-child {
+    border-top: 0;
+  }
+
+  .gutters .col-12:nth-child(3) {
+    border-top: 0;
+    border-right: 0;
+  }
+
+  .gutters .col-12:nth-child(2) {
+    border-right: 1px solid #e2dcdc;
+  }
+
+  #last-ch {
+    border: none;
   }
 }
 
@@ -1377,6 +1412,35 @@ ul.payment li {
     display: flex;
     justify-content: center;
   }
+
+  .content-main {
+    border: none;
+  }
+
+  .gutters .col-12 {
+    border: 1px solid #e2dcdc;
+  }
+
+  .gutters .col-12:first-child {
+    border-right: 0;
+    border-bottom: 1px solid #e2dcdc;
+  }
+  .gutters .col-12:last-child {
+    border-top: 0;
+  }
+
+  .gutters .col-12:nth-child(3) {
+    border-top: 0;
+    border-right: 0;
+  }
+
+  .gutters .col-12:nth-child(2) {
+    border-right: 1px solid #e2dcdc;
+  }
+
+  #last-ch {
+    border: none;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -1457,6 +1521,26 @@ ul.payment li {
     color: #292b2c;
     font-size: 15px;
   }
+
+  .content-main {
+    border: none;
+  }
+
+  #last-ch {
+    border-right: none;
+  }
+
+  .gutters .col-12:first-child {
+    width: 100%;
+    border-bottom: none;
+    border-right: 1px solid #e2dcdc;
+  }
+
+  .gutters .col-12:nth-child(3) {
+    width: 100%;
+    border-top: none;
+    border-right: 1px solid #e2dcdc;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1472,3 +1556,90 @@ ul.payment li {
     width: 100%;
   }
 }
+
+@media (min-width: 768px) and (max-width: 840px) {
+  .icons {
+      width: 16%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+  .icons {
+      width: 20%;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 380px) {
+  .icons {
+      width: 35%;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .cover01 {
+    background-image: url(/assets/images/ImagesFigma/banner-desktop-sx-01.png);
+  }
+
+  .cover02 {
+    background-image: url(/assets/images/ImagesFigma/banner-desktop-sx-02.png);
+  }
+
+  .cover03 {
+    background-image: url(/assets/images/ImagesFigma/banner-desktop-sx-03.png);
+  }
+}
+
+@media (min-width: 900px) {
+  .cover01 {
+    background-image: url(/assets/images/ImagesFigma/banner8.jpg);
+  }
+
+  .cover02 {
+    background-image: url(/assets/images/ImagesFigma/banner7.jpg);
+  }
+
+  .cover03 {
+    background-image: url(/assets/images/ImagesFigma/banner9.jpg);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+  .cover01 {
+    background-image: url(/assets/images/ImagesFigma/banner-tablet-01.png);
+  }
+
+  .cover02 {
+    background-image: url(/assets/images/ImagesFigma/banner-tablet-02.png);
+  }
+
+  .cover03 {
+    background-image: url(/assets/images/ImagesFigma/banner-tablet-03.png);
+  }
+
+  h2.title-text {
+    font-size: 60px;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .cover01 {
+    background-image: url(/assets/images/ImagesFigma/banner-mobile-01.png);
+  }
+
+  .cover02 {
+    background-image: url(/assets/images/ImagesFigma/banner-mobile-02.png);
+  }
+
+  .cover03 {
+    background-image: url(/assets/images/ImagesFigma/banner-mobile-03.png);
+  }
+
+  h2.title-text {
+    font-size: 50px;
+    font-weight: 600;
+  }
+}
+
+

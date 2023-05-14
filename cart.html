@@ -182,9 +182,9 @@
                       <input type="text" class="se-input" placeholder="Enter name......">
                   </div>
                 </li>
-                <li class="cart">
+                <li class="cart" id="cart-link">
                   <i class="fa-solid fa-cart-shopping"></i>
-                  <span id="cart-count">0</span>
+                  <span id="cart-count">3</span>
                 </li>
                 <li class="account">
                   <i class="fa-solid fa-user-large"></i>
@@ -323,7 +323,7 @@
                         <th class="product-rice">Unit Price</th>
                         <th class="product-quantity">Quantity</th>
                         <th class="product-subtotal">Into Money</th>
-                        <th class="product-close">Delete</th>
+                        <th class="product-close">Dele</th>
                     </tr>
                 </thead>
                 <tbody id="table">
@@ -332,23 +332,23 @@
                             <div class="img-pr-main" style="background-image: url(./assets/images/ImagesFigma/furniture_img3.jpg);">
                             </div>
                         </td>
-                        <td class="product-na pr">
+                        <td data-label="Product's Name" class="product-na pr">
                             <a href="./product_detail.html">Internet Tend To Repeat</a>
                         </td>
-                        <td class="product-ri pr">
+                        <td data-label="Unit Price" class="product-ri pr">
                             <span class="amount">20000000</span>
                         </td>
-                        <td class="product-qatity pr">
+                        <td data-label="Quantity" class="product-qatity pr">
                             <div class="quantity">
                                 <button class="minus-btn btnpr">-</button>
                                 <span class="qtity">2</span>
                                 <button class="plus-btn btnpr">+</button>
                             </div>
                         </td>
-                        <td class="product-sub pr">
+                        <td data-label="Into Money" class="product-sub pr">
                             <span class="sub-amu">20000000</span>
                         </td>
-                        <td class="product-cl pr">
+                        <td data-label="Delete" class="product-cl pr">
                             <a href="#" class="cart-item-actions">
                                 <i class="fa-solid fa-trash-can"></i>
                             </a>
@@ -359,23 +359,23 @@
                             <div class="img-pr-main" style="background-image: url(./assets/images/ImagesFigma/furniture_img1.jpg);">
                             </div>
                         </td>
-                        <td class="product-na pr">
+                        <td data-label="Product's Name" class="product-na pr">
                             <a href="./product_detail.html">Internet Tend To Repeat</a>
                         </td>
-                        <td class="product-ri pr">
-                            <span class="amount">20000000</span>
+                        <td data-label="Unit Price" class="product-ri pr">
+                            <span class="amount">23000000</span>
                         </td>
-                        <td class="product-qatity pr">
+                        <td data-label="Quantity" class="product-qatity pr">
                             <div class="quantity">
                                 <button class="minus-btn btnpr">-</button>
                                 <span class="qtity">2</span>
                                 <button class="plus-btn btnpr">+</button>
                             </div>
                         </td>
-                        <td class="product-sub pr">
+                        <td data-label="Into Money" class="product-sub pr">
                             <span class="sub-amu">20000000</span>
                         </td>
-                        <td class="product-cl pr">
+                        <td data-label="Delete" class="product-cl pr">
                             <a href="#" class="cart-item-actions">
                                 <i class="fa-solid fa-trash-can"></i>
                             </a>
@@ -383,32 +383,32 @@
                     </tr>
                     <tr class="cart-item">
                         <td class="product-imag pr">
-                            <div class="img-pr-main" style="background-image: url(./assets/images/ImagesFigma/furniture_img4.jpg);">
+                            <div class="img-pr-main" style="background-image: url(./assets/images/ImagesFigma/furniture_img5.jpg);">
                             </div>
                         </td>
-                        <td class="product-na pr">
+                        <td data-label="Product's Name" class="product-na pr">
                             <a href="./product_detail.html">Internet Tend To Repeat</a>
                         </td>
-                        <td class="product-ri pr">
-                            <span class="amount">20000000</span>
+                        <td data-label="Unit Price" class="product-ri pr">
+                            <span class="amount">12000000</span>
                         </td>
-                        <td class="product-qatity pr">
+                        <td data-label="Quantity" class="product-qatity pr">
                             <div class="quantity">
                                 <button class="minus-btn btnpr">-</button>
                                 <span class="qtity">2</span>
                                 <button class="plus-btn btnpr">+</button>
                             </div>
                         </td>
-                        <td class="product-sub pr">
-                            <span class="sub-amu"></span>
+                        <td data-label="Into Money" class="product-sub pr">
+                            <span class="sub-amu">20000000</span>
                         </td>
-                        <td class="product-cl pr">
+                        <td data-label="Delete" class="product-cl pr">
                             <a href="#" class="cart-item-actions">
                                 <i class="fa-solid fa-trash-can"></i>
                             </a>
                         </td>
                     </tr>
-                    <tr >
+                    <!-- <tr >
                       <td class="con-shop">
                         <div class="continue-shopping">
                           <a href="./index.html">CONTINUE SHOPPING</a>
@@ -416,18 +416,18 @@
                       </td>
                       <td></td>
                       <td></td>
-                      <td class="title-total">
+                      <td class="title-total" colspan="2">
                         <div class="ti-to">
                           Total Payment
                         </div>
                       </td>
-                      <td colspan="2" class="total-price">
+                      <td colspan="" class="total-price">
                         <div class="to-pr">
                           8,000,000
                         </div>
                       </td>
-                    </tr>
-                    <tr>
+                    </tr> -->
+                    <!-- <tr>
                       <td></td>
                       <td></td>
                       <td></td>
@@ -437,12 +437,27 @@
                           <a href="./pay.html">MAKE A PAYMENT</a>
                         </div>
                       </td>
-                    </tr>
+                    </tr> -->
+                    
                 </tbody>
-                <tfoot>
-                  
-                </tfoot>
             </table>
+
+            <div class="total-price">
+              <div class="total-title-name">
+                Total Payment
+              </div>
+              <div class="to-pr">
+                  8,000,000
+              </div>
+            </div>
+            <div class="colum-main-cart">
+              <div class="continue-shopping">
+                <a href="./index.html">CONTINUE SHOPPING</a>
+              </div>
+              <div class="ma-apay">
+                <a href="./pay.html">MAKE A PAYMENT</a>
+              </div>
+            </div>
         </div>
       </div>
     </main>

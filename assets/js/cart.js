@@ -44,33 +44,11 @@ close.addEventListener("click", function () {
   }
 });
 
-// Todo: Quantity
-// const minusButton = document.querySelector(".minus-btn");
-// const plusButton = document.querySelector(".plus-btn");
-// const inputField = document.querySelector(".quantity-input");
-
-// minusButton.addEventListener("click", decreaseQuantity);
-// plusButton.addEventListener("click", increaseQuantity);
-
-// function decreaseQuantity() {
-//   let currentValue = parseInt(inputField.value);
-//   if (currentValue > 0) {
-//     inputField.value = currentValue - 1;
-//   }
-// }
-
-// function increaseQuantity() {
-//   let currentValue = parseInt(inputField.value);
-//   inputField.value = currentValue + 1;
-// }
-// Todo: Không load lại trang khi click vào thẻ a trong delete
-const links = document.querySelectorAll(".cart-item-actions");
-links.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-  });
+// Todo: giỏ hàng
+const cartIcon = document.querySelector("#cart-link");
+cartIcon.addEventListener("click", function () {
+    window.location.href = "./cart.html"
 });
-
 
 // Todo: Xóa thông tin giỏ hàng
 const deleteBtn = document.querySelectorAll(".cart-item-actions");
@@ -78,8 +56,8 @@ deleteBtn.forEach(i => {
   i.addEventListener("click", () => {
     const cartItemElement = i.closest(".cart-item");
     cartItemElement.remove();
-    updateCartInfor(); 
     alert("Do you definitely want to delete this product?");
+    updateCartInfor(); 
   });
 })
 
