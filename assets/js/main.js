@@ -18,7 +18,7 @@ const addLoginFun = document.querySelector(".btn-login");
 const valueEmail = document.querySelector(".value-email");
 const valuePass = document.querySelector(".value-password");
 addLoginFun.addEventListener("click", function(){
-  alert("Tính năng này đang được cập nhật!");
+  alert("This feature is being updated!");
   formLogin.style.opacity = "0";
   formLogin.style.visibility = "hidden";
 })
