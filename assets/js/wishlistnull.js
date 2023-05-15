@@ -113,3 +113,11 @@ const del = document.querySelector(".fa-trash-can");
 del.addEventListener("click", function () {
   cartItem.remove();
 });
+
+function retTo() {
+  window.location.href = "./blog.html";
+}
+
+function reTo() {
+  window.location.href = "./contact.html";
+}

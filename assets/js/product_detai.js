@@ -328,3 +328,11 @@ btnRadius.forEach((a) => {
     e.preventDefault();
   });
 });
+
+function retTo() {
+  window.location.href = "./blog.html";
+}
+
+function reTo() {
+  window.location.href = "./contact.html";
+}

@@ -287,3 +287,12 @@ cartIcon.addEventListener("click", () => {
     alert("There is no product in the cart!");
   }
 });
+
+
+function retTo() {
+  window.location.href = "./blog.html";
+}
+
+function reTo() {
+  window.location.href = "./contact.html";
+}

@@ -44,3 +44,11 @@ close.addEventListener("click", function () {
     dropDow.style.display = "block";
   }
 });
+
+function retTo() {
+  window.location.href = "./blog.html";
+}
+
+function reTo() {
+  window.location.href = "./contact.html";
+}
