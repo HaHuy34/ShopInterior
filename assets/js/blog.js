@@ -52,3 +52,4 @@ function reTo() {
   window.location.href = "./contact.html";
 }
 
+ScrollReveal().reveal(".blog-item", { scale: 1.5 });

@@ -55,27 +55,8 @@ $(".trending-items").owlCarousel({
   },
 });
 
-$(".related-products").owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  autoplay: true,
-  autoplayTimeout: 3000,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    500: {
-      items: 2,
-    },
-    700: {
-      items: 3,
-    },
-    950: {
-      items: 4,
-    },
-  },
-});
+
+
 var nextButton = $('span[aria-label="Next"]');// Tìm phần tử span có thuộc tính aria-label="Next"
 nextButton.html('<i class="fa-solid fa-arrow-right-long"></i>');// Thay đổi nội dung của phần tử span
 var nextButton = $('span[aria-label="Previous"]');
@@ -90,7 +71,7 @@ function changeBorder(box) {
   }
   box.classList.add("selected");
 }
-/*BackGroundImage*/
+// Todo: BG Image
 function changeImage(img) {
   var mainImage = document.getElementById("myimage");
   mainImage.src = img.src;
@@ -185,7 +166,6 @@ function increase() {
 var iconWishLish = document.getElementById("icon");
 var count = 0;
 iconWishLish.addEventListener("click", function(){
-  // alert("Added products to the favorite list");
   // Nếu người dùng click lần đầu tiên, chuyển màu của icon sang màu đỏ
   if (count % 2 !== 0) {
     iconWishLish.style.color = "#b1b6bf";
@@ -336,3 +316,25 @@ function retTo() {
 function reTo() {
   window.location.href = "./contact.html";
 }
+
+$(".related-products").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    500: {
+      items: 2,
+    },
+    700: {
+      items: 3,
+    },
+    950: {
+      items: 4,
+    },
+  },
+});

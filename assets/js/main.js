@@ -123,7 +123,7 @@ $(".trending-items").owlCarousel({
     767: {
       items: 3,
     },
-    1000: {
+    992: {
       items: 4,
     },
   },

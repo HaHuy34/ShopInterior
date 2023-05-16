@@ -101,17 +101,20 @@ function updateCartInfor() {
 
   let totalPrice = 0;
   cartItems.forEach((cartItem) => {
-    const price = +cartItem.querySelector(".amount").textContent.replace(",", "").replace("đ", "");
+    const price = +cartItem.querySelector(".amount").textContent.replace(".", "").replace("$", "");
     const quantity = +cartItem.querySelector(".qtity").textContent;
     const total = cartItem.querySelector(".sub-amu");
     const dowBtn = document.querySelector(".minus-btn");  
 
     // Cập nhật giá tiền cho Item
-    total.textContent = price * quantity; 
-    totalPrice += price * quantity;  
+    let itemTotal = price * quantity;
+    let displayTotal = "$" + (Math.round(itemTotal / 100).toFixed(2));
+    total.textContent = displayTotal;
+    totalPrice += price * quantity;
+ 
   });
 
-  totalPriceElement.textContent = totalPrice;
+  totalPriceElement.textContent = "$" + (Math.round(totalPrice / 100).toFixed(2));
 }
 
 updateCartInfor();
@@ -123,3 +126,4 @@ function retTo() {
 function reTo() {
   window.location.href = "./contact.html";
 }
+
