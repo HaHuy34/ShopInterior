@@ -1613,6 +1613,15 @@ ul.payment li {
   .input-email input,
   .input-password input {
     margin-bottom: 7px;
+    height: 39px;
+    padding-left: 40px;
+    font-size: 17px;
+  }
+
+  .input-email::before, 
+  .input-password::before {
+    left: 34px;
+    top: 10px;
   }
 
   .login-main {
@@ -1621,16 +1630,12 @@ ul.payment li {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 307px;
-    width: 431px;
+    height: 280px;
+    width: 351px;
   }
 
   .normal {
     width: 100%;
-  }
-
-  .normal h5 {
-    margin: 0;
   }
 
   .logomain {
@@ -1641,7 +1646,7 @@ ul.payment li {
 
   .input-email ::placeholder,
   .input-password ::placeholder {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .forgot-password a:first-child {
@@ -1654,8 +1659,9 @@ ul.payment li {
   }
 
   .normal h5 {
+      margin: 0;
       font-weight: 600;
-      font-size: 15px;
+      font-size: 13px;
   }
 
   .input-email::after, 
@@ -1666,25 +1672,26 @@ ul.payment li {
   }
 
   .icons-pass i {
-      font-size: 13px;
+      font-size: 12px;
   }
 
   .login-main-img {
     background-image: url(/assets/images/ImagesFigma/furniture8.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 87%;
-    background-position: -29px;
-    background-position-y: 20px;
+    height: 80%;
+    background-position: -27px;
+    background-position-y: 13px;
+    margin-top: 13px;
   }
 
     #show-pass {
-    margin-top: 7px;
-    display: none;
+      margin-top: 7px;
+      display: none;
   }
 
-  #hidden-pass {
-    margin-top: 7px;
+    #hidden-pass {
+      margin-top: 7px;
   }
 }
 
