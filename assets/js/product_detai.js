@@ -32,8 +32,10 @@ function redirect() {
   window.location.href = "product_detail.html";
 }
 
+
+
 //Todo: Slide Trending Items
-$(".trending-items").owlCarousel({
+$(".trendings").owlCarousel({
   loop: true,
   margin: 10,
   nav: true,
@@ -55,7 +57,27 @@ $(".trending-items").owlCarousel({
   },
 });
 
-
+$(".adbh").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    500: {
+      items: 2,
+    },
+    700: {
+      items: 3,
+    },
+    950: {
+      items: 4,
+    },
+  },
+});
 
 var nextButton = $('span[aria-label="Next"]');// Tìm phần tử span có thuộc tính aria-label="Next"
 nextButton.html('<i class="fa-solid fa-arrow-right-long"></i>');// Thay đổi nội dung của phần tử span
@@ -317,24 +339,3 @@ function reTo() {
   window.location.href = "./contact.html";
 }
 
-$(".related-products").owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  autoplay: true,
-  autoplayTimeout: 3000,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    500: {
-      items: 2,
-    },
-    700: {
-      items: 3,
-    },
-    950: {
-      items: 4,
-    },
-  },
-});
