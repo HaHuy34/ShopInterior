@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-body {
+body { 
   font-family: "Inter", sans-serif;
 }
 
@@ -104,6 +104,12 @@ ul.icon-link li.ic:hover .link-main,
   color: red;
   transition: all 0.3s;
 }
+
+
+.home.ic:hover a {
+  color: red;
+}
+
 
 /* CART COUNT */
 .cart {

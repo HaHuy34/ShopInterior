@@ -3,7 +3,7 @@ function loader() {
   document.querySelector(".loader-container").classList.add("fade-out");
 }
 function fadeOut() {
-  setInterval(loader, 1000);
+  setInterval(loader, 500);
 }
 
 window.onload = fadeOut;
@@ -111,6 +111,13 @@ function imageZoom(imgID, resultID) {
   img.parentElement.insertBefore(lens, img);
   /*calculate the ratio between result DIV and lens:*/
   cx = result.offsetWidth / lens.offsetWidth;
+  console.log(
+    "result les widh hright",
+    result.clineWidth,
+    lens.clineWidth,
+    result.clineHeight,
+    lens.clineHeight
+  );
   cy = result.offsetHeight / lens.offsetHeight;
   /*set background properties for the result DIV:*/
   result.style.backgroundImage = "url('" + img.src + "')";
@@ -127,9 +134,14 @@ function imageZoom(imgID, resultID) {
     e.preventDefault();
     /*get the cursor's x and y positions:*/
     pos = getCursorPos(e);
+
+    console.log(pos);
     /*calculate the position of the lens:*/
+
     x = pos.x - lens.offsetWidth / 2;
     y = pos.y - lens.offsetHeight / 2;
+    console.log(x, y);
+
     /*prevent the lens from being positioned outside the image:*/
     if (x > img.width - lens.offsetWidth) {
       x = img.width - lens.offsetWidth;
@@ -149,10 +161,10 @@ function imageZoom(imgID, resultID) {
     /*display what the lens "sees":*/
     result.style.backgroundPosition = "-" + x * cx + "px -" + y * cy + "px";
   }
+  
+  
   function getCursorPos(e) {
-    var a,
-      x = 0,
-      y = 0;
+    var a, x = 0, y = 0;
     e = e || window.event;
     /*get the x and y positions of the image:*/
     a = img.getBoundingClientRect();
@@ -167,7 +179,10 @@ function imageZoom(imgID, resultID) {
 }
 
 // Initiate zoom effect:
-imageZoom("myimage", "myresult");
+$(function() {
+  imageZoom("myimage", "myresult");
+
+})
 
 // Todo: NumberOfAddedShopping
 function decrease() {

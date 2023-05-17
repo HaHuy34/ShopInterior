@@ -275,7 +275,6 @@ btnRadius.forEach((a) => {
 // Todo: Giỏ hàng
 // Lấy icon giỏ hàng
 const cartIcon = document.querySelector(".cart");
-
 // Đính kèm sự kiện click cho icon giỏ hàng
 cartIcon.addEventListener("click", () => {
   // Kiểm tra nếu giỏ hàng có sản phẩm

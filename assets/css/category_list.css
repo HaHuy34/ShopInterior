@@ -104,6 +104,10 @@ ul.icon-link li.ic:hover .link-main,
   transition: all 0.3s;
 }
 
+.home.ic:hover a {
+  color: red;
+}
+
 /* CART COUNT */
 .cart {
   position: relative;
