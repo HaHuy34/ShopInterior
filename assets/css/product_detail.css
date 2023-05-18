@@ -605,11 +605,13 @@ main .container {
 
 #myimage { 
   width: 100%;
+  object-fit: cover;
 }
 
 
 
 .product-img-bottom {
+  /* padding: 2px; */
   width: 100%;
   margin-top: 5px;
   display: flex;
@@ -626,7 +628,7 @@ main .container {
 
 .muli.selected {
 			border-color: black;
-		}
+	}
 
 .muli img {
   width: 100%;
@@ -1386,8 +1388,12 @@ ul.payment li {
 /* END FOOTER */
 /* REPONSIVE */
 /* TABLET */
+.img-zoom-container img {
+    width: 100%;
+    border: 1px solid #ddd;
+  }
 @media (min-width: 993px) {
-  * {
+  /* * {
     box-sizing: border-box;
   }
 
@@ -1418,11 +1424,39 @@ ul.payment li {
     display: none;
   }
 
-  .img-zoom-container:hover .img-zoom-result {
-  display: block;
+} */
+
+  * {
+    box-sizing: border-box;
   }
 
+  .img-zoom-container {
+    position: relative;
+  }
 
+  .img-zoom-lens {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    width: 40px;
+    height: 40px;
+    background-image: url(/assets/images/ImagesFigma/selector.png);
+  }
+
+  .img-zoom-result {
+    position: absolute;
+    top: 0;
+    left: 104%;
+    border: 1px solid #d4d4d4;
+    width: 100%;
+    height: 350px;
+    opacity: 0;
+    overflow: hidden;
+  }
+  
+  .img-zoom-container:hover .img-zoom-result {
+    opacity: 1;
+    overflow: visible;
+  }
 }
 @media (min-width: 900px) and (max-width: 980px) {
 .product-img-bottom {
@@ -1432,7 +1466,7 @@ ul.payment li {
 
 @media (min-width: 900px) and (max-width: 1056px) {
   .product-img-bottom {
-    margin-top: 40px;
+    margin-top: 30px;
   }
   
   h4.prduct-title {
@@ -1934,4 +1968,3 @@ ul.payment li {
     width: 100%;
   }
 }
-

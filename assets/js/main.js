@@ -282,8 +282,13 @@ cartIcon.addEventListener("click", () => {
     // Chuyển hướng đến trang chứa thông tin giỏ hàng
     window.location.href = "./cart.html";
   } else {
-    // Hiển thị thông báo chưa có sản phẩm trong giỏ hàng
-    alert("There is no product in the cart!");
+    // Ẩn hiện thông báo sản phẩm trong cart
+    const notificationDiv = document.querySelector(".nav");
+    const closeNavMain = document.querySelector("#cancle");
+    notificationDiv.style.display = "block";
+    closeNavMain.addEventListener("click", function () {
+      notificationDiv.style.display = "none";
+    });
   }
 });
 

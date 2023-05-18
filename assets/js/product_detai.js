@@ -31,9 +31,6 @@ document.addEventListener("click", function (event) {
 function redirect() {
   window.location.href = "product_detail.html";
 }
-
-
-
 //Todo: Slide Trending Items
 $(".trendings").owlCarousel({
   loop: true,
@@ -95,7 +92,7 @@ function changeBorder(box) {
 }
 // Todo: BG Image
 function changeImage(img) {
-  var mainImage = document.getElementById("myimage");
+  var mainImage = document.querySelector("#myimage");
   mainImage.src = img.src;
 }
 
@@ -111,13 +108,6 @@ function imageZoom(imgID, resultID) {
   img.parentElement.insertBefore(lens, img);
   /*calculate the ratio between result DIV and lens:*/
   cx = result.offsetWidth / lens.offsetWidth;
-  console.log(
-    "result les widh hright",
-    result.clineWidth,
-    lens.clineWidth,
-    result.clineHeight,
-    lens.clineHeight
-  );
   cy = result.offsetHeight / lens.offsetHeight;
   /*set background properties for the result DIV:*/
   result.style.backgroundImage = "url('" + img.src + "')";
@@ -134,14 +124,9 @@ function imageZoom(imgID, resultID) {
     e.preventDefault();
     /*get the cursor's x and y positions:*/
     pos = getCursorPos(e);
-
-    console.log(pos);
     /*calculate the position of the lens:*/
-
     x = pos.x - lens.offsetWidth / 2;
     y = pos.y - lens.offsetHeight / 2;
-    console.log(x, y);
-
     /*prevent the lens from being positioned outside the image:*/
     if (x > img.width - lens.offsetWidth) {
       x = img.width - lens.offsetWidth;
@@ -161,10 +146,10 @@ function imageZoom(imgID, resultID) {
     /*display what the lens "sees":*/
     result.style.backgroundPosition = "-" + x * cx + "px -" + y * cy + "px";
   }
-  
-  
   function getCursorPos(e) {
-    var a, x = 0, y = 0;
+    var a,
+      x = 0,
+      y = 0;
     e = e || window.event;
     /*get the x and y positions of the image:*/
     a = img.getBoundingClientRect();
@@ -178,11 +163,18 @@ function imageZoom(imgID, resultID) {
   }
 }
 
-// Initiate zoom effect:
-$(function() {
-  imageZoom("myimage", "myresult");
+imageZoom("myimage", "myresult");
 
-})
+
+
+
+
+
+
+
+
+
+
 
 // Todo: NumberOfAddedShopping
 function decrease() {

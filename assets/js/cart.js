@@ -55,9 +55,23 @@ const deleteBtn = document.querySelectorAll(".cart-item-actions");
 deleteBtn.forEach(i => {
   i.addEventListener("click", () => {
     const cartItemElement = i.closest(".cart-item");
-    cartItemElement.remove();
-    alert("Do you definitely want to delete this product?");
-    updateCartInfor(); 
+    const totalPrice = document.querySelector(".total-price");
+    const columMainCart = document.querySelector(".colum-main-cart");
+    const formTable = document.querySelector(".form-cart");
+    // Ẩn hiện thông báo sản phẩm trong cart
+    const notificationDiv = document.querySelector(".nav");
+    const closeNavMain = document.querySelector("#cancle");
+    notificationDiv.style.display = "block";
+    closeNavMain.addEventListener("click", function () {
+      notificationDiv.style.display = "none";
+      cartItemElement.remove();
+      updateCartInfor();
+    });
+    // if (formTable.length == 0){
+    //   totalPrice.remove();
+    //   columMainCart.remove();
+    // }
+    updateCartInfor();
   });
 })
 
