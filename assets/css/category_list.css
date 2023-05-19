@@ -531,14 +531,13 @@ p.ct {
   z-index: 999999;
 }
 
-
 .tot {
   display: flex;
   align-items: center;
   background-color: #fff;
   border-radius: 2px;
   padding: 20px 0;
-  min-width: 400px;
+  min-width: 300px;
   max-width: 450px;
   border-left: 4px solid #47d864;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
@@ -984,6 +983,14 @@ span.content-nav {
 /* END CHAIR */
 
 /* FOOTER */
+.widget-info li {
+  cursor: pointer;
+}
+
+.widget-info li {
+  cursor: pointer;
+}
+
 ul li {
   list-style: none;
 }

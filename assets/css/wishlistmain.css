@@ -856,6 +856,10 @@ table a {
 
 /* END MAIN */
 /* FOOTER */
+.widget-info li {
+  cursor: pointer;
+}
+
 .footer {
   margin-top: 60px;
 }

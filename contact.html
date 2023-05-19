@@ -275,6 +275,7 @@
       </div>
   </header>
   <main>
+    <div id="toast"></div>
     <!-- LOADER  -->
     <div class="loader-container">
       <img src="./assets/images/ImagesFigma/Image_Blogs/R.gif" alt="">
@@ -425,19 +426,19 @@
                 <h6 class="widget-title">Useful Links</h6>
                 <ul class="widget-info">
                     <li>
-                        <p>Home</p>
+                        <p onclick="homeLink();">Home</p>
                     </li>
                     <li>
-                        <p>Pages</p>
+                        <p onclick="wishlist();">Pages</p>
                     </li>
                     <li>
-                        <p>Products</p>
+                        <p onclick="categoryList();">Products</p>
                     </li>
                     <li>
-                        <p>Blogs</p>
+                        <p onclick="retTo();">Blogs</p>
                     </li>
                     <li>
-                        <p>Contact Us</p>
+                        <p onclick="reTo();">Contact Us</p>
                     </li>
                 </ul>
               </div>
@@ -446,22 +447,16 @@
           <div class="col-lg-2 col-md-3 col-sm-6">
             <div class="widget-main">
               <div class="widget">
-                <h6 class="widget-title">Useful Links</h6>
+                <h6 class="widget-title">My Account</h6>
                 <ul class="widget-info">
                     <li>
-                        <p>Home</p>
+                        <p onclick="Update();">My Account</p>
                     </li>
                     <li>
-                        <p>Pages</p>
+                        <p onclick="Update();">Orders History</p>
                     </li>
                     <li>
-                        <p>Products</p>
-                    </li>
-                    <li>
-                        <p>Blogs</p>
-                    </li>
-                    <li>
-                        <p>Contact Us</p>
+                        <p  onclick="Update();">Order Tracking</p>
                     </li>
                 </ul>
               </div>

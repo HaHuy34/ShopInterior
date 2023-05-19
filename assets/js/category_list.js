@@ -266,6 +266,10 @@ function dividePage() {
       currentPage--;
       displayProducts();
     }
+    
+    else if (currentPage = 1) {
+      checkCart();
+    }
   });
 
   function numPages() {
@@ -325,7 +329,6 @@ function dividePage() {
     });
     updatePagination();
   }
-
   displayProducts();
 
   function updatePagination() {
@@ -379,8 +382,8 @@ function dividePage() {
     checkCart();
   }
 }
-
 dividePage();
+
 function retTo() {
   window.location.href = "./blog.html";
 }
@@ -393,116 +396,179 @@ function reTo() {
   window.location.href = "./contact.html";
 }
 
-function showContentCart() {
-  // Lấy icon giỏ hàng
-  const cartCount = document.getElementById("cart-count");
-  const cartIcon = document.querySelector(".cart");
-  // Đính kèm sự kiện click cho icon giỏ hàng
-  cartIcon.addEventListener("click", () => {
-    // Kiểm tra nếu giỏ hàng có sản phẩm
-    if (cartCount.textContent !== "0") {
-      // Chuyển hướng đến trang chứa thông tin giỏ hàng
-      window.location.href = "./cart.html";
-    } else {
-      // Ẩn hiện thông báo sản phẩm trong cart
-      const notificationDiv = document.querySelector(".nav");
-      const closeIconNav = document.querySelector("#cancle");
-      notificationDiv.style.display = "block";
-      closeIconNav.addEventListener("click", function () {
-        notificationDiv.style.display = "none";
-      });
-    }
-  });
-}
-showContentCart();
+// function showContentCart() {
+//   // Lấy icon giỏ hàng
+//   const cartCount = document.getElementById("cart-count");
+//   const cartIcon = document.querySelector(".cart");
+//   // Đính kèm sự kiện click cho icon giỏ hàng
+//   cartIcon.addEventListener("click", () => {
+//     // Kiểm tra nếu giỏ hàng có sản phẩm
+//     if (cartCount.textContent !== "0") {
+//       // Chuyển hướng đến trang chứa thông tin giỏ hàng
+//       window.location.href = "./cart.html";
+//     } else {
+//       const main = document.getElementById("toast");
+//       const toast = document.createElement("div");
+//       // Auto remove toast
+//       const autoRemoveId = setTimeout(function () {
+//         main.removeChild(toast);
+//       }, 9000);
+
+//       // Remove toast when clicked
+//       toast.onclick = function (e) {
+//         if (e.target.closest(".toast__close")) {
+//           main.removeChild(toast);
+//           clearTimeout(autoRemoveId);
+//         }
+//       };
+//       toast.classList.add("tot");
+//       toast.innerHTML = `
+//             <div class="toast__icon">
+//               <i class="fas fa-exclamation-circle"></i>
+//             </div>
+//             <div class="toast__body">
+//               <h3 class="toast__title">Sorry!</h3>
+//               <p class="toast__msg">No product has been added yet.</p>
+//             </div>
+//             <div class="toast__close">
+//               <i class="fas fa-times"></i>
+//             </div>
+//         `;
+//       main.appendChild(toast);
+//     }
+//   });
+// }
+// showContentCart();
 
 // Todo: Add To Cart Icon Header
-// function checkCart() {
-//   var addToCartButtons = document.getElementsByClassName("add-to-cart");
-//   var cartCount = document.getElementById("cart-count");
+function checkCart() {
+  var addToCartButtons = document.getElementsByClassName("add-to-cart");
+  var cartCount = document.getElementById("cart-count");
 
-//   var itemsInCart = [];
+  var itemsInCart = [];
 
-//   for (var i = 0; i < addToCartButtons.length; i++) {
-//     addToCartButtons[i].addEventListener("click", function () {
-//       var itemName = this.getAttribute("data-name");
-//       var itemPrice = parseFloat(this.getAttribute("data-price"));
-//       var itemExists = false;
+  for (var i = 0; i < addToCartButtons.length; i++) {
+    addToCartButtons[i].addEventListener("click", function () {
+      var itemName = this.getAttribute("data-name");
+      var itemPrice = parseFloat(this.getAttribute("data-price"));
+      var itemExists = false;
 
-//       // Kiểm tra sản phẩm đã tồn tại trong danh sách hay chưa
-//       for (var j = 0; j < itemsInCart.length; j++) {
-//         if (itemsInCart[j].name === itemName) {
-//           itemExists = true;
-//           break;
-//         }
-//       }
+      // Kiểm tra sản phẩm đã tồn tại trong danh sách hay chưa
+      for (var j = 0; j < itemsInCart.length; j++) {
+        if (itemsInCart[j].name === itemName) {
+          itemExists = true;
+          break;
+        }
+      }
 
-//       // Nếu sản phẩm chưa tồn tại, thêm sản phẩm vào danh sách
-//       if (!itemExists) {
-//         itemsInCart.push({ name: itemName, price: itemPrice });
-//         cartCount.innerHTML = itemsInCart.length;
-//         const main = document.getElementById("toast");
-//         const toast = document.createElement("div");
-//         // Auto remove toast
-//         const autoRemoveId = setTimeout(function () {
-//           main.removeChild(toast);
-//         }, 4000);
+      // Nếu sản phẩm chưa tồn tại, thêm sản phẩm vào danh sách
+      if (!itemExists) {
+        itemsInCart.push({ name: itemName, price: itemPrice });
+        cartCount.innerHTML = itemsInCart.length;
+        const main = document.getElementById("toast");
+        const toast = document.createElement("div");
+        // Auto remove toast
+        const autoRemoveId = setTimeout(function () {
+          main.removeChild(toast);
+        }, 4000);
 
-//         // Remove toast when clicked
-//         toast.onclick = function (e) {
-//           if (e.target.closest(".toast__close")) {
-//             main.removeChild(toast);
-//             clearTimeout(autoRemoveId);
-//           }
-//         };
-//         const delay = (3).toFixed(2);
-//         toast.classList.add("tot");
-//         toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
-//         toast.innerHTML = `
-//           <div class="toast__icon">
-//             <i class="fas fa-check-circle"></i>
-//           </div>
-//           <div class="toast__body">
-//             <h3 class="toast__title">Success!</h3>
-//             <p class="toast__msg">You have added products to the cart.</p>
-//           </div>
-//           <div class="toast__close">
-//             <i class="fas fa-times"></i>
-//           </div>
-//       `;
-//         main.appendChild(toast);
-//       } else {
-//         const main = document.getElementById("toast");
-//         const toast = document.createElement("div");
-//         // Auto remove toast
-//         const autoRemoveId = setTimeout(function () {
-//           main.removeChild(toast);
-//         }, 9000);
+        // Remove toast when clicked
+        toast.onclick = function (e) {
+          if (e.target.closest(".toast__close")) {
+            main.removeChild(toast);
+            clearTimeout(autoRemoveId);
+          }
+        };
+        const delay = (3).toFixed(2);
+        toast.classList.add("tot");
+        toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards`;
+        toast.innerHTML = `
+          <div class="toast__icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="toast__body">
+            <h3 class="toast__title">Success!</h3>
+            <p class="toast__msg">You have added products to the cart.</p>
+          </div>
+          <div class="toast__close">
+            <i class="fas fa-times"></i>
+          </div>
+      `;
+        main.appendChild(toast);
+      } else {
+        const main = document.getElementById("toast");
+        const toast = document.createElement("div");
+        // Auto remove toast
+        const autoRemoveId = setTimeout(function () {
+          main.removeChild(toast);
+        }, 9000);
 
-//         // Remove toast when clicked
-//         toast.onclick = function (e) {
-//           if (e.target.closest(".toast__close")) {
-//             main.removeChild(toast);
-//             clearTimeout(autoRemoveId);
-//           }
-//         };
-//         toast.classList.add("tot");
-//         toast.innerHTML = `
-//         <div class="toast__icon">
-//         <i class="fas fa-exclamation-circle"></i>
-//         </div>
-//         <div class="toast__body">
-//         <h3 class="toast__title">Sorry!</h3>
-//         <p class="toast__msg">The product has existed in the cart.</p>
-//         </div>
-//         <div class="toast__close">
-//         <i class="fas fa-times"></i>
-//         </div>
-//         `;
-//         main.appendChild(toast);
-//       }
-//     });
-//   }
-// }
+        // Remove toast when clicked
+        toast.onclick = function (e) {
+          if (e.target.closest(".toast__close")) {
+            main.removeChild(toast);
+            clearTimeout(autoRemoveId);
+          }
+        };
+        toast.classList.add("tot");
+        toast.innerHTML = `
+        <div class="toast__icon">
+        <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="toast__body">
+        <h3 class="toast__title">Sorry!</h3>
+        <p class="toast__msg">The product has existed in the cart.</p>
+        </div>
+        <div class="toast__close">
+        <i class="fas fa-times"></i>
+        </div>
+        `;
+        main.appendChild(toast);
+      }
+    });
+  }
+}
 
 checkCart();
+function wishlist() {
+  window.location.href = "/wishlistmain.html";
+}
+
+function homeLink() {
+  window.location.href = "/index.html";
+}
+
+function categoryList() {
+  window.location.href = "/category_list.html";
+}
+
+function Update() {
+  const main = document.getElementById("toast");
+  const toast = document.createElement("div");
+  // Auto remove toast
+  const autoRemoveId = setTimeout(function () {
+    main.removeChild(toast);
+  }, 9000);
+
+  // Remove toast when clicked
+  toast.onclick = function (e) {
+    if (e.target.closest(".toast__close")) {
+      main.removeChild(toast);
+      clearTimeout(autoRemoveId);
+    }
+  };
+  toast.classList.add("tot");
+  toast.innerHTML = `
+            <div class="toast__icon">
+              <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="toast__body">
+              <h3 class="toast__title">Sorry!</h3>
+              <p class="toast__msg">This feature is being updated.</p>
+            </div>
+            <div class="toast__close">
+              <i class="fas fa-times"></i>
+            </div>
+        `;
+  main.appendChild(toast);
+}

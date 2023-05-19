@@ -729,6 +729,10 @@ ul.entr-list {
 /* END MAIN */
 
 /* FOOTER */
+.widget-info li {
+  cursor: pointer;
+}
+
 ul li {
   list-style: none;
 }

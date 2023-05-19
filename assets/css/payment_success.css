@@ -845,6 +845,10 @@ section.section {
 /* END MAIN */
 
 /* FOOTER */
+.widget-info li {
+  cursor: pointer;
+}
+
 .footer {
   margin-top: 40px;
 }

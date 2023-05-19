@@ -668,6 +668,11 @@ ul.product-detail li i{
 }
 /* END MAIN */
 /* FOOTER */
+
+.widget-info li {
+  cursor: pointer;
+}
+
 ul li {
   list-style: none;
 }
