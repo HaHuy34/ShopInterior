@@ -45,24 +45,6 @@ close.addEventListener("click", function () {
 });
 
 // Todo: Quantity
-// const minusButton = document.querySelector(".minus-btn");
-// const plusButton = document.querySelector(".plus-btn");
-// const inputField = document.querySelector(".quantity-input");
-
-// minusButton.addEventListener("click", decreaseQuantity);
-// plusButton.addEventListener("click", increaseQuantity);
-
-// function decreaseQuantity() {
-//   let currentValue = parseInt(inputField.value);
-//   if (currentValue > 0) {
-//     inputField.value = currentValue - 1;
-//   }
-// }
-
-// function increaseQuantity() {
-//   let currentValue = parseInt(inputField.value);
-//   inputField.value = currentValue + 1;
-// }
 
 // Todo: Tăng giảm số lượng và cập nhật lại giá
 const minusBtn = document.querySelector(".minus-btn");
@@ -120,4 +102,51 @@ function retTo() {
 
 function reTo() {
   window.location.href = "./contact.html";
+}
+
+function banerLink() {
+  window.location.href = "./product_detail.html";
+}
+
+function wishlist() {
+  window.location.href = "/wishlistmain.html";
+}
+
+function homeLink() {
+  window.location.href = "/index.html";
+}
+
+function categoryList() {
+  window.location.href = "/category_list.html";
+}
+
+function Update() {
+  const main = document.getElementById("toast");
+  const toast = document.createElement("div");
+  // Auto remove toast
+  const autoRemoveId = setTimeout(function () {
+    main.removeChild(toast);
+  }, 9000);
+
+  // Remove toast when clicked
+  toast.onclick = function (e) {
+    if (e.target.closest(".toast__close")) {
+      main.removeChild(toast);
+      clearTimeout(autoRemoveId);
+    }
+  };
+  toast.classList.add("tot");
+  toast.innerHTML = `
+            <div class="toast__icon">
+              <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="toast__body">
+              <h3 class="toast__title">Sorry!</h3>
+              <p class="toast__msg">This feature is being updated.</p>
+            </div>
+            <div class="toast__close">
+              <i class="fas fa-times"></i>
+            </div>
+        `;
+  main.appendChild(toast);
 }

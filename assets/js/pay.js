@@ -236,3 +236,7 @@ function Update() {
         `;
   main.appendChild(toast);
 }
+
+function banerLink() {
+  window.location.href = "./product_detail.html";
+}

@@ -592,6 +592,35 @@ p.ct {
   color: rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
+
+.cart {
+  position: relative;
+}
+
+.mycart {
+  animation: bell 1s infinite;
+}
+
+@keyframes bell {
+  0% {
+    rotate: 0deg;
+  }
+  10%{
+    rotate: 10deg;
+  }
+  30% {
+    rotate: -10deg;
+  }
+  45%{
+    rotate: 5deg;
+  }
+  55% {
+    rotate: -5deg;
+  }
+  60%{
+    rotate: 0deg;
+  }
+}
 /* END HEADER */
 /* PRODUCTS */
 

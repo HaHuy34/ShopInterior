@@ -387,3 +387,22 @@ function Update() {
         `;
   main.appendChild(toast);
 }
+
+function banerLink() {
+  window.location.href = "./product_detail.html";
+}
+
+
+// Todo: Thông báo animation khi có sản phẩm cart
+function navCartAnimation() {
+  const cart = document.querySelector(".cart");
+  const spanElement = document.getElementById("cart-count");
+  if (parseInt(spanElement.innerHTML) > 0) {
+    cart.classList.add("mycart");
+  } else {
+    cart.classList.remove("mycart");
+  }
+}
+
+// Gọi function navCartAnimation() khi giá trị trong cart-count thay đổi
+document.getElementById("cart-count").addEventListener("DOMSubtreeModified", navCartAnimation);

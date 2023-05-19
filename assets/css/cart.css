@@ -782,6 +782,7 @@ span.content-nav {
 }
 
 .btn-return-shop {
+  border: 1px solid red;
   background-color: #FF0000;
   color: #fff;
   font-size: 20px;
