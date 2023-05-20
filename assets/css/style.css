@@ -645,7 +645,7 @@ p.ct {
   width: 50px;
   height: 1px;
   background-color: #ff324d;
-  bottom: 22px;
+  bottom: 0px;
   right: 0;
   margin: 0 auto;
 }
@@ -654,7 +654,6 @@ p.ct {
   position: relative;
   text-align: center !important;
   padding: 0 0 17px 0;
-  height: 450px;
   width: 100%;
   border: 1px solid #d4d1d1;
   border-radius: 7px;
@@ -666,26 +665,20 @@ p.ct {
 .product-img {
   position: relative;
   width: 100%;
-  height: 75%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 100%;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.product-img img {
-  height: 101%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 .product-img::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%;
   top: 0;
   right: 0;
   left: 0;
@@ -697,13 +690,12 @@ p.ct {
 }
 
 .product-action-box {
-  position: relative;
+  position: absolute;
   width: 60px;
   height: 60px;
-  top: 8%;
-  left: 0;
-  right: 0;
-  transform: translate(0, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2;
   display: flex;
@@ -1375,7 +1367,7 @@ ul.payment li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 25px 85px;
+  padding: 15px 67px;
   background-color: #fff;
   max-width: 400px;
   background-image: url(/assets/images/ImagesFigma/logoico.png);
@@ -1387,7 +1379,7 @@ ul.payment li {
 }
 
 .fllow-box h3 {
-  font-size: 35px;
+  font-size: 32px;
   font-weight: 600;
 }
 
@@ -1635,6 +1627,41 @@ ul.payment li {
   }
 }
 
+@media (min-width: 400px) and (max-width: 500px) {
+  .products-list .col-6 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  h6.pro-title {
+    font-size: 16px;
+  }
+
+  span.price {
+    font-size: 15px;
+  }
+
+  .product-price del {
+    font-size: 13px;
+  }
+
+  .rating-wrap {
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .products-list .col-6 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
 @media (min-width: 350px) and (max-width: 500px) {
   .logomain {
     margin: 0;
@@ -1731,7 +1758,54 @@ ul.payment li {
   }
 }
 
+@media (min-width: 700px) and (max-width: 992px) {
+  .fllow-box {
+    padding: 10px 70px;
+  }
+
+  .fllow-box h3 {
+    font-size: 29px;
+  }
+
+  .fllow-box span {
+    font-size: 16px;
+  }
+
+}
+
+@media (min-width: 550px) and (max-width: 700px) {
+  .fllow-box {
+    padding: 7px 50px;
+    background-size: 65px;
+
+  }
+
+  .fllow-box h3 {
+    font-size: 27px;
+  }
+
+  .fllow-box span {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 550px) {
+  .fllow-box {
+    padding: 5px 40px;
+    background-size: 60px;
+  }
+
+  .fllow-box h3 {
+    font-size: 25px;
+  }
+
+  .fllow-box span {
+    font-size: 13px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 992px) {
+
   #scroll-hea {
     padding-right: 0;
     width: 100%;
@@ -1877,23 +1951,6 @@ ul.payment li {
 
 @media screen and (max-width: 768px) {
 
-  .fllow-box {
-    position: absolute;
-    z-index: 9999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 15px 75px;
-    background-color: #fff;
-    max-width: 400px;
-    background-image: url(/assets/images/ImagesFigma/logoico.png);
-    background-repeat: no-repeat;
-    background-size: 80px;
-    background-position: center;
-    border-radius: 80px;
-    text-align: center; 
-  }
-
   .container {
     max-width: 700px;
   }
@@ -2037,12 +2094,6 @@ ul.payment li {
     display: none;
   }
 
-  .products-list .col-6 {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-  }
-
   .col-sm-6 {
     flex: 0 0 auto;
     width: 50%;
@@ -2058,32 +2109,6 @@ ul.payment li {
 }
 
 @media screen and (max-width: 500px) {
-  .fllow-box {
-    position: absolute;
-    z-index: 9999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 12px 55px;
-    background-color: #fff;
-    max-width: 400px;
-    background-image: url(/assets/images/ImagesFigma/logoico.png);
-    background-repeat: no-repeat;
-    background-size: 80px;
-    background-position: center;
-    border-radius: 80px;
-    text-align: center;
-  }
-
-  .fllow-box h3 {
-    font-size: 31px;
-  }
-
-  .fllow-box span {
-    font-size: 17px;
-  }
-
-
   .logo {
     width: 22%;
   }
@@ -2095,12 +2120,6 @@ ul.payment li {
 
   .icons {
     width: 27%;
-  }
-
-  .products-list .col-6 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
   }
 
   .gutters .col-12 {

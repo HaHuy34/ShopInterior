@@ -6,6 +6,39 @@ account.addEventListener("click", function () {
   formLogin.style.visibility = "visible";
 });
 
+//Todo: Background-image Cart
+function backGroundImageCart() {
+  // Lấy tất cả các phần tử .product-img
+  const productImages = document.querySelectorAll(".product-img");
+
+  // Tạo một mảng chứa các URL hình ảnh mới (tùy thuộc vào nhu cầu của bạn)
+  const imageUrls = [
+    "url(./assets/images/ImagesFigma/furniture_img1.jpg)",
+    "url(./assets/images/ImagesFigma/furniture_img2.jpg)",
+    "url(./assets/images/ImagesFigma/furniture_img3.jpg)",
+    "url(./assets/images/ImagesFigma/furniture_img4.jpg)",
+    "url(./assets/images/ImagesFigma/furniture_img5.jpg)",
+    "url(./assets/images/ImagesFigma/furniture_img6.jpg)",
+    "url(./assets/images/ImagesFigma/furniture_img7.jpg)",
+    "url(./assets/images/ImagesFigma/furniture_img8.jpg)",
+    "url(./assets/images/ImagesFigma/furniture10.jpg)",
+    "url(./assets/images/ImagesFigma/furniture5_3.jpg)",
+    "url(./assets/images/ImagesFigma/furniture7-430.jpg)",
+    "url(./assets/images/ImagesFigma/furniture5_5.jpg)",
+    "url(./assets/images/ImagesFigma/furniture39.jpg)",
+    "url(./assets/images/ImagesFigma/product-accessories-12.jpg)",
+    "url(./assets/images/ImagesFigma/product-furniture1.jpg)",
+  ];
+
+  // Sử dụng forEach để gán background-image cho mỗi phần tử .product-img
+  productImages.forEach((productImg, index) => {
+    const imageUrl = imageUrls[index % imageUrls.length]; // Lấy URL hình ảnh tương ứng dựa trên vị trí trong mảng
+    productImg.style.backgroundImage = imageUrl; // Gán background-image
+  });
+}
+
+backGroundImageCart();
+
 //Todo: Close form
 const closeLogin = document.querySelector(".close-login");
 closeLogin.addEventListener("click", function () {
@@ -117,10 +150,10 @@ $(".trending-items").owlCarousel({
     0: {
       items: 1,
     },
-    500: {
+    400: {
       items: 2,
     },
-    767: {
+    768: {
       items: 3,
     },
     992: {
