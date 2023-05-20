@@ -407,13 +407,16 @@ h2.muli {
   padding: 0;
 }
 
+/* #col:nth-child(3) {
+  padding: 0 0 0 30px;
+} */
+
 .content-main {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  padding: 30px;
+  padding: 30px 0 30px 30px;
   border: 1px solid #e2dcdc;
 }
 
@@ -645,7 +648,7 @@ p.ct {
   width: 50px;
   height: 1px;
   background-color: #ff324d;
-  bottom: 0px;
+  bottom: 22px;
   right: 0;
   margin: 0 auto;
 }
@@ -1389,11 +1392,15 @@ ul.payment li {
   color: #757993;
 }
 
-@media screen and (width: 992px) {
+@media (width: 992px) {
   .gutters .col-12:nth-child(3) {
-    border-top: 1px solid #e2dcdc;
-    border-right: 0;
+    border-top: 1px solid #e2dcdc !important;
+    border-left: 0px !important;
   }
+
+  .gutters .col-12:nth-child(4) {
+    border-top: 1px solid #e2dcdc !important;
+  } 
 }
 
 @media (min-width: 850px) and (max-width: 992px) {
@@ -1627,6 +1634,24 @@ ul.payment li {
   }
 }
 
+/* @media (min-width: 850px) and (max-width: 992px) {
+  .content-main {
+    padding: 30px 0 30px 100px;
+  }
+} */
+
+@media (min-width: 730px) and (max-width: 850px) {
+  .content-main {
+    padding: 30px 0 30px 80px;
+  }
+}
+
+@media (min-width: 680px) and (max-width: 730px) {
+  .content-main {
+    padding: 30px 0 30px 50px;
+  }
+}
+
 @media (min-width: 400px) and (max-width: 500px) {
   .products-list .col-6 {
     width: 50%;
@@ -1777,7 +1802,7 @@ ul.payment li {
   .fllow-box {
     padding: 7px 50px;
     background-size: 65px;
-
+    left: 54%;
   }
 
   .fllow-box h3 {
@@ -1789,10 +1814,27 @@ ul.payment li {
   }
 }
 
-@media (min-width: 350px) and (max-width: 550px) {
+@media (min-width: 430px) and (max-width: 550px) {
   .fllow-box {
     padding: 5px 40px;
     background-size: 60px;
+    left: 58%;
+  }
+
+  .fllow-box h3 {
+    font-size: 25px;
+  }
+
+  .fllow-box span {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 430px) {
+  .fllow-box {
+    padding: 5px 40px;
+    background-size: 60px;
+    left: 60%;
   }
 
   .fllow-box h3 {
@@ -1950,11 +1992,6 @@ ul.payment li {
 }
 
 @media screen and (max-width: 768px) {
-
-  .container {
-    max-width: 700px;
-  }
-
   .header-top {
     position: relative;
     display: flex;
@@ -2109,6 +2146,22 @@ ul.payment li {
 }
 
 @media screen and (max-width: 500px) {
+  .main-products {
+    margin-top: 30px;
+  }
+
+  .add-to-cart {
+    padding: 7px 0;
+  }
+
+  span.adtoca {
+    font-size: 14px;
+  }
+
+  .shipping-info {
+    display: none;
+  }
+
   .logo {
     width: 22%;
   }

@@ -20,7 +20,6 @@
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css" />
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
   <!-- Import style.css -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Shop Interior</title>
 </head>
@@ -361,14 +360,14 @@
       <div class="main-products">
         <div class="container">
           <div class="row products-title">
-            <div class="col-md-6 text-center" data-aos="fade-up">
-              <h2>Exclusive Products</h2>
+            <div class="col-md-6 text-center">
+              <h2 class="animation-title">Exclusive Products</h2>
             </div>
           </div>
           
           <div class="row products-list">
-            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-right">
-              <div class="card-item">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
                       <div class="pr-dc">
@@ -403,8 +402,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-left">
-              <div class="card-item">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
                       <div class="pr-dc">
@@ -440,8 +439,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-right">
-              <div class="card-item">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
                       <div class="pr-dc">
@@ -477,8 +476,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-left">
-              <div class="card-item">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
                       <div class="pr-dc">
@@ -514,8 +513,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-right">
-              <div class="card-item">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
                       <div class="pr-dc">
@@ -551,8 +550,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-left">
-              <div class="card-item">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
                       <div class="pr-dc">
@@ -588,8 +587,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-right">
-              <div class="card-item">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
                       <div class="pr-dc">
@@ -625,8 +624,8 @@
                 </div>
               </div>
             </div>  
-            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-left">
-              <div class="card-item">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
                       <div class="pr-dc">
@@ -665,7 +664,7 @@
           </div>
           <!-- START SECTION BANNER -->
           <div class="banner">
-              <div class="single-banner-01" data-aos="flip-left">
+              <div class="single-banner-01">
                   <img src="./assets/images/ImagesFigma/furniture_banner1.jpg" alt="">
                   <div class="info1">
                       <h5 class="single-bn-title1">Super Sale</h5>
@@ -673,7 +672,7 @@
                       <a href="#" class="single-bn-link" onclick="banerLink()">Shop Now</a>
                   </div>
               </div>
-              <div class="single-banner-02" data-aos="flip-right">
+              <div class="single-banner-02">
                   <img src="./assets/images/ImagesFigma/furniture_banner2.jpg" alt="">
                   <div class="info2">
                       <h5 class="single-bn-title1">Super Sale</h5>
@@ -683,13 +682,13 @@
               </div>
           </div>
           <div class="row products-title">
-            <div class="col-md-6 text-center" data-aos="fade-up">
-              <h2>Trending Items</h2>
+            <div class="col-md-6 text-center">
+              <h2 class="animation-title">Trending Items</h2>
             </div>
           </div>
 
           <div class="trending-items owl-carousel owl-theme">
-              <div class="item" data-aos="fade-right">
+              <div class="item">
                 <div class="card-item">
                   <div class="product-img">
 
@@ -727,7 +726,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item" data-aos="fade-left">
+              <div class="item">
                 <div class="card-item">
                   <div class="product-img">
 
@@ -765,7 +764,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item" data-aos="fade-right">
+              <div class="item">
                 <div class="card-item">
                   <div class="product-img">
 
@@ -803,7 +802,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item" data-aos="fade-left">
+              <div class="item">
                 <div class="card-item">
                   <div class="product-img">
 
@@ -841,7 +840,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item" data-aos="fade-right">
+              <div class="item">
                 <div class="card-item">
                   <div class="product-img">
 
@@ -879,7 +878,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item" data-aos="fade-left">
+              <div class="item">
                 <div class="card-item">
                   <div class="product-img">
 
@@ -917,7 +916,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item" data-aos="fade-right">
+              <div class="item">
                 <div class="card-item">
                   <div class="product-img">
 
@@ -955,7 +954,7 @@
                   </div>
                 </div>
               </div>
-              <div class="item" data-aos="fade-right">
+              <div class="item">
                 <div class="card-item">
                   <div class="product-img">
 
@@ -1008,22 +1007,22 @@
                 <span>@huyn11677</span>
               </div>
               <div class="slide-banner-image owl-carousel owl-theme">
-                <div class="item" data-aos="zoom-out-right">
+                <div class="item">
                   <img src="./assets/images/ImagesFigma/furniture_insta1.jpg" alt="">
                 </div>
-                <div class="item" data-aos="zoom-out-left">
+                <div class="item">
                   <img src="./assets/images/ImagesFigma/furniture_insta2.jpg" alt="">
                 </div>
-                <div class="item" data-aos="zoom-out-right">
+                <div class="item">
                   <img src="./assets/images/ImagesFigma/furniture_insta3.jpg" alt="">
                 </div>
-                <div class="item" data-aos="zoom-out-left">
+                <div class="item">
                   <img src="./assets/images/ImagesFigma/furniture_insta4.jpg" alt="">
                 </div>
-                <div class="item" data-aos="zoom-out-right">
+                <div class="item">
                   <img src="./assets/images/ImagesFigma/furniture_insta5.jpg" alt="">
                 </div>
-                <div class="item" data-aos="zoom-out-left">
+                <div class="item">
                   <img src="./assets/images/ImagesFigma/furniture_insta6.jpg" alt="">
                 </div>
               </div>
@@ -1075,7 +1074,7 @@
 
       <!-- COOPERATE IMAGE -->
       <div class="container">
-        <div class="cooperate-main owl-carousel owl-theme" data-aos="fade-up">
+        <div class="cooperate-main owl-carousel owl-theme">
           <div class="item">
             <img src="./assets/images/ImagesFigma/cl_logo1.png" alt="">
           </div>
@@ -1247,10 +1246,7 @@
   <!-- Import js bootstrap -->
   <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Import main.js -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="./assets/js/main.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </body>
 </html>

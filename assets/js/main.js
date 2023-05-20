@@ -1,3 +1,31 @@
+//Todo: Animatiion Scroll
+ ScrollReveal({
+   reset: true,
+   distance: '60px',
+   duration: 2000,
+   delay: 400 
+  });
+ScrollReveal().reveal(".animation-title", { delay: 50, origin: "bottom"});
+ScrollReveal().reveal("#animation-cartitems", { delay: 50, origin: "bottom", interval: 50 });
+ScrollReveal().reveal(".single-banner-01", {
+  delay: 50,
+  origin: "top",
+});
+
+ScrollReveal().reveal(".single-banner-02", {
+  delay: 50,
+  origin: "bottom",
+});
+
+ScrollReveal().reveal(".trending-items", { delay: 50, origin: "left" });
+ScrollReveal().reveal(".fllow-box", { delay: 50, origin: "bottom" });
+ScrollReveal().reveal(".cooperate-main", { delay: 50, origin: "bottom" });
+
+
+
+
+
+
 //Todo: hide and show form login
 const account = document.querySelector(".account");
 const formLogin = document.querySelector(".form-login");
