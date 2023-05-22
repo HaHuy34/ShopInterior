@@ -3,8 +3,9 @@
    reset: true,
    distance: '60px',
    duration: 2000,
-   delay: 400 
+   delay: 400
   });
+
 ScrollReveal().reveal(".animation-title", { delay: 50, origin: "bottom"});
 ScrollReveal().reveal("#animation-cartitems", { delay: 50, origin: "bottom", interval: 50 });
 ScrollReveal().reveal(".single-banner-01", {
