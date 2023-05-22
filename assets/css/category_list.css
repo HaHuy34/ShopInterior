@@ -635,7 +635,7 @@ select {
   position: relative;
   text-align: center !important;
   padding: 0 0 17px 0;
-  height: 450px;
+  /* height: 450px; */
   width: 100%;
   border: 1px solid #d4d1d1;
   border-radius: 7px;
@@ -647,26 +647,28 @@ select {
 .product-img {
   position: relative;
   width: 100%;
-  height: 75%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 100%;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.product-img img {
+/* .product-img img {
   height: 101%;
   width: 100%;
   position: absolute;
   top: 0;
   right: 0;
-}
+} */
 
 .product-img::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%;
   top: 0;
   right: 0;
   left: 0;
@@ -678,13 +680,12 @@ select {
 }
 
 .product-action-box {
-  position: relative;
+  position: absolute;
   width: 60px;
   height: 60px;
-  top: 8%;
-  left: 0;
-  right: 0;
-  transform: translate(0, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   z-index: 2;
   display: flex;
@@ -1409,9 +1410,6 @@ ul.payment li {
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    max-width: 700px;
-  }
 
   .header-top {
     position: relative;
@@ -1571,11 +1569,70 @@ ul.payment li {
   }
 }
 
-@media screen and (max-width: 500px) {
-  .container {
-    max-width: 400px;
+@media (min-width: 400px) and (max-width: 500px) {
+  .products-list .col-6 {
+    width: 50%;
   }
 
+  h6.pro-title {
+    font-size: 15px;
+  }
+
+  span.price {
+    font-size: 15px;
+  }
+
+  .rating-wrap {
+    font-size: 12px;
+  }
+
+  .pr-dc {
+    width: 53px;
+    height: 53px;
+  }
+
+  a.detail-product i {
+    font-size: 20px;
+  }
+
+  .add-to-cart {
+    padding: 4px 0;
+  }
+
+  span.adtoca {
+    font-size: 14px;
+  }
+}  
+
+@media screen and (max-width: 400px) {
+  .products-list .col-6 {
+    width: 100%;
+  }
+
+  .add-to-cart {
+    width: 51%;
+  }
+
+  span.adtoca {
+    font-size: 15px;
+  }
+}  
+
+@media (min-width: 577px) and (max-width: 680px) {
+  h6.pro-title {
+    font-size: 15px;
+  }
+
+  span.price {
+    font-size: 15px;
+  }
+
+  .rating-wrap {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .logo {
     width: 22%;
   }
@@ -1587,12 +1644,6 @@ ul.payment li {
 
   .icons {
     width: 27%;
-  }
-
-  .products-list .col-6 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
   }
 
   .gutters .col-12 {

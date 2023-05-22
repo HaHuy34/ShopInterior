@@ -283,13 +283,10 @@ function dividePage() {
     let pageProducts = productMain.slice(startIndex, endIndex);
     pageProducts.forEach((product) => {
       let productDiv = document.createElement("div");
-      productDiv.classList.add("col-6", "col-md-4", "col-lg-3");
+      productDiv.classList.add("col-6", "col-sm-4", "col-md-4", "col-lg-3");
       productDiv.innerHTML = `
       <div class="card-item">
-              <div class="product-img">
-                  <a href="#">
-                    <img src="${product.image}" alt="">
-                  </a>
+              <div class="product-img" style="background-image: url(${product.image});">
                   <div class="product-action-box">
                     <div class="pr-dc">
                       <a href="#" class="detail-product" onclick="redirect()">

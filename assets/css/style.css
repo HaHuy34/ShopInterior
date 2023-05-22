@@ -1824,11 +1824,29 @@ ul.payment li {
   }
 }
 
-@media (min-width: 350px) and (max-width: 430px) {
+@media (min-width: 350px) and (max-width: 390px) {
+  .fllow-box {
+    padding: 5px 40px;
+    background-size: 60px;
+    left: 66%;
+    top: 57%;
+  }
+
+  .fllow-box h3 {
+    font-size: 19px;
+  }
+
+  .fllow-box span {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 430px) {
   .fllow-box {
     padding: 5px 40px;
     background-size: 60px;
     left: 60%;
+    top: 55%;
   }
 
   .fllow-box h3 {
