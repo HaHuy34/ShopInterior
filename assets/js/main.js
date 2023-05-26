@@ -23,10 +23,6 @@ ScrollReveal().reveal(".fllow-box", { delay: 50, origin: "bottom" });
 ScrollReveal().reveal(".cooperate-main", { delay: 50, origin: "bottom" });
 
 
-
-
-
-
 //Todo: hide and show form login
 const account = document.querySelector(".account");
 const formLogin = document.querySelector(".form-login");
@@ -34,6 +30,18 @@ account.addEventListener("click", function () {
   formLogin.style.opacity = "1";
   formLogin.style.visibility = "visible";
 });
+
+// Todo: 
+document.getElementById("nextas").onclick = function () {
+  let lists = document.querySelectorAll(".itemas");
+  document.getElementById("slide").appendChild(lists[0]);
+};
+document.getElementById("prevas").onclick = function () {
+  let lists = document.querySelectorAll(".itemas");
+  document.getElementById("slide").prepend(lists[lists.length - 1]);
+};
+
+  
 
 //Todo: Background-image Cart
 function backGroundImageCart() {
@@ -57,6 +65,7 @@ function backGroundImageCart() {
     "url(./assets/images/ImagesFigma/furniture39.jpg)",
     "url(./assets/images/ImagesFigma/product-accessories-12.jpg)",
     "url(./assets/images/ImagesFigma/product-furniture1.jpg)",
+    "url(./assets/images/ImagesFigma/img-pro-01.webp)",
   ];
 
   // Sử dụng forEach để gán background-image cho mỗi phần tử .product-img
@@ -149,24 +158,24 @@ close.addEventListener("click", function () {
 });
 
 // Todo: Slider banner header
-$(".slider-banner-header").owlCarousel({
-  loop: true,
-  margin: 10,
-  nav: true,
-  autoplay: true,
-  autoplayTimeout: 3000,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 1,
-    },
-    1000: {
-      items: 1,
-    },
-  },
-});
+// $(".slider-banner-header").owlCarousel({
+//   loop: true,
+//   margin: 10,
+//   nav: true,
+//   // autoplay: true,
+//   // autoplayTimeout: 3000,
+//   responsive: {
+//     0: {
+//       items: 1,
+//     },
+//     600: {
+//       items: 1,
+//     },
+//     1000: {
+//       items: 1,
+//     },
+//   },
+// });
 
 //Todo: Slide Trending Items
 $(".trending-items").owlCarousel({
@@ -465,6 +474,5 @@ function navCartAnimation() {
     cart.classList.remove("mycart");
   }
 }
-
 // Gọi function navCartAnimation() khi giá trị trong cart-count thay đổi
 document.getElementById("cart-count").addEventListener("DOMSubtreeModified", navCartAnimation);

@@ -4,7 +4,7 @@ function loader() {
 }
 
 function fadeOut() {
-  setInterval(loader, 1000);
+  setInterval(loader, 100);
 }
 window.onload = fadeOut;
 
@@ -356,6 +356,23 @@ function dividePage() {
       }
       pageLink.addEventListener("click", function () {
         currentPage = i;
+        let scrollDistance;
+        // Sử dụng media queries để xác định kích thước màn hình và khoảng cách cuộn tương ứng
+        if (window.matchMedia("(min-width: 1024px)").matches) {
+          // Màn desktop
+          scrollDistance = 650;
+        } else if (window.matchMedia("(min-width: 768px)").matches) {
+          // Tablet
+          scrollDistance = 750;
+        } else {
+          // Mobile
+          scrollDistance = 530;
+        }
+
+        window.scrollTo({
+          top: scrollDistance,
+          behavior: "smooth",
+        });
         displayProducts();
       });
       pagination.appendChild(pageLink);

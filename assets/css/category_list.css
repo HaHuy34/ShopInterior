@@ -1616,7 +1616,17 @@ ul.payment li {
   span.adtoca {
     font-size: 15px;
   }
-}  
+} 
+
+@media screen and (max-width: 577px) {
+  div#row {
+    display: none;
+  }
+
+  .main-products {
+    margin-top: 42px;
+  }
+}
 
 @media (min-width: 577px) and (max-width: 680px) {
   h6.pro-title {
