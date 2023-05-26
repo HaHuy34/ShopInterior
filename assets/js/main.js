@@ -31,11 +31,17 @@ account.addEventListener("click", function () {
   formLogin.style.visibility = "visible";
 });
 
-// Todo: 
+// Todo: Slide Banner Images
+// const itemas = document.getElementById("item-cli");
+// itemas.addEventListener("click", function(){
+//   alert("a");
+// })
+
 document.getElementById("nextas").onclick = function () {
   let lists = document.querySelectorAll(".itemas");
   document.getElementById("slide").appendChild(lists[0]);
 };
+
 document.getElementById("prevas").onclick = function () {
   let lists = document.querySelectorAll(".itemas");
   document.getElementById("slide").prepend(lists[lists.length - 1]);
@@ -117,7 +123,7 @@ function loader() {
 }
 
 function fadeOut() {
-  setInterval(loader, 1000);
+  setInterval(loader, 100);
 }
 
 window.onload = fadeOut;
