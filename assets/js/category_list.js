@@ -1,3 +1,69 @@
+// Todo: Banner Header Top
+document.getElementById("nextas").onclick = function () {
+  let lists = document.querySelectorAll(".itemas");
+  document.getElementById("slide").appendChild(lists[0]);
+};
+
+document.getElementById("prevas").onclick = function () {
+  let lists = document.querySelectorAll(".itemas");
+  document.getElementById("slide").prepend(lists[lists.length - 1]);
+};
+
+// Todo: Block LogIn
+const Account = document.querySelector(".account");
+const showAccount = document.querySelector(".bg-form");
+const signUps = document.querySelector(".signup");
+const logIns = document.querySelector(".login");
+const closeAccount = document.querySelector("#close-form");
+const closeAcc = document.querySelector(".cl-fo");
+Account.addEventListener("click", function () {
+  showAccount.style.display = "block";
+});
+
+// Todo: Hide Account
+closeAccount.addEventListener("click", function () {
+  showAccount.style.display = "none";
+
+});
+
+closeAcc.addEventListener("click", function () {
+  showAccount.style.display = "none";
+});
+
+function signUp() {
+  logIns.style.display = "none";
+  signUps.style.display = "block";
+}
+
+function logIn() {
+  logIns.style.display = "block";
+  signUps.style.display = "none";
+}
+
+// Todo: Hide Show Notification
+const btnAccept = document.querySelector(".accept-noti");
+const boxNotifi = document.querySelector(".notification-account");
+btnAccept.addEventListener("click", function () {
+  boxNotifi.style.display = "none";
+});
+
+function subLog() {
+  var fullname = document.querySelectorAll("#fullname").value;
+  var email = document.querySelectorAll("#email").value;
+  if (fullname !== "" && email !== "") {
+    boxNotifi.style.display = "block";
+    showAccount.style.display = "none";
+  }
+}
+
+function subSign() {
+  var fullname = document.querySelectorAll("#fullname").value;
+  var email = document.querySelectorAll("#email").value;
+  if (fullname !== "" && email !== "") {
+    boxNotifi.style.display = "block";
+    showAccount.style.display = "none";
+  }
+}
 // Todo: Loader
 function loader() {
   document.querySelector(".loader-container").classList.add("fade-out");
@@ -265,9 +331,7 @@ function dividePage() {
     if (currentPage > 1) {
       currentPage--;
       displayProducts();
-    }
-    
-    else if (currentPage = 1) {
+    } else if ((currentPage = 1)) {
       checkCart();
     }
   });
@@ -286,7 +350,9 @@ function dividePage() {
       productDiv.classList.add("col-6", "col-sm-4", "col-md-4", "col-lg-3");
       productDiv.innerHTML = `
       <div class="card-item">
-              <div class="product-img" style="background-image: url(${product.image});">
+              <div class="product-img" style="background-image: url(${
+                product.image
+              });">
                   <div class="product-action-box">
                     <div class="pr-dc">
                       <a href="#" class="detail-product" onclick="redirect()">

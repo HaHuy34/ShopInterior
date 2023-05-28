@@ -1,35 +1,32 @@
-//Todo: Animatiion Scroll
- ScrollReveal({
-   reset: true,
-   distance: '60px',
-   duration: 2000,
-   delay: 400
-  });
+// //Todo: Animatiion Scroll
+// ScrollReveal({
+//   reset: true,
+//   distance: "60px",
+//   duration: 2000,
+//   delay: 400,
+// });
 
-ScrollReveal().reveal(".animation-title", { delay: 50, origin: "bottom"});
-ScrollReveal().reveal("#animation-cartitems", { delay: 50, origin: "bottom", interval: 50 });
-ScrollReveal().reveal(".single-banner-01", {
-  delay: 50,
-  origin: "top",
-});
+// ScrollReveal().reveal(".animation-title", { delay: 50, origin: "bottom" });
+// ScrollReveal().reveal("#animation-cartitems", {
+//   delay: 50,
+//   origin: "bottom",
+//   interval: 50,
+// });
+// ScrollReveal().reveal(".single-banner-01", {
+//   delay: 50,
+//   origin: "top",
+// });
 
-ScrollReveal().reveal(".single-banner-02", {
-  delay: 50,
-  origin: "bottom",
-});
+// ScrollReveal().reveal(".single-banner-02", {
+//   delay: 50,
+//   origin: "bottom",
+// });
 
-ScrollReveal().reveal(".trending-items", { delay: 50, origin: "left" });
-ScrollReveal().reveal(".fllow-box", { delay: 50, origin: "bottom" });
-ScrollReveal().reveal(".cooperate-main", { delay: 50, origin: "bottom" });
-
+// ScrollReveal().reveal(".trending-items", { delay: 50, origin: "left" });
+// ScrollReveal().reveal(".fllow-box", { delay: 50, origin: "bottom" });
+// ScrollReveal().reveal(".cooperate-main", { delay: 50, origin: "bottom" });
 
 //Todo: hide and show form login
-const account = document.querySelector(".account");
-const formLogin = document.querySelector(".form-login");
-account.addEventListener("click", function () {
-  formLogin.style.opacity = "1";
-  formLogin.style.visibility = "visible";
-});
 
 // Todo: Slide Banner Images
 // const itemas = document.getElementById("item-cli");
@@ -46,8 +43,6 @@ document.getElementById("prevas").onclick = function () {
   let lists = document.querySelectorAll(".itemas");
   document.getElementById("slide").prepend(lists[lists.length - 1]);
 };
-
-  
 
 //Todo: Background-image Cart
 function backGroundImageCart() {
@@ -80,42 +75,63 @@ function backGroundImageCart() {
     productImg.style.backgroundImage = imageUrl; // Gán background-image
   });
 }
-
 backGroundImageCart();
 
-//Todo: Close form
-const closeLogin = document.querySelector(".close-login");
-closeLogin.addEventListener("click", function () {
-  formLogin.style.opacity = "0";
-  formLogin.style.visibility = "hidden";
+// Todo: Block LogIn
+const Account = document.querySelector(".account");
+const showAccount = document.querySelector(".bg-form");
+const signUps = document.querySelector(".signup");
+const logIns = document.querySelector(".login");
+const closeAccount = document.querySelector("#close-form");
+const closeAcc = document.querySelector(".cl-fo");
+Account.addEventListener("click", function () {
+  showAccount.style.display = "block";
 });
 
-// Todo: Functions are being added
-const addLoginFun = document.querySelector(".btn-login");
-const valueEmail = document.querySelector(".value-email");
-const valuePass = document.querySelector(".value-password");
-addLoginFun.addEventListener("click", function(){
-  alert("This feature is being updated!");
-  formLogin.style.opacity = "0";
-  formLogin.style.visibility = "hidden";
-})
+// Todo: Hide Account
+closeAccount.addEventListener("click", function () {
+  showAccount.style.display = "none";
 
-// Todo: hodden and show pass
-const hiddenPass = document.querySelector("#hidden-pass");
-const showPass = document.querySelector("#show-pass");
-const iconsPass = document.querySelector(".icons-pass");
-iconsPass.addEventListener("click", function () {
-  if (valuePass.type === "password") {
-    valuePass.type = "text";
-    hiddenPass.style.display = "none";
-    showPass.style.display = "block";
-  } else {
-    valuePass.type = "password";
-    hiddenPass.style.display = "block";
-    showPass.style.display = "none";
+});
+
+closeAcc.addEventListener("click", function () {
+  showAccount.style.display = "none";
+});
+
+function signUp() {
+  logIns.style.display = "none";
+  signUps.style.display = "block";
+}
+
+function logIn() {
+  logIns.style.display = "block";
+  signUps.style.display = "none";
+}
+
+// Todo: Hide Show Notification
+const btnAccept = document.querySelector(".accept-noti");
+const boxNotifi = document.querySelector(".notification-account");
+btnAccept.addEventListener("click", function () {
+  boxNotifi.style.display = "none";
+});
+
+function subLog() {
+  var fullname = document.querySelectorAll("#fullname").value;
+  var email = document.querySelectorAll("#email").value;
+  if (fullname !== "" && email !== "") {
+    boxNotifi.style.display = "block";
+    showAccount.style.display = "none";
   }
-});
+}
 
+function subSign() {
+  var fullname = document.querySelectorAll("#fullname").value;
+  var email = document.querySelectorAll("#email").value;
+  if (fullname !== "" && email !== "") {
+    boxNotifi.style.display = "block";
+    showAccount.style.display = "none";
+  }
+}
 
 // Todo: Loader
 function loader() {
@@ -163,26 +179,6 @@ close.addEventListener("click", function () {
   }
 });
 
-// Todo: Slider banner header
-// $(".slider-banner-header").owlCarousel({
-//   loop: true,
-//   margin: 10,
-//   nav: true,
-//   // autoplay: true,
-//   // autoplayTimeout: 3000,
-//   responsive: {
-//     0: {
-//       items: 1,
-//     },
-//     600: {
-//       items: 1,
-//     },
-//     1000: {
-//       items: 1,
-//     },
-//   },
-// });
-
 //Todo: Slide Trending Items
 $(".trending-items").owlCarousel({
   loop: true,
@@ -205,8 +201,8 @@ $(".trending-items").owlCarousel({
     },
   },
 });
-var nextButton = $('span[aria-label="Next"]');// Tìm phần tử span có thuộc tính aria-label="Next"
-nextButton.html('<i class="fa-solid fa-arrow-right-long"></i>');// Thay đổi nội dung của phần tử span
+var nextButton = $('span[aria-label="Next"]'); // Tìm phần tử span có thuộc tính aria-label="Next"
+nextButton.html('<i class="fa-solid fa-arrow-right-long"></i>'); // Thay đổi nội dung của phần tử span
 var nextButton = $('span[aria-label="Previous"]');
 nextButton.html('<i class="fa-solid fa-arrow-left-long"></i>');
 
@@ -369,7 +365,6 @@ cartIcon.addEventListener("click", () => {
   }
 });
 
-
 function retTo() {
   window.location.href = "./blog.html";
 }
@@ -469,7 +464,6 @@ function banerLink() {
   window.location.href = "./product_detail.html";
 }
 
-
 // Todo: Thông báo animation khi có sản phẩm cart
 function navCartAnimation() {
   const cart = document.querySelector(".cart");
@@ -481,4 +475,6 @@ function navCartAnimation() {
   }
 }
 // Gọi function navCartAnimation() khi giá trị trong cart-count thay đổi
-document.getElementById("cart-count").addEventListener("DOMSubtreeModified", navCartAnimation);
+document
+  .getElementById("cart-count")
+  .addEventListener("DOMSubtreeModified", navCartAnimation);
