@@ -4,7 +4,7 @@ function loader() {
 }
 
 function fadeOut() {
-  setInterval(loader, 1000);
+  setInterval(loader, 100);
 }
 
 window.onload = fadeOut;
@@ -17,6 +17,62 @@ const searchBtn = document.querySelector(".search-btn");
 search.addEventListener("click", function () {
   searchBtn.classList.add("sebtn");
 });
+
+// Todo: Block LogIn
+const Account = document.querySelector(".account");
+const showAccount = document.querySelector(".bg-form");
+const signUps = document.querySelector(".signup");
+const logIns = document.querySelector(".login");
+const closeAccount = document.querySelector("#close-form");
+const closeAcc = document.querySelector(".cl-fo");
+Account.addEventListener("click", function () {
+  showAccount.style.display = "block";
+});
+
+// Todo: Hide Account
+closeAccount.addEventListener("click", function () {
+  showAccount.style.display = "none";
+
+});
+
+closeAcc.addEventListener("click", function () {
+  showAccount.style.display = "none";
+});
+
+function signUp() {
+  logIns.style.display = "none";
+  signUps.style.display = "block";
+}
+
+function logIn() {
+  logIns.style.display = "block";
+  signUps.style.display = "none";
+}
+
+// Todo: Hide Show Notification
+const btnAccept = document.querySelector(".accept-noti");
+const boxNotifi = document.querySelector(".notification-account");
+btnAccept.addEventListener("click", function () {
+  boxNotifi.style.display = "none";
+});
+
+function subLog() {
+  var fullname = document.querySelectorAll("#fullname").value;
+  var email = document.querySelectorAll("#email").value;
+  if (fullname !== "" && email !== "") {
+    boxNotifi.style.display = "block";
+    showAccount.style.display = "none";
+  }
+}
+
+function subSign() {
+  var fullname = document.querySelectorAll("#fullname").value;
+  var email = document.querySelectorAll("#email").value;
+  if (fullname !== "" && email !== "") {
+    boxNotifi.style.display = "block";
+    showAccount.style.display = "none";
+  }
+}
 
 // Thêm sự kiện "click" cho toàn bộ tài liệu (document)
 document.addEventListener("click", function (event) {
@@ -99,6 +155,44 @@ function Update() {
   main.appendChild(toast);
 }
 
-ScrollReveal().reveal(".blog-item", { scale: 1.5 });
+// ScrollReveal().reveal(".blog-item", { scale: 1.5 });
 
+//Todo: SLIDE BANNER IMAGE
+$(".slide-banner-image").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  autoplay: true,
+  autoplayTimeout: 5000,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 6,
+    },
+  },
+});
 
+//Todo: COOPERATE IMAGE
+$(".cooperate-main").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  autoplay: true,
+  autoplayTimeout: 3000,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 6,
+    },
+  },
+});

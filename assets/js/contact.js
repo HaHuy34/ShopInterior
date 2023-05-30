@@ -30,6 +30,63 @@ document.addEventListener("click", function (event) {
   }
 });
 
+// Todo: Block LogIn
+const Account = document.querySelector(".account");
+const showAccount = document.querySelector(".bg-form");
+const signUps = document.querySelector(".signup");
+const logIns = document.querySelector(".login");
+const closeAccount = document.querySelector("#close-form");
+const closeAcc = document.querySelector(".cl-fo");
+Account.addEventListener("click", function () {
+  showAccount.style.display = "block";
+});
+
+// Todo: Hide Account
+closeAccount.addEventListener("click", function () {
+  showAccount.style.display = "none";
+
+});
+
+closeAcc.addEventListener("click", function () {
+  showAccount.style.display = "none";
+});
+
+function signUp() {
+  logIns.style.display = "none";
+  signUps.style.display = "block";
+}
+
+function logIn() {
+  logIns.style.display = "block";
+  signUps.style.display = "none";
+}
+
+// Todo: Hide Show Notification
+const btnAccept = document.querySelector(".accept-noti");
+const boxNotifi = document.querySelector(".notification-account");
+btnAccept.addEventListener("click", function () {
+  boxNotifi.style.display = "none";
+});
+
+function subLog() {
+  var fullname = document.querySelectorAll("#fullname").value;
+  var email = document.querySelectorAll("#email").value;
+  if (fullname !== "" && email !== "") {
+    boxNotifi.style.display = "block";
+    showAccount.style.display = "none";
+  }
+}
+
+function subSign() {
+  var fullname = document.querySelectorAll("#fullname").value;
+  var email = document.querySelectorAll("#email").value;
+  if (fullname !== "" && email !== "") {
+    boxNotifi.style.display = "block";
+    showAccount.style.display = "none";
+  }
+}
+
+
 // Todo: Reponsive Bars
 function myFunction(x) {
   x.classList.toggle("change");

@@ -103,10 +103,6 @@ ul.icon-link li.ic:hover .link-main,
 }
 
 /* CART COUNT */
-.cart {
-  position: relative;
-}
-
 #cart-count {
   position: absolute;
   top: -5px;
@@ -2668,12 +2664,10 @@ ul.payment li {
 
   ul.icon-link li {
     font-size: 17px;
-  }
-
-  
+  } 
 }
 
-@media (min-width: 310px) and (max-width: 420px) {
+@media (min-width: 250px) and (max-width: 420px) {
   .logo img {
     width: 117px;
   }
@@ -2701,6 +2695,17 @@ ul.payment li {
 @media (max-width: 820px) {
   .itemas .name {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .add-to-cart {
+    width: 51%;
+    padding: 12px 0;
+  }
+
+  span.adtoca {
+    font-size: 15px;
   }
 }
 

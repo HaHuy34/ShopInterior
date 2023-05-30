@@ -184,7 +184,7 @@
                 </li>
                 <li class="cart">
                   <i class="fa-solid fa-cart-shopping"></i>
-                  <span id="cart-count">0</span>
+                  <span id="cart-count">3</span>
                 </li>
                 <li class="account">
                   <i class="fa-solid fa-user-large"></i>
@@ -554,8 +554,65 @@
                 </aside>
         </div>
       </div>
+      <!-- FORM LOGIN -->
+      <div class="notification-account animateOpen">
+        <h5>Notification</h5>
+        <p class="noti-update">Website is being updated. Let's wait until we can complete this function.</p>
+        <button class="accept-noti">Accept</button>
+      </div>
+      <div class="bg-form">
+        <div class="signup">
+          <div id="close-form">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <h1 class="signup-heading">Sign up</h1>
+          <button class="signup-social">
+            <i class="fa fa-google signup-social-icon"></i>
+            <span class="signup-social-text">Sign up with Google</span>
+          </button>
+          <div class="signup-or"><span>Or</span></div>
+          <form action="#" class="signup-form">
+            <div class="inpu-name-as">
+              <input type="text" id="fullname" class="signup-input">
+              <label for="fullname" class="signup-label">Full name</label>
+            </div>
+            <div class="inpu-email-as">
+              <input type="email" id="email" class="signup-input">
+              <label for="email" class="signup-label">Email</label>
+            </div>
+            <button class="signup-submit" onclick="subSign()">Sign up</button>
+          </form>
+          <p class="signup-already">
+            <span>Already have an account ?</span>
+            <a class="signup-login-link" onclick="logIn()">Login</a>
+          </p>
+        </div>
+
+        <div class="login">
+          <div id="close-form" class="cl-fo">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <h1 class="signup-heading" id="login-he">Log In</h1>
+          <h3 class="title-login">Welcome Back!</h3>
+          <form action="#" class="signup-form" autocomplete="off">
+            <div class="inpu-name-as">
+              <input type="text" id="fullname" class="signup-input">
+              <label for="fullname" class="signup-label">Email</label>
+            </div>
+            <div class="inpu-email-as">
+              <input class="signup-input" required>
+              <label for="email" class="signup-label">Password</label>
+              <p class="forgot-password">Forgot Password?</p>
+            </div>
+            <button class="signup-submit" onclick="subLog()">Log In</button>
+          </form>
+          <p class="signup-already">
+            <span>Do not have an account ?</span>
+            <a class="signup-login-link" onclick="signUp()">SignUp</a>
+          </p>
+        </div>
+      </div>
     </main>
-    
     <footer class="footer">
       <div class="footer-top">
         <div class="container">

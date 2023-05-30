@@ -13,6 +13,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: block;
+  padding: 0 16px;
   width: 100%;
 }
 
@@ -222,6 +223,7 @@ h5.bn {
   top: 0;
   background-color: #ffffff;
   z-index: 9999999;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   width: 100%;
 }
 
@@ -291,6 +293,28 @@ ul.icon-link li.ic:hover .link-main,
 /* CART COUNT */
 .cart {
   position: relative;
+  animation: bell 1s infinite;
+}
+
+@keyframes bell {
+  0% {
+    rotate: 0deg;
+  }
+  10% {
+    rotate: 10deg;
+  }
+  30% {
+    rotate: -10deg;
+  }
+  45% {
+    rotate: 5deg;
+  }
+  55% {
+    rotate: -5deg;
+  }
+  60% {
+    rotate: 0deg;
+  }
 }
 
 #cart-count {
@@ -746,6 +770,283 @@ ul.product-detail li i {
 
 /* END HEADER */
 /* START MAIN */
+/* Form Login */
+.bg-form {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 99999999;
+  display: none;
+}
+
+.signup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 40px 10px 40px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 7px;
+  z-index: 999999999;
+  font-family: "Poppins", sans-serif;
+  display: none;
+}
+
+.signup-heading {
+  font-size: 30px;
+  font-weight: bold;
+  color: #373941;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.signup-social {
+  padding: 10px;
+  border-radius: 7px;
+  display: block;
+  width: 100%;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  border: 0;
+  background-color: #4c6ff4;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: block;
+  box-shadow: 0 5px 10px 0 rgba(76, 111, 244, 0.5);
+}
+.signup-social-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  color: #4c6ff4;
+  justify-content: center;
+  font-size: 18px;
+}
+.signup-social-text {
+  display: block;
+  margin: 0 auto;
+}
+.signup-or {
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+  margin: 33px auto;
+  position: relative;
+}
+.signup-or span {
+  display: inline-block;
+  padding: 2px 20px;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.signup-or:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #d4d2d2;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.inpu-email-as {
+  margin: 30px 0;
+  display: flex;
+}
+
+.inpu-name-as,
+.inpu-email-as {
+  display: flex;
+  position: relative;
+}
+
+.signup-form .signup-label {
+  top: 0px;
+  color: #2979ff;
+  font-size: 15px;
+}
+
+.signup-form input:focus {
+  border: 1px solid #9f9f9f;
+}
+
+.signup-label {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translate(5%, -50%);
+  color: #cbcdce;
+  font-weight: 500;
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: none;
+  transition: all .3s ease-in-out;
+}
+
+.signup-input {
+  display: block;
+  width: 100%;
+  padding: 10px 10px 10px 16px;
+  border-radius: 7px;
+  border: 1px solid #d7d7d7;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+.signup-input::-webkit-input-placeholder {
+  color: #b4bac0;
+  font-weight: 500;
+}
+.signup-input::-moz-input-placeholder {
+  color: #b4bac0;
+  font-weight: 500;
+}
+.signup-submit {
+  padding: 14px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  border: 0;
+  outline: none;
+  display: inline-block;
+  width: 100%;
+  border-radius: 7px;
+  background-color: rgb(130, 201, 30);
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 5px 10px 0 rgba(130, 201, 30, 0.5);
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.signup-already {
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+}
+.signup-login-link {
+  cursor: pointer;
+  color: #2979ff;
+  text-decoration: none;
+}
+
+.login {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 40px 10px 40px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 7px;
+  z-index: 999999999;
+  font-family: "Poppins", sans-serif;
+}
+
+#login-he {
+  margin-bottom: 13px;
+}
+
+.title-login {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.forgot-password {
+  cursor: pointer;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  font-size: 14px;
+  font-style: italic;
+  color: rgb(117, 93, 196);
+}
+
+.forgot-password:hover {
+  color: rgb(88, 50, 215);
+}
+
+#close-form {
+  position: absolute;
+  top: -3%;
+  right: -2%;
+  background-color: #fff;
+  border: 1px solid #858585;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+#close-form:hover {
+  background-color: #ccc;
+}
+
+.notification-account {
+  text-align: center;
+  border-radius: 10px;
+  background-color: #333333;
+  color: #fff;
+  position: fixed;
+  top: 10%;
+  right: 0%;
+  transform: translate(100%, 10%);
+  padding: 10px;
+  width: 300px;
+  z-index: 9999999999;
+  display: none;
+  transition: all 1s;
+}
+
+.noti-update {
+  font-size: 14px;
+}
+
+.accept-noti {
+  background-color: #03CB04;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 5px 20px;
+  border-radius: 30px;
+  transition: all .3s;
+}
+
+.accept-noti:hover {
+  background-color: #489948;
+}
+
+.animateOpen{
+	animation: moveOpen 1s linear forwards;
+}
+
+@keyframes moveOpen 
+	{
+  from {-webkit-transform: translate(100%,30%);}
+  100% {-webkit-transform: translate(-3%,30%);}
+} 
+
+/* End Form login */
+
 #toast {
   position: fixed;
   top: 92px;
@@ -1300,7 +1601,7 @@ ul.payment li {
   }
 
   .icons {
-    width: 12%;
+    width: 13%;
   }
 
   ul.icon-link li.bars {
@@ -1400,10 +1701,6 @@ ul.payment li {
 }
 
 @media screen and (max-width: 768px) {
-  .container {
-    max-width: 700px;
-  }
-
   div#repo {
     padding: 0;
   }
@@ -1432,7 +1729,7 @@ ul.payment li {
   }
 
   .icons {
-    width: 16%;
+    width: 20%;
   }
 
   ul.icon-link li.bars {
@@ -1563,10 +1860,6 @@ ul.payment li {
 }
 
 @media screen and (max-width: 500px) {
-  .container {
-    max-width: 500px;
-  }
-
   .logo {
     width: 22%;
   }
@@ -1642,12 +1935,147 @@ ul.payment li {
 
 @media (min-width: 500px) and (max-width: 600px) {
   .icons {
-      width: 20%;
+      width: 22%;
   }
 }
 
 @media (min-width: 250px) and (max-width: 380px) {
   .icons {
       width: 35%;
+  }
+}
+
+
+/* Repon Account */
+@media (min-width: 480px) and (max-width: 650px) {
+  .login,
+  .signup {
+    max-width: 400px;
+  }
+
+  .signup-or span {
+    font-size: 14px;
+  }
+
+  .signup-heading {
+    font-size: 26px;
+  }
+
+  .signup-social {
+    padding: 7px;
+  } 
+
+  .title-login {
+    margin-bottom: 26px;
+  }
+
+  .forgot-password {
+    font-size: 13px;
+  }
+
+  .signup-submit {
+    padding: 10px;
+  }
+
+  .signup-already {
+    font-size: 14px;
+  } 
+}
+
+@media (min-width: 300px) and (max-width: 480px) {
+  .login,
+  .signup {
+    max-width: 300px;
+    padding: 30px 30px 10px 30px;
+  }
+
+  .signup-or span {
+    font-size: 12px;
+  }
+  .signup-heading {
+    font-size: 22px;
+  }
+
+  .signup-form .signup-label {
+    font-size: 13px;
+  }
+
+  .title-login {
+    margin-bottom: 22px;
+  }
+
+  .forgot-password {
+    font-size: 13px;
+  }
+
+  .signup-submit {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .signup-already {
+    font-size: 13px;
+  } 
+
+  .signup-social-text {
+    font-size: 14px;
+  }
+
+  .signup-social {
+    padding: 5px;
+  }  
+
+  .notification-account {
+    padding: 7px;
+    width: 258px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 630px) {
+  .header-top {
+    display: flex;
+    height: 67px;
+    width: 100%;
+    position: relative;
+  }
+
+  .header-bottom {
+    margin-top: 68px;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 510px) {
+  .logo img {
+    width: 117px;
+  }
+
+  .header-top {
+    height: 60px;
+  }
+
+  ul.icon-link li {
+    font-size: 17px;
+  } 
+
+  .header-bottom {
+    margin-top: 61px;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 420px) {
+  .logo img {
+    width: 117px;
+  }
+
+  .header-top {
+    height: 60px;
+  }
+
+  ul.icon-link li {
+    font-size: 17px;
+  }
+
+  .header-bottom {
+    margin-top: 61px;
   }
 }
