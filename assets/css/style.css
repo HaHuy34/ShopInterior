@@ -321,6 +321,7 @@ button#btn-drop {
 }
 
 .slide-bn {
+  margin-top: 80px;
   width: 100%;
   height: 640px;
   overflow: hidden;
@@ -353,14 +354,6 @@ button#btn-drop {
   background-position: center;
 }
 
-.itemas:nth-child(1) {
-  background-size: 667px;
-}
-
-.itemas:nth-child(2) {
-  background-size: 570px;
-}
-
 .itemas:nth-child(1),
 .itemas:nth-child(2) {
   left: 0;
@@ -376,41 +369,37 @@ button#btn-drop {
 
 .itemas:nth-child(3) {
   left: 3%;
-  top: 80%;
+  top: 75%;
 }
 .itemas:nth-child(4) {
   left: calc(3% + 162px);
-  top: 80%;
+  top: 75%;
 }
 .itemas:nth-child(5) {
-  top: 80%;
+  top: 75%;
   left: calc(3% + 324px);
 }
 .itemas:nth-child(n + 6) {
   left: calc(3% + 486px);
-  top: 80%;
+  top: 75%;
   opacity: 0;
 }
 
 .itemas:nth-child(2) .content {
-  margin-top: 60px;
   display: block;
   z-index: 11111;
 }
 .itemas .name {
-  font-size: 50px;
-  font-weight: bold;
+  font-size: 62px;
+  font-weight: 600;
   opacity: 0;
   animation: showcontent 1s ease-in-out 1 forwards;
 }
 
-#title-name-he {
-    margin-top: 71px;
-}
 .itemas .des {
   margin: 20px 0;
   opacity: 0;
-  width: 50%;
+  width: 70%;
   color: #687188;
   animation: showcontent 1s ease-in-out 0.3s 1 forwards;
 }
@@ -1321,7 +1310,7 @@ ul.payment li {
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 99999999;
   display: none;
 }
@@ -1438,7 +1427,7 @@ ul.payment li {
   display: inline-block;
   cursor: pointer;
   pointer-events: none;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .signup-input {
@@ -1538,7 +1527,7 @@ ul.payment li {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 #close-form:hover {
@@ -1566,28 +1555,31 @@ ul.payment li {
 }
 
 .accept-noti {
-  background-color: #03CB04;
+  background-color: #03cb04;
   color: #fff;
   border: none;
   outline: none;
   padding: 5px 20px;
   border-radius: 30px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .accept-noti:hover {
   background-color: #489948;
 }
 
-.animateOpen{
-	animation: moveOpen 1s linear forwards;
+.animateOpen {
+  animation: moveOpen 1s linear forwards;
 }
 
-@keyframes moveOpen 
-	{
-  from {-webkit-transform: translate(100%,30%);}
-  100% {-webkit-transform: translate(-3%,30%);}
-} 
+@keyframes moveOpen {
+  from {
+    -webkit-transform: translate(100%, 30%);
+  }
+  100% {
+    -webkit-transform: translate(-3%, 30%);
+  }
+}
 
 /* End Form login */
 .container-fluid {
@@ -1635,7 +1627,6 @@ ul.payment li {
     position: relative;
   }
 }
-
 
 @media (min-width: 730px) and (max-width: 850px) {
   .content-main {
@@ -2187,9 +2178,6 @@ ul.payment li {
   }
 }
 
-
-
-
 /* Repon Account */
 @media (min-width: 480px) and (max-width: 650px) {
   .login,
@@ -2207,7 +2195,7 @@ ul.payment li {
 
   .signup-social {
     padding: 7px;
-  } 
+  }
 
   .title-login {
     margin-bottom: 26px;
@@ -2223,7 +2211,7 @@ ul.payment li {
 
   .signup-already {
     font-size: 14px;
-  } 
+  }
 }
 
 @media (min-width: 300px) and (max-width: 480px) {
@@ -2259,7 +2247,7 @@ ul.payment li {
 
   .signup-already {
     font-size: 13px;
-  } 
+  }
 
   .signup-social-text {
     font-size: 14px;
@@ -2267,7 +2255,7 @@ ul.payment li {
 
   .signup-social {
     padding: 5px;
-  }  
+  }
 
   .notification-account {
     padding: 7px;
@@ -2275,41 +2263,43 @@ ul.payment li {
   }
 }
 
-@media (min-width: 1150px){
+@media (min-width: 1150px) {
   .itemas:nth-child(1),
   .itemas:nth-child(2) {
-    background-position: 600px 50px;
+    background-position: right;
     background-repeat: no-repeat;
-    background-size: 700px;
+    background-size: 500px;
   }
 }
 
-@media (min-width: 1050px) and (max-width: 1149px) {
+@media (min-width: 800px) and (max-width: 1150px) {
   .itemas:nth-child(1),
   .itemas:nth-child(2) {
-    background-position: 500px 50px;
+    background-position: right;
     background-repeat: no-repeat;
-    background-size: 700px;
+    background-size: 450px;
   }
 }
 
-@media (min-width: 950px) and (max-width: 1050px) {
+@media (min-width: 600px) and (max-width: 800px) {
   .itemas:nth-child(1),
   .itemas:nth-child(2) {
-    background-position: 400px 50px;
+    background-position: right top;
     background-repeat: no-repeat;
-    background-size: 700px;
+    background-size: 400px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .itemas:nth-child(1),
+  .itemas:nth-child(2) {
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 350px;
   }
 }
 
 @media (min-width: 815px) and (max-width: 950px) {
-  .itemas:nth-child(1),
-  .itemas:nth-child(2) {
-    background-position: 300px 50px;
-    background-repeat: no-repeat;
-    background-size: 650px;
-  }
-
   .itemas {
     width: 130px;
     height: 159px;
@@ -2321,7 +2311,7 @@ ul.payment li {
 
   .itemas:nth-child(5) {
     left: 299px;
-  } 
+  }
 
   .itemas:nth-child(n + 6) {
     left: calc(0% + 436px);
@@ -2329,13 +2319,6 @@ ul.payment li {
 }
 
 @media (min-width: 715px) and (max-width: 815px) {
-  .itemas:nth-child(1),
-  .itemas:nth-child(2) {
-    background-position: 200px -28px;
-    background-repeat: no-repeat;
-    background-size: 650px;
-  }
-
   .itemas {
     width: 130px;
     height: 159px;
@@ -2347,7 +2330,7 @@ ul.payment li {
 
   .itemas:nth-child(5) {
     left: 299px;
-  } 
+  }
 
   .itemas:nth-child(n + 6) {
     left: 437px;
@@ -2355,14 +2338,10 @@ ul.payment li {
 }
 
 @media (min-width: 650px) and (max-width: 715px) {
-  .itemas:nth-child(1), .itemas:nth-child(2) {  
-    background-position: 200px -6px;
-  }
-
   .buttons button {
     width: 40px;
     height: 40px;
-  } 
+  }
 
   .btn-line-fill {
     padding: 10px 20px;
@@ -2380,7 +2359,7 @@ ul.payment li {
 
   .itemas:nth-child(5) {
     left: 299px;
-  } 
+  }
 
   .itemas:nth-child(n + 6) {
     left: calc(0% + 436px);
@@ -2393,10 +2372,6 @@ ul.payment li {
 }
 
 @media (min-width: 600px) and (max-width: 650px) {
-  .itemas:nth-child(1), .itemas:nth-child(2) {
-    background-position: 150px -6px;
-  }
-
   .itemas .name {
     font-size: 40px;
     width: 70%;
@@ -2418,7 +2393,7 @@ ul.payment li {
 
   .itemas:nth-child(5) {
     left: 299px;
-  } 
+  }
 
   .itemas:nth-child(n + 6) {
     left: calc(0% + 436px);
@@ -2427,15 +2402,10 @@ ul.payment li {
   .buttons button {
     width: 40px;
     height: 40px;
-  } 
-
+  }
 }
 
 @media (min-width: 550px) and (max-width: 600px) {
-  .itemas:nth-child(1), .itemas:nth-child(2) {
-    background-position: 100px -6px;
-  }
-
   .itemas .name {
     font-size: 40px;
     width: 70%;
@@ -2457,7 +2427,7 @@ ul.payment li {
 
   .itemas:nth-child(5) {
     left: 298px;
-  } 
+  }
 
   .itemas:nth-child(n + 6) {
     left: calc(0% + 436px);
@@ -2466,15 +2436,10 @@ ul.payment li {
   .buttons button {
     width: 40px;
     height: 40px;
-  } 
+  }
 }
 
 @media (min-width: 500px) and (max-width: 550px) {
-  .itemas:nth-child(1), .itemas:nth-child(2) {
-    background-position: 94px 18px;
-    background-size: 520px;
-  }
-
   .itemas {
     width: 110px;
     height: 135px;
@@ -2505,15 +2470,10 @@ ul.payment li {
   .buttons button {
     width: 40px;
     height: 40px;
-  } 
+  }
 }
 
 @media (min-width: 460px) and (max-width: 500px) {
-  .itemas:nth-child(1), .itemas:nth-child(2) {
-    background-position: 50px 42px;
-    background-size: 520px;
-  }
-
   .itemas {
     width: 110px;
     height: 135px;
@@ -2543,7 +2503,7 @@ ul.payment li {
   .buttons button {
     width: 40px;
     height: 40px;
-  } 
+  }
 
   .btn-line-fill {
     padding: 8px 18px;
@@ -2552,11 +2512,6 @@ ul.payment li {
 }
 
 @media (min-width: 400px) and (max-width: 460px) {
-  .itemas:nth-child(1), .itemas:nth-child(2) {
-    background-position: 0px 42px;
-    background-size: 500px;
-  }
-
   .itemas {
     width: 110px;
     height: 135px;
@@ -2568,7 +2523,7 @@ ul.payment li {
   }
 
   .itemas .des {
-    width: 70%;
+    width: 90%;
   }
 
   .btn-line-fill {
@@ -2591,7 +2546,7 @@ ul.payment li {
   .buttons button {
     width: 40px;
     height: 40px;
-  } 
+  }
 
   .btn-line-fill {
     padding: 8px 18px;
@@ -2600,14 +2555,9 @@ ul.payment li {
 }
 
 @media (max-width: 400px) {
-  .itemas:nth-child(2) .content {
-    margin-top: 13px;
-  }
-
   .itemas:nth-child(1), .itemas:nth-child(2) {
-    background-position-x: center;
-    background-position-y: 45px;
-    background-size: 500px;
+    background-position: right top;
+    background-size: 300px;
   }
 
   .itemas {
@@ -2644,14 +2594,13 @@ ul.payment li {
   .buttons button {
     width: 40px;
     height: 40px;
-  } 
+  }
 
   .btn-line-fill {
     padding: 6px 12px;
     font-size: 12px;
   }
 }
-
 
 @media (min-width: 420px) and (max-width: 510px) {
   .logo img {
@@ -2664,7 +2613,7 @@ ul.payment li {
 
   ul.icon-link li {
     font-size: 17px;
-  } 
+  }
 }
 
 @media (min-width: 250px) and (max-width: 420px) {
@@ -2709,3 +2658,31 @@ ul.payment li {
   }
 }
 
+
+/* @media (min-width: 990px) and (max-width: 1040px) {
+.itemas .name {
+    font-size: 58px;
+    font-weight: 600;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 1 forwards;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 990px) {
+.itemas .name {
+    font-size: 56px;
+    font-weight: 600;
+    opacity: 0;
+    animation: showcontent 1s ease-in-out 1 forwards;
+  }
+}
+@media (min-width: 925px) and (max-width: 960px) {
+.itemas .name {
+    font-size: 53px;
+  }
+}
+@media (min-width: 890px) and (max-width: 925px) {
+.itemas .name {
+    font-size: 50px;
+  }
+} */
