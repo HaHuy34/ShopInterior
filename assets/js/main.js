@@ -117,6 +117,9 @@ btnAccept.addEventListener("click", function () {
 
 function subLog() {
   var fullname = document.querySelectorAll("#fullname").value;
+  document.querySelector(".signup-submit").addEventListener("click", (e) => {
+    e.preventDefault();
+  });
   var email = document.querySelectorAll("#email").value;
   if (fullname !== "" && email !== "") {
     boxNotifi.style.display = "block";
@@ -475,9 +478,7 @@ function navCartAnimation() {
   }
 }
 // Gọi function navCartAnimation() khi giá trị trong cart-count thay đổi
-document
-  .getElementById("cart-count")
-  .addEventListener("DOMSubtreeModified", navCartAnimation);
+document.getElementById("cart-count").addEventListener("DOMSubtreeModified", navCartAnimation);
 
 // Back To Top
 window.onscroll = function () {
@@ -506,3 +507,16 @@ function scrollToTop() {
   }
 }
 
+// Todo: Hide Show Password
+const eyeIcon = document.querySelector(".bx");
+const pwFields = document.querySelector("#pass-show");
+eyeIcon.addEventListener("click", () => {
+  if(pwFields.type === "password"){
+    pwFields.type = "text";
+    eyeIcon.classList.replace("bx-hide", "bx-show");
+    return;
+  }else{
+    pwFields.type = "password";
+    eyeIcon.classList.replace("bx-show", "bx-hide");
+  }
+})

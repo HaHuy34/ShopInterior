@@ -1406,6 +1406,17 @@ ul.payment li {
   box-shadow: 0 5px 10px 0 rgba(76, 111, 244, 0.5);
   transition: all 0.3s;
 }
+
+.bx {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d7d7d7;
+  font-size: 18px;
+  cursor: pointer;
+}
+
 .signup-social-icon {
   background-image: url(/assets/images/ImagesFigma/logo\ google.png);
   background-position: center;
