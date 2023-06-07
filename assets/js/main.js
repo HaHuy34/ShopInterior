@@ -478,3 +478,31 @@ function navCartAnimation() {
 document
   .getElementById("cart-count")
   .addEventListener("DOMSubtreeModified", navCartAnimation);
+
+// Back To Top
+window.onscroll = function () {
+  scrollFunction();
+};
+
+var scrollToTopBtn = document.querySelector(".back-to-top");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+  if (currentPosition > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, currentPosition - currentPosition / 10); // Tốc độ cuộn có thể được điều chỉnh ở đây
+  }
+}
+

@@ -816,22 +816,9 @@ ul.product-detail li i{
 
 #close-form {
   position: absolute;
-  top: -3%;
-  right: -2%;
-  background-color: #fff;
-  border: 1px solid #858585;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  top: 0px;
+  right: 6px;
   cursor: pointer;
-  transition: all .3s;
-}
-
-#close-form:hover {
-  background-color: #ccc;
 }
 
 .notification-account {
