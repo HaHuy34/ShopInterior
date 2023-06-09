@@ -297,3 +297,65 @@ function Update() {
 function banerLink() {
   window.location.href = "./product_detail.html";
 }
+
+
+function saveFormData() {
+  // Get the values from the input fields
+  var email = document.getElementById("ip-select-4").value;
+  var name = document.getElementById("ip-select-5").value;
+  var phoneNumber = document.getElementById("ip-select").value;
+  var province = document.getElementById("ip-select1").value;
+  var district = document.getElementById("ip-select2").value;
+  var ward = document.getElementById("ip-select3").value;
+
+  // Store the values in localStorage
+  localStorage.setItem("email", email);
+  localStorage.setItem("name", name);
+  localStorage.setItem("phoneNumber", phoneNumber);
+  localStorage.setItem("province", province);
+  localStorage.setItem("district", district);
+  localStorage.setItem("ward", ward);
+
+  var cartItems = localStorage.getItem("cartItems");
+  cartItems = JSON.parse(cartItems);
+  var htmlContent = "";
+  // Lặp qua các thông tin trong Local Storage
+  cartItems.forEach(function abs(product) {
+    let { price, proTitle, backgroundImage } = product;
+    const imageUrl = backgroundImage.match(/url\(["']?(.*?)["']?\)/)[1];
+    // Tạo đoạn mã HTML cho mỗi thông tin
+    var cartItemHTML = `
+                <tr class="pr-main">
+                    <td class="prduct-image">
+                        <div class="prduct-thumbnail">
+                            <div class="prduct-img-thum">
+                                <div class="bg-img" style='background-image: url("${imageUrl}")'></div>
+                                <span class="pr-thum-quan">1</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="prduct-des">
+                        <span class="prduct-des-name">${proTitle}</span>
+                    </td>
+                    <td class="prduct-quantity"></td>
+                    <td class="prduct-price">${price}</td>
+                </tr>
+  `;
+
+    // Thêm đoạn mã HTML vào biến htmlContent
+    htmlContent += cartItemHTML;
+  });
+  // Gán nội dung của htmlContent vào innerHTML của phần tử cha trên trang
+  var cartTable = document.getElementById("tbl");
+  cartTable.innerHTML = htmlContent;
+}
+saveFormData();
+
+// Lấy giá trị từ localStorage
+var toPrValue = localStorage.getItem('toPrValue');
+
+// In giá trị vào phần tử <td>
+var tltTotalPaymentPriceElement = document.querySelector('.tlt-total-payment-price');
+tltTotalPaymentPriceElement.textContent = toPrValue;
+
+

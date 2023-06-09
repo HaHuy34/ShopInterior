@@ -18,7 +18,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 2px;
 }
 
 ::-webkit-scrollbar-track {
@@ -28,6 +28,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #888;
 }
+
 
 /* START HEADER */
 .he-top-fix {
@@ -2985,5 +2986,11 @@ button.signup-social:hover {
     padding: 10px 0;
     min-width: 200px;
     max-width: 350px;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 768px) {
+  .add-to-cart {
+    width: 58%;
   }
 }

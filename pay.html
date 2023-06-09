@@ -317,12 +317,12 @@
                                         <form class="fieldset">
                                             <div class="field">
                                                 <div class="field-input-wrapper">
-                                                    <input type="email" placeholder="Email" class="input-email">
+                                                    <input type="email" placeholder="Email" class="input-email" id="ip-select-4">
                                                 </div>
                                             </div>
                                             <div class="field">
                                                 <div class="field-input-wrapper">
-                                                    <input required type="text" placeholder="First and last name" class="input-name">
+                                                    <input required type="text" placeholder="First and last name" class="input-name" id="ip-select-5">
                                                 </div>
                                             </div>
                                             <div class="field">
@@ -451,7 +451,7 @@
                 </div>
                 <aside class="sidebar">
                     <div class="sidebar-header">
-                        <h3 class="sidebar-header-title">Order</h3>
+                        <div class="sidebar-header-title">Order</div>
                     </div>
                     <div class="sidebar-content">
                         <div class="order-summary">
@@ -462,13 +462,12 @@
                                     <th></th>
                                     <th></th>
                                 </thead>
-                                <tbody>
-                                    <tr class="pr-main">
+                                <tbody id="tbl">
                                         <td class="prduct-image">
                                             <div class="prduct-thumbnail">
                                                 <div class="prduct-img-thum">
                                                     <img src="./assets/images/ImagesFigma/furniture_img5.jpg" alt="">
-                                                    <span class="pr-thum-quan">2</span>
+                                                    <span class="pr-thum-quan"></span>
                                                 </div>
                                             </div>
                                         </td>
@@ -483,7 +482,7 @@
                                             <div class="prduct-thumbnail">
                                                 <div class="prduct-img-thum">
                                                     <img src="./assets/images/ImagesFigma/furniture_img3.jpg" alt="">
-                                                    <span class="pr-thum-quan">1</span>
+                                                    <span class="pr-thum-quan"</span>
                                                 </div>
                                             </div>
                                         </td>
@@ -498,7 +497,7 @@
                                             <div class="prduct-thumbnail">
                                                 <div class="prduct-img-thum">
                                                     <img src="./assets/images/ImagesFigma/furniture_img2.jpg" alt="">
-                                                    <span class="pr-thum-quan">3</span>
+                                                    <span class="pr-thum-quan"></span>
                                                 </div>
                                             </div>
                                         </td>
@@ -507,7 +506,7 @@
                                         </td>
                                         <td class="prduct-quantity"></td>
                                         <td class="prduct-price">$120.00</td>
-                                    </tr>
+                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
@@ -534,7 +533,7 @@
                                 </tr>
                                 <tr>
                                     <th class="tlt-total-payment-name">Total</th>
-                                    <td class="tlt-total-payment-price">$290.00</td>
+                                    <td class="tlt-total-payment-price"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -547,7 +546,7 @@
                         </a>
                         <div class="btn-order">
                             <a>
-                                <button class="btn-or-next">ORDER</button>
+                                <button type="submit" class="btn-or-next" onclick="saveFormData()">ORDER</button>
                             </a>
                         </div>
                     </div>

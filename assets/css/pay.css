@@ -76,6 +76,10 @@ ul.menu-cher {
   height: 100%;
 }
 
+.accordion-button:focus {
+  box-shadow: none;
+}
+
 ul.menu-cher li.ic {
   display: flex;
   align-items: center;
@@ -661,6 +665,10 @@ ul.product-detail li i {
   padding: 0 5px 0 15px;
 }
 
+.prduct-des-name {
+  text-transform: capitalize;
+}
+
 .prduct-des-name,
 .prduct-price {
   font-size: 14px;
@@ -672,9 +680,13 @@ ul.product-detail li i {
 }
 
 .sidebar {
-  /* min-width: 400px; */
   background-color: #f6f6f6;
-  padding: 10px 10px;
+  padding: 0 10px 10px;
+}
+
+.sidebar-header-title {
+  font-size: 19px;
+  font-weight: 500;
 }
 
 .sidebar-header {
@@ -915,6 +927,14 @@ ul.product-detail li i {
   color: #b4bac0;
   font-weight: 500;
 }
+
+.bg-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 100%;
+  width: 40px;
+}
+
 .signup-submit {
   padding: 14px;
   color: white;
@@ -2077,5 +2097,91 @@ ul.payment li {
 
   .header-bottom {
     margin-top: 61px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .radio-label-acc img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .layout-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .layout-flex a {
+    margin-bottom: 10px;
+  }
+  .section-title {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .icons {
+    width: 40%;
+  } 
+
+  .name-product {
+    font-size: 18px;
+  }
+
+  .section-content ::placeholder {
+    font-size: 14px;
+  }
+
+  .input-number {
+    padding-right: 55px;
+  }
+
+  .input-email,
+  .input-name,
+  .input-addr,
+  .input-district,
+  .input-ward {
+    padding-right: 30px;
+  }
+
+  .se-le img {
+    width: 17px;
+    height: auto;
+  }
+
+  .ct-box {
+    margin-left: 0;
+  }
+
+  .money-transport-content {
+    padding: 10px 13px 9px;
+    border: 1px solid #bfbdbd;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+
+  .paymentMethod {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .btn-sale {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .prduct-des {
+    padding: 0 0px 0px 20px;
+  }
+
+  .btn-or-next {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }

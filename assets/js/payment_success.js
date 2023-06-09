@@ -23,7 +23,6 @@ Account.addEventListener("click", function () {
 // Todo: Hide Account
 closeAccount.addEventListener("click", function () {
   showAccount.style.display = "none";
-
 });
 
 closeAcc.addEventListener("click", function () {
@@ -65,7 +64,6 @@ function subSign() {
   }
 }
 
-
 // Todo: Search
 const search = document.querySelector(".search");
 const searchBtn = document.querySelector(".search-btn");
@@ -99,7 +97,6 @@ close.addEventListener("click", function () {
   } else {
     dropDow.style.display = "block";
   }
-
 });
 // Todo: Không load lại trang khi click vào thẻ a trong delete
 const links = document.querySelectorAll(".cart-item-actions");
@@ -108,7 +105,6 @@ links.forEach((link) => {
     event.preventDefault();
   });
 });
-
 
 function retTo() {
   window.location.href = "./blog.html";
@@ -168,3 +164,69 @@ function Update() {
 function banerLink() {
   window.location.href = "./product_detail.html";
 }
+
+//Todo: Lấy thông tin từ locoStorate
+function getInformation() {
+  // Retrieve the stored values from localStorage
+  var buyerName = localStorage.getItem("name");
+  var buyerEmail = localStorage.getItem("email");
+  var buyerPhoneNumber = localStorage.getItem("phoneNumber");
+  var shippingName = localStorage.getItem("name");
+  var shippingProvince = localStorage.getItem("province");
+  var shippingAddress =
+    localStorage.getItem("district") + ", " + localStorage.getItem("ward");
+  var shippingPhoneNumber = localStorage.getItem("phoneNumber");
+
+  // Update the HTML elements with the retrieved values
+  document.getElementById("buyerName").textContent = buyerName;
+  document.getElementById("buyerEmail").textContent = buyerEmail;
+  document.getElementById("buyerPhoneNumber").textContent = buyerPhoneNumber;
+  document.getElementById("shippingName").textContent = shippingName;
+  document.getElementById("shippingProvince").textContent = shippingProvince;
+  document.getElementById("shippingAddress").textContent = shippingAddress;
+  document.getElementById("shippingPhoneNumber").textContent =
+    shippingPhoneNumber;
+
+  var cartItems = localStorage.getItem("cartItems");
+  cartItems = JSON.parse(cartItems);
+  var htmlContent = "";
+  // Lặp qua các thông tin trong Local Storage
+  cartItems.forEach(function abs(product) {
+    let { price, proTitle, backgroundImage } = product;
+    const imageUrl = backgroundImage.match(/url\(["']?(.*?)["']?\)/)[1];
+    // Tạo đoạn mã HTML cho mỗi thông tin
+    var cartItemHTML = `
+                <tr class="pr-main">
+                    <td class="prduct-image">
+                        <div class="prduct-thumbnail">
+                            <div class="prduct-img-thum">
+                                <div class="bg-img" style='background-image: url("${imageUrl}")'></div>
+                                <span class="pr-thum-quan">1</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="prduct-des">
+                        <span class="prduct-des-name">${proTitle}</span>
+                    </td>
+                    <td class="prduct-quantity"></td>
+                    <td class="prduct-price">${price}</td>
+                </tr>
+  `;
+
+    // Thêm đoạn mã HTML vào biến htmlContent
+    htmlContent += cartItemHTML;
+  });
+  // Gán nội dung của htmlContent vào innerHTML của phần tử cha trên trang
+  var cartTable = document.getElementById("tbl");
+  cartTable.innerHTML = htmlContent;
+
+  // Lấy giá trị từ localStorage
+  var toPrValue = localStorage.getItem("toPrValue");
+
+  // In giá trị vào phần tử <td>
+  var tltTotalPaymentPriceElement = document.querySelector(
+    ".tlt-total-payment-price"
+  );
+  tltTotalPaymentPriceElement.textContent = toPrValue;
+}
+getInformation();

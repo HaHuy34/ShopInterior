@@ -44,20 +44,63 @@ close.addEventListener("click", function () {
   }
 });
 
+// Lấy thông tin từ Local Storage
+var cartItems = localStorage.getItem("cartItems");
+cartItems = JSON.parse(cartItems);
+
+// Biến lưu trữ nội dung HTML
+var htmlContent = "";
+// Lặp qua các thông tin trong Local Storage
+cartItems.forEach(function abs(product) {
+  let { price, proTitle, backgroundImage } = product;
+  // Tạo đoạn mã HTML cho mỗi thông tin
+  var cartItemHTML = `
+    <tr class="cart-item">
+      <td class="product-imag pr">
+        <div class="img-pr-main" style='background-image: ${backgroundImage};'></div>
+      </td>
+      <td data-label="Product's Name" class="product-na pr">
+        <a href="./product_detail.html">${proTitle}</a>
+      </td>
+      <td data-label="Unit Price" class="product-ri pr">
+        <span class="amount">${price}</span>
+      </td>
+      <td data-label="Quantity" class="product-qatity pr">
+          <div class="quantity">
+              <button class="minus-btn btnpr">-</button>
+              <span class="qtity">1</span>
+              <button class="plus-btn btnpr">+</button>
+          </div>
+      </td>
+      <td data-label="Into Money" class="product-sub pr">
+          <span class="sub-amu"></span>
+      </td>
+      <td data-label="Delete" class="product-cl pr">
+          <a href="#" class="cart-item-actions">
+              <i class="fa-solid fa-trash-can"></i>
+          </a>
+      </td>
+    </tr>
+  `;
+
+  // Thêm đoạn mã HTML vào biến htmlContent
+  htmlContent += cartItemHTML;
+});
+// Gán nội dung của htmlContent vào innerHTML của phần tử cha trên trang
+var cartTable = document.getElementById("table");
+cartTable.innerHTML = htmlContent;
+
 // Todo: giỏ hàng
 const cartIcon = document.querySelector("#cart-link");
 cartIcon.addEventListener("click", function () {
-    window.location.href = "./cart.html"
+  window.location.href = "./cart.html";
 });
 
 // Todo: Xóa thông tin giỏ hàng
 const deleteBtn = document.querySelectorAll(".cart-item-actions");
-deleteBtn.forEach(i => {
+deleteBtn.forEach((i) => {
   i.addEventListener("click", () => {
-    const cartItemElement = i.closest(".cart-item");
-    const totalPrice = document.querySelector(".total-price");
-    const columMainCart = document.querySelector(".colum-main-cart");
-    const formTable = document.querySelector(".form-cart");
+    const cartItemElement = document.querySelector(".cart-item");
     // Ẩn hiện thông báo sản phẩm trong cart
     const notificationDiv = document.querySelector(".nav");
     const closeNavMain = document.querySelector("#cancle");
@@ -67,37 +110,32 @@ deleteBtn.forEach(i => {
       cartItemElement.remove();
       updateCartInfor();
     });
-    // if (formTable.length == 0){
-    //   totalPrice.remove();
-    //   columMainCart.remove();
-    // }
     updateCartInfor();
   });
-})
+});
 
 // Todo: Cập nhật số lượng
 const dowBtn = document.querySelectorAll(".minus-btn");
-dowBtn.forEach(button => {
+dowBtn.forEach((button) => {
   button.addEventListener("click", () => {
     const quantityElement = button.nextElementSibling;
     const current = +quantityElement.textContent;
-    if(current > 1) {
+    if (current > 1) {
       quantityElement.textContent = current - 1;
       updateCartInfor();
     }
-  })
-})
+  });
+});
 
 const upBtn = document.querySelectorAll(".plus-btn");
 upBtn.forEach((button) => {
   button.addEventListener("click", () => {
     const quantityElement = button.previousElementSibling;
     const current = +quantityElement.textContent;
-      quantityElement.textContent = current + 1;
-      updateCartInfor();
+    quantityElement.textContent = current + 1;
+    updateCartInfor();
   });
 });
-
 
 // Todo: Tăng giảm số lượng và cập nhật lại giá
 function updateCartInfor() {
@@ -108,27 +146,42 @@ function updateCartInfor() {
   if (cartItems.length == 0) {
     emtyCart.style.display = "block";
     cartTable.style.display = "none";
-  }else{
+  } else {
     emtyCart.style.display = "none";
     cartTable.style.display = "block";
   }
 
   let totalPrice = 0;
   cartItems.forEach((cartItem) => {
-    const price = +cartItem.querySelector(".amount").textContent.replace(".", "").replace("$", "");
+    const price = +cartItem
+      .querySelector(".amount")
+      .textContent.replace(".", "")
+      .replace("$", "");
     const quantity = +cartItem.querySelector(".qtity").textContent;
+
+    const quantityElements = document.querySelectorAll(".qtity");
+    const quantities = [];
+    quantityElements.forEach((element) => {
+      const quantity = element.textContent;
+      quantities.push(quantity);
+    });
+
+    localStorage.setItem("quantities", JSON.stringify(quantities));
+
     const total = cartItem.querySelector(".sub-amu");
-    const dowBtn = document.querySelector(".minus-btn");  
+    const dowBtn = document.querySelector(".minus-btn");
 
     // Cập nhật giá tiền cho Item
     let itemTotal = price * quantity;
-    let displayTotal = "$" + (Math.round(itemTotal / 100).toFixed(2));
+    let displayTotal = "$" + Math.round(itemTotal / 100).toFixed(2);
     total.textContent = displayTotal;
     totalPrice += price * quantity;
- 
   });
 
-  totalPriceElement.textContent = "$" + (Math.round(totalPrice / 100).toFixed(2));
+  totalPriceElement.textContent = "$" + Math.round(totalPrice / 100).toFixed(2);
+  var toPrValue = totalPriceElement.textContent;
+  // Lưu trữ giá trị trong localStorage
+  localStorage.setItem("toPrValue", toPrValue);
 }
 
 updateCartInfor();
@@ -198,7 +251,6 @@ Account.addEventListener("click", function () {
 // Todo: Hide Account
 closeAccount.addEventListener("click", function () {
   showAccount.style.display = "none";
-
 });
 
 closeAcc.addEventListener("click", function () {
@@ -239,4 +291,3 @@ function subSign() {
     showAccount.style.display = "none";
   }
 }
-

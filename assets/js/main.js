@@ -1,39 +1,3 @@
-// //Todo: Animatiion Scroll
-// ScrollReveal({
-//   reset: true,
-//   distance: "60px",
-//   duration: 2000,
-//   delay: 400,
-// });
-
-// ScrollReveal().reveal(".animation-title", { delay: 50, origin: "bottom" });
-// ScrollReveal().reveal("#animation-cartitems", {
-//   delay: 50,
-//   origin: "bottom",
-//   interval: 50,
-// });
-// ScrollReveal().reveal(".single-banner-01", {
-//   delay: 50,
-//   origin: "top",
-// });
-
-// ScrollReveal().reveal(".single-banner-02", {
-//   delay: 50,
-//   origin: "bottom",
-// });
-
-// ScrollReveal().reveal(".trending-items", { delay: 50, origin: "left" });
-// ScrollReveal().reveal(".fllow-box", { delay: 50, origin: "bottom" });
-// ScrollReveal().reveal(".cooperate-main", { delay: 50, origin: "bottom" });
-
-//Todo: hide and show form login
-
-// Todo: Slide Banner Images
-// const itemas = document.getElementById("item-cli");
-// itemas.addEventListener("click", function(){
-//   alert("a");
-// })
-
 document.getElementById("nextas").onclick = function () {
   let lists = document.querySelectorAll(".itemas");
   document.getElementById("slide").appendChild(lists[0]);
@@ -91,7 +55,6 @@ Account.addEventListener("click", function () {
 // Todo: Hide Account
 closeAccount.addEventListener("click", function () {
   showAccount.style.display = "none";
-
 });
 
 closeAcc.addEventListener("click", function () {
@@ -478,7 +441,9 @@ function navCartAnimation() {
   }
 }
 // Gọi function navCartAnimation() khi giá trị trong cart-count thay đổi
-document.getElementById("cart-count").addEventListener("DOMSubtreeModified", navCartAnimation);
+document
+  .getElementById("cart-count")
+  .addEventListener("DOMSubtreeModified", navCartAnimation);
 
 // Back To Top
 window.onscroll = function () {
@@ -492,7 +457,10 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
     scrollToTopBtn.style.display = "block";
   } else {
     scrollToTopBtn.style.display = "none";
@@ -500,23 +468,69 @@ function scrollFunction() {
 }
 
 function scrollToTop() {
-  var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+  var currentPosition =
+    document.documentElement.scrollTop || document.body.scrollTop;
   if (currentPosition > 0) {
     window.requestAnimationFrame(scrollToTop);
     window.scrollTo(0, currentPosition - currentPosition / 10); // Tốc độ cuộn có thể được điều chỉnh ở đây
   }
 }
 
+
+
 // Todo: Hide Show Password
 const eyeIcon = document.querySelector(".bx");
 const pwFields = document.querySelector("#pass-show");
 eyeIcon.addEventListener("click", () => {
-  if(pwFields.type === "password"){
+  if (pwFields.type === "password") {
     pwFields.type = "text";
     eyeIcon.classList.replace("bx-hide", "bx-show");
     return;
-  }else{
+  } else {
     pwFields.type = "password";
     eyeIcon.classList.replace("bx-show", "bx-hide");
   }
-})
+});
+
+// Function to handle the click event for "Add To Cart" buttons
+function addToCart(event) {
+  var cardItem = event.currentTarget.closest(".card-item");
+
+  // Get the background-image, pro-title, and price from the card item
+  var backgroundImage =
+  cardItem.querySelector(".product-img").style.backgroundImage;
+  console.log(backgroundImage);
+  var proTitle = cardItem.querySelector(".pro-title").textContent;
+  console.log(proTitle);
+
+  var price = cardItem.querySelector(".price").textContent;
+
+  // Create an object to store the product information
+  var product = {
+    backgroundImage: backgroundImage,
+    proTitle: proTitle,
+    price: price,
+  };
+  
+
+  // Retrieve existing cart items from local storage (if any)
+  var cartItems = localStorage.getItem("cartItems");
+  if (cartItems) {
+    cartItems = JSON.parse(cartItems);
+  } else {
+    cartItems = [];
+  }
+
+  // Add the product to the cart items array
+  cartItems.push(product);
+
+  // Store the updated cart items back in local storage
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
+
+// Get all "Add To Cart" buttons
+var addToCartButtons = document.querySelectorAll(".add-to-cart");
+addToCartButtons.forEach(function (button) {
+  button.addEventListener("click", addToCart, { one: true });
+  console.log(addToCartButtons); // Thêm option { once: true } để chỉ gọi hàm addToCart một lần
+});

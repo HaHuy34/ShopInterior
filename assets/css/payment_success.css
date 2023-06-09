@@ -1380,6 +1380,13 @@ ul.payment li {
   margin-left: 4px;
 }
 
+.bg-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 100%;
+  width: 40px;
+}
+
 /* END FOOTER */
 
 ::-webkit-outer-spin-button,
@@ -2002,5 +2009,64 @@ ul.payment li {
 
   .header-bottom {
     margin-top: 61px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  section.section-icon-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thank-mes {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section.section {
+    padding: 10px 0 10px 0;
+  }
+}
+
+@media screen and (max-width: 375px){
+  h2.title-section {
+      font-size: 20px;
+  }
+
+  .name-product {
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .section-content-border .row {
+    display: block;
+  }
+
+  .section-content-borde p {
+    font-size: 14px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  .btn-field {
+    padding: 12px 10px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .prduct-des {
+    padding: 0 0 0 20px;
+  }
+
+  .field-main {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
   }
 }

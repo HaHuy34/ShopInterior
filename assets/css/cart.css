@@ -955,6 +955,10 @@ span.content-nav {
   margin-bottom: 10px;
 }
 
+.cart-table-main {
+  display: none;
+}
+
 @keyframes slideInLeft {
   from {
     opacity: 0;
