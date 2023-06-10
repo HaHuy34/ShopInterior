@@ -733,9 +733,9 @@ p.ct {
   position: relative;
 }
 
-.mycart {
+/* .mycart {
   animation: bell 1s infinite;
-}
+} */
 
 @keyframes bell {
   0% {
@@ -1139,7 +1139,7 @@ button.owl-next:hover {
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
   transform: scale(1);
   animation: pulse 2s infinite;
-  display: none;
+  display: block;
 }
 
 .back-to-top i {
@@ -1803,6 +1803,19 @@ button.signup-social:hover {
 
   .fllow-box span {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 350px) {
+  .fllow-box {
+    padding: 5px 40px;
+    background-size: 60px;
+  }
+  .fllow-box h3 {
+    font-size: 19px;
+  }
+  .fllow-box span {
+    font-size: 12px;
   }
 }
 

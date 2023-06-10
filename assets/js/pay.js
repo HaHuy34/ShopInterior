@@ -1,14 +1,13 @@
-
 // Todo: Loader
-function loader() {
-  document.querySelector(".loader-container").classList.add("fade-out");
-}
+// function loader() {
+//   document.querySelector(".loader-container").classList.add("fade-out");
+// }
 
-function fadeOut() {
-  setInterval(loader, 100);
-}
+// function fadeOut() {
+//   setInterval(loader, 100);
+// }
 
-window.onload = fadeOut;
+// window.onload = fadeOut;
 
 // Todo: Block LogIn
 const Account = document.querySelector(".account");
@@ -24,7 +23,6 @@ Account.addEventListener("click", function () {
 // Todo: Hide Account
 closeAccount.addEventListener("click", function () {
   showAccount.style.display = "none";
-
 });
 
 closeAcc.addEventListener("click", function () {
@@ -66,7 +64,6 @@ function subSign() {
   }
 }
 
-
 // Todo: Search
 const search = document.querySelector(".search");
 const searchBtn = document.querySelector(".search-btn");
@@ -94,7 +91,7 @@ const checkInput = document.querySelector(".paymentMethod");
 const transportCotent = document.querySelector(".money-transport-content");
 checkInput.addEventListener("click", () => {
   contentBow.textContent = "You only pay when receiving the goods";
-})
+});
 
 transportCotent.addEventListener("click", () => {
   contentBow.textContent = "You only pay when receiving the goods";
@@ -123,18 +120,17 @@ links.forEach((link) => {
   });
 });
 
-
 // Todo: Check input sale
 const inputSale = document.querySelector(".input-sale");
 const btnSale = document.querySelector(".btn-sale");
 const messSale = document.querySelector(".mess-sale");
 btnSale.addEventListener("click", () => {
-  if(inputSale.value === ''){
+  if (inputSale.value === "") {
     messSale.textContent = "Please enter the discount code";
-  }else{
+  } else {
     messSale.textContent = "Successfully pounded reducing codes";
   }
-})
+});
 
 // Todo: Check input value click order
 document.querySelector(".btn-order").addEventListener("click", () => {
@@ -251,6 +247,10 @@ function reTo() {
   window.location.href = "./contact.html";
 }
 
+function linkHome() {
+  window.location.href = "/index.html";
+}
+
 function wishlist() {
   window.location.href = "/wishlistmain.html";
 }
@@ -297,7 +297,6 @@ function Update() {
 function banerLink() {
   window.location.href = "./product_detail.html";
 }
-
 
 function saveFormData() {
   // Get the values from the input fields
@@ -352,10 +351,10 @@ function saveFormData() {
 saveFormData();
 
 // Lấy giá trị từ localStorage
-var toPrValue = localStorage.getItem('toPrValue');
+var toPrValue = localStorage.getItem("toPrValue");
 
 // In giá trị vào phần tử <td>
-var tltTotalPaymentPriceElement = document.querySelector('.tlt-total-payment-price');
+var tltTotalPaymentPriceElement = document.querySelector(
+  ".tlt-total-payment-price"
+);
 tltTotalPaymentPriceElement.textContent = toPrValue;
-
-

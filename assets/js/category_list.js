@@ -64,15 +64,15 @@ function subSign() {
     showAccount.style.display = "none";
   }
 }
-// Todo: Loader
-function loader() {
-  document.querySelector(".loader-container").classList.add("fade-out");
-}
+// // Todo: Loader
+// function loader() {
+//   document.querySelector(".loader-container").classList.add("fade-out");
+// }
 
-function fadeOut() {
-  setInterval(loader, 100);
-}
-window.onload = fadeOut;
+// function fadeOut() {
+//   setInterval(loader, 100);
+// }
+// window.onload = fadeOut;
 
 // Todo: Search
 const search = document.querySelector(".search");
@@ -188,133 +188,133 @@ function dividePage() {
   const productMain = [
     {
       name: "Enim Expedita Sed",
-      price: 45,
+      price: 45.0,
       image: "./assets/images/ImagesFigma/furniture_img3.jpg",
       del: "$55.00",
     },
     {
       name: "Chris Dining Chair",
-      price: 47,
+      price: 47.0,
       image: "./assets/images/ImagesFigma/furniture_img1.jpg",
       del: "$59.00",
     },
     {
       name: "Silver Eat Chair",
-      price: 25,
+      price: 25.0,
       image: "./assets/images/ImagesFigma/furniture_img2.jpg",
       del: "$37.00",
     },
     {
       name: "Denmark Channel",
-      price: 95,
+      price: 95.0,
       image: "./assets/images/ImagesFigma/furniture5_3.jpg",
       del: "$100.00",
     },
     {
       name: "Hadley Eat Chair",
-      price: 25,
+      price: 25.0,
       image: "./assets/images/ImagesFigma/furniture_img4.jpg",
       del: "$50.00",
     },
     {
       name: "Vienna Dining Chair",
-      price: 95,
+      price: 95.00,
       image: "./assets/images/ImagesFigma/furniture_img5.jpg",
       del: "$105.00",
     },
     {
       name: "London Dining Chair",
-      price: 12,
+      price: 12.00,
       image: "./assets/images/ImagesFigma/furniture_img6.jpg",
       del: "$24.00",
     },
     {
       name: "Northe Eating Sheet",
-      price: 80,
+      price: 80.00,
       image: "./assets/images/ImagesFigma/furniture_img7.jpg",
       del: "$24.00",
     },
     {
       name: "Pu Leather Leather",
-      price: 22,
+      price: 22.00,
       image: "./assets/images/ImagesFigma/furniture_img8.jpg",
       del: "$24.00",
     },
     {
       name: "Eames Plastic Side Chair",
-      price: 70,
+      price: 70.00,
       image: "./assets/images/ImagesFigma/product-furniture1.jpg",
       del: "$84.00",
     },
     {
       name: "Scelerisque pulvinar ligula",
-      price: 65,
+      price: 65.00,
       image: "./assets/images/ImagesFigma/furniture5_5.jpg",
       del: "$74.00",
     },
     {
       name: "Vivant janus charles",
-      price: 37,
+      price: 37.00,
       image: "./assets/images/ImagesFigma/product-accessories-9-2.jpg",
       del: "$44.00",
     },
     {
       name: "Classic wooden chair",
-      price: 40,
+      price: 40.00,
       image: "./assets/images/ImagesFigma/furniture10.jpg",
       del: "$75.00",
     },
     {
       name: "Milo Diet Chair",
-      price: 140,
+      price: 140.00,
       image: "./assets/images/ImagesFigma/product-furniture-1.jpg",
       del: "$150.00",
     },
     {
       name: "Panton tunior chair",
-      price: 110,
+      price: 110.00,
       image: "./assets/images/ImagesFigma/product-furniture-19.jpg",
       del: "$124.00",
     },
     {
       name: "Eames lounge chair",
-      price: 190,
+      price: 190.00,
       image: "./assets/images/ImagesFigma/product-furniture-8.jpg",
       del: "$255.00",
     },
     {
       name: "Ornare auctor",
-      price: 70,
+      price: 70.00,
       image: "./assets/images/ImagesFigma/light10_4.jpg",
       del: "$85.00",
     },
     {
       name: "Senectus nisi a imperdiet",
-      price: 72,
+      price: 72.00,
       image: "./assets/images/ImagesFigma/furniture39.jpg",
       del: "$87.00",
     },
     {
       name: "Char with Magazine",
-      price: 92,
+      price: 92.00,
       image: "./assets/images/ImagesFigma/product-furniture-5.jpg",
       del: "$107.00",
     },
     {
       name: "Ullamcorper nisl",
-      price: 38,
+      price: 38.00,
       image: "./assets/images/ImagesFigma/furniture8.jpg",
       del: "$58.00",
     },
     {
       name: "Feelgood designs",
-      price: 148,
+      price: 148.00,
       image: "./assets/images/ImagesFigma/product-accessories-12.jpg",
       del: "$198.00",
     },
     {
       name: "Gravida condimentum",
-      price: 128,
+      price: 128.00,
       image: "./assets/images/ImagesFigma/furniture7-430.jpg",
       del: "$150.00",
     },
@@ -347,7 +347,7 @@ function dividePage() {
     let pageProducts = productMain.slice(startIndex, endIndex);
     pageProducts.forEach((product) => {
       let productDiv = document.createElement("div");
-      productDiv.classList.add("col-6", "col-sm-4", "col-md-4", "col-lg-3");
+      productDiv.classList.add("col-6", "col-md-4", "col-lg-3");
       productDiv.innerHTML = `
       <div class="card-item">
               <div class="product-img" style="background-image: url(${
@@ -356,7 +356,8 @@ function dividePage() {
                   <div class="product-action-box">
                     <div class="pr-dc">
                       <a href="#" class="detail-product" onclick="redirect()">
-                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <img src="./assets/images/ImagesFigma/detail-imag.svg" alt="">
+                        </a>
                       </a>
                     </div>
                   </div>
@@ -364,7 +365,7 @@ function dividePage() {
               <div class="product-info">
                 <h6 class="pro-title">${product.name}</h6>
                 <div class="product-price">
-                  <span class="price">$${product.price}</span>
+                  <span class="price">$${product.price}.00</span>
                   <del>${product.del}</del>
                 </div>
                 <div class="rating-wrap">
@@ -520,6 +521,7 @@ function reTo() {
 // }
 // showContentCart();
 
+
 // Todo: Add To Cart Icon Header
 function checkCart() {
   var addToCartButtons = document.getElementsByClassName("add-to-cart");
@@ -608,10 +610,13 @@ function checkCart() {
     });
   }
 }
-
-checkCart();
+// checkCart();
 function wishlist() {
   window.location.href = "/wishlistmain.html";
+}
+
+function linkHome() {
+  window.location.href = "/index.html";
 }
 
 function homeLink() {
@@ -656,3 +661,64 @@ function Update() {
 function banerLink() {
   window.location.href = "./product_detail.html";
 }
+
+// Function to handle the click event for "Add To Cart" buttons
+function addToCart(event) {
+  var cardItem = event.currentTarget.closest(".card-item");
+
+  // Get the background-image, pro-title, and price from the card item
+  var backgroundImage =
+  cardItem.querySelector(".product-img").style.backgroundImage;
+  console.log(backgroundImage);
+  var proTitle = cardItem.querySelector(".pro-title").textContent;
+  console.log(proTitle);
+
+  var price = cardItem.querySelector(".price").textContent;
+
+  // Create an object to store the product information
+  var product = {
+    backgroundImage: backgroundImage,
+    proTitle: proTitle,
+    price: price,
+  };
+  
+
+  // Retrieve existing cart items from local storage (if any)
+  var cartItems = localStorage.getItem("cartItems");
+  if (cartItems) {
+    cartItems = JSON.parse(cartItems);
+  } else {
+    cartItems = [];
+  }
+
+  // Add the product to the cart items array
+  cartItems.push(product);
+
+  // Store the updated cart items back in local storage
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
+
+// Get all "Add To Cart" buttons
+var addToCartButtons = document.querySelectorAll(".add-to-cart");
+addToCartButtons.forEach(function (button) {
+  button.addEventListener("click", addToCart, { one: true }); // Thêm option { once: true } để chỉ gọi hàm addToCart một lần
+});
+
+const cartIcon = document.querySelector(".cart");
+var cartCount = document.getElementById("cart-count");
+// Đính kèm sự kiện click cho icon giỏ hàng
+cartIcon.addEventListener("click", () => {
+  // Kiểm tra nếu giỏ hàng có sản phẩm
+  if (cartCount.textContent !== "0") {
+    // Chuyển hướng đến trang chứa thông tin giỏ hàng
+    window.location.href = "./cart.html";
+  } else {
+    // Ẩn hiện thông báo sản phẩm trong cart
+    const notificationDiv = document.querySelector(".nav");
+    const closeNavMain = document.querySelector("#cancle");
+    notificationDiv.style.display = "block";
+    closeNavMain.addEventListener("click", function () {
+      notificationDiv.style.display = "none";
+    });
+  }
+});

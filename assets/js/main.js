@@ -100,15 +100,15 @@ function subSign() {
 }
 
 // Todo: Loader
-function loader() {
-  document.querySelector(".loader-container").classList.add("fade-out");
-}
+// function loader() {
+//   document.querySelector(".loader-container").classList.add("fade-out");
+// }
 
-function fadeOut() {
-  setInterval(loader, 100);
-}
+// function fadeOut() {
+//   setInterval(loader, 100);
+// }
 
-window.onload = fadeOut;
+// window.onload = fadeOut;
 
 // Todo: Search
 const search = document.querySelector(".search");
@@ -446,35 +446,35 @@ document
   .addEventListener("DOMSubtreeModified", navCartAnimation);
 
 // Back To Top
-window.onscroll = function () {
-  scrollFunction();
-};
+// window.onscroll = function () {
+//   scrollFunction();
+// };
 
-var scrollToTopBtn = document.querySelector(".back-to-top");
+// var scrollToTopBtn = document.querySelector(".back-to-top");
 
-window.onscroll = function () {
-  scrollFunction();
-};
+// window.onscroll = function () {
+//   scrollFunction();
+// };
 
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
-  ) {
-    scrollToTopBtn.style.display = "block";
-  } else {
-    scrollToTopBtn.style.display = "none";
-  }
-}
+// function scrollFunction() {
+//   if (
+//     document.body.scrollTop > 100 ||
+//     document.documentElement.scrollTop > 100
+//   ) {
+//     scrollToTopBtn.style.display = "block";
+//   } else {
+//     scrollToTopBtn.style.display = "none";
+//   }
+// }
 
-function scrollToTop() {
-  var currentPosition =
-    document.documentElement.scrollTop || document.body.scrollTop;
-  if (currentPosition > 0) {
-    window.requestAnimationFrame(scrollToTop);
-    window.scrollTo(0, currentPosition - currentPosition / 10); // Tốc độ cuộn có thể được điều chỉnh ở đây
-  }
-}
+// function scrollToTop() {
+//   var currentPosition =
+//     document.documentElement.scrollTop || document.body.scrollTop;
+//   if (currentPosition > 0) {
+//     window.requestAnimationFrame(scrollToTop);
+//     window.scrollTo(0, currentPosition - currentPosition / 10); // Tốc độ cuộn có thể được điều chỉnh ở đây
+//   }
+// }
 
 
 
@@ -531,6 +531,5 @@ function addToCart(event) {
 // Get all "Add To Cart" buttons
 var addToCartButtons = document.querySelectorAll(".add-to-cart");
 addToCartButtons.forEach(function (button) {
-  button.addEventListener("click", addToCart, { one: true });
-  console.log(addToCartButtons); // Thêm option { once: true } để chỉ gọi hàm addToCart một lần
+  button.addEventListener("click", addToCart, { one: true });// Thêm option { once: true } để chỉ gọi hàm addToCart một lần
 });

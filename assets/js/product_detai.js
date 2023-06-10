@@ -1,12 +1,12 @@
 // Todo: Loader
-function loader() {
-  document.querySelector(".loader-container").classList.add("fade-out");
-}
-function fadeOut() {
-  setInterval(loader, 500);
-}
+// function loader() {
+//   document.querySelector(".loader-container").classList.add("fade-out");
+// }
+// function fadeOut() {
+//   setInterval(loader, 500);
+// }
 
-window.onload = fadeOut;
+// window.onload = fadeOut;
 
 // Todo: Block LogIn
 const Account = document.querySelector(".account");
@@ -519,6 +519,10 @@ function banerLink() {
   window.location.href = "./product_detail.html";
 }
 
+function linkHome() {
+  window.location.href = "/index.html";
+}
+
 function wishlist() {
   window.location.href = "/wishlistmain.html";
 }
@@ -583,8 +587,6 @@ function backGroundImageCart() {
     "url(./assets/images/ImagesFigma/furniture7-430.jpg)",
     "url(./assets/images/ImagesFigma/furniture5_5.jpg)",
     "url(./assets/images/ImagesFigma/furniture39.jpg)",
-    "url(./assets/images/ImagesFigma/product-accessories-12.jpg)",
-    "url(./assets/images/ImagesFigma/product-furniture1.jpg)",
   ];
 
   // Sử dụng forEach để gán background-image cho mỗi phần tử .product-img
@@ -596,3 +598,51 @@ function backGroundImageCart() {
 
 backGroundImageCart();
 
+function addToCart(event) {
+  var cardItem = event.currentTarget.closest(".card-item");
+
+  // Get the background-image, pro-title, and price from the card item
+  var backgroundImage =
+    cardItem.querySelector(".product-img").style.backgroundImage;
+  console.log(backgroundImage);
+  var proTitle = cardItem.querySelector(".pro-title").textContent;
+  console.log(proTitle);
+
+  var price = cardItem.querySelector(".price").textContent;
+
+  // Create an object to store the product information
+  var product = {
+    backgroundImage: backgroundImage,
+    proTitle: proTitle,
+    price: price,
+  };
+
+  // Retrieve existing cart items from local storage (if any)
+  var cartItems = localStorage.getItem("cartItems");
+  if (cartItems) {
+    cartItems = JSON.parse(cartItems);
+  } else {
+    cartItems = [];
+  }
+
+  // Add the product to the cart items array
+  cartItems.push(product);
+
+  // Store the updated cart items back in local storage
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
+
+// Get all "Add To Cart" buttons
+var addToCartButtons = document.querySelectorAll(".add-to-cart");
+addToCartButtons.forEach(function (button) {
+  button.addEventListener("click", addToCart, { one: true });
+  console.log(addToCartButtons); // Thêm option { once: true } để chỉ gọi hàm addToCart một lần
+});
+
+// Lấy icon giỏ hàng
+const cartIcon = document.querySelector(".cart");
+// Đính kèm sự kiện click cho icon giỏ hàng
+cartIcon.addEventListener("click", () => {
+    // Chuyển hướng đến trang chứa thông tin giỏ hàng
+    window.location.href = "./cart.html";
+});

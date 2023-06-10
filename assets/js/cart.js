@@ -1,13 +1,13 @@
-// Todo: Loader
-function loader() {
-  document.querySelector(".loader-container").classList.add("fade-out");
-}
+// // Todo: Loader
+// function loader() {
+//   document.querySelector(".loader-container").classList.add("fade-out");
+// }
 
-function fadeOut() {
-  setInterval(loader, 100);
-}
+// function fadeOut() {
+//   setInterval(loader, 100);
+// }
 
-window.onload = fadeOut;
+// window.onload = fadeOut;
 
 // Todo: Search
 const search = document.querySelector(".search");
@@ -59,7 +59,7 @@ cartItems.forEach(function abs(product) {
       <td class="product-imag pr">
         <div class="img-pr-main" style='background-image: ${backgroundImage};'></div>
       </td>
-      <td data-label="Product's Name" class="product-na pr">
+      <td data-label="Name" class="product-na pr">
         <a href="./product_detail.html">${proTitle}</a>
       </td>
       <td data-label="Unit Price" class="product-ri pr">
@@ -100,15 +100,19 @@ cartIcon.addEventListener("click", function () {
 const deleteBtn = document.querySelectorAll(".cart-item-actions");
 deleteBtn.forEach((i) => {
   i.addEventListener("click", () => {
-    const cartItemElement = document.querySelector(".cart-item");
+    const cartItemElement = i.closest(".cart-item");
     // Ẩn hiện thông báo sản phẩm trong cart
     const notificationDiv = document.querySelector(".nav");
-    const closeNavMain = document.querySelector("#cancle");
+    const deleteNavMain = document.querySelector("#ok");
+    const closeNavMain = document.querySelector("#cancel");
     notificationDiv.style.display = "block";
-    closeNavMain.addEventListener("click", function () {
+    deleteNavMain.addEventListener("click", function () {
       notificationDiv.style.display = "none";
       cartItemElement.remove();
       updateCartInfor();
+    });
+    closeNavMain.addEventListener("click", function () {
+      notificationDiv.style.display = "none";
     });
     updateCartInfor();
   });
@@ -204,6 +208,10 @@ function homeLink() {
 
 function categoryList() {
   window.location.href = "/category_list.html";
+}
+
+function linkHome() {
+  window.location.href = "/index.html";
 }
 
 function Update() {

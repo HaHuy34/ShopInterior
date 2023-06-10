@@ -574,7 +574,7 @@ ul.icon-link li.ic:hover .link-main,
 /* CART COUNT */
 .cart {
   position: relative;
-  animation: bell 1s infinite;
+  /* animation: bell 1s infinite; */
 }
 
 .mycart {
@@ -1154,9 +1154,17 @@ span.choose-color:first-child {
   display: flex;
 }
 
-.icons-share {
-  margin-left: 25px;
+.pr-dc img {
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, 39%);
 }
+
+/* .icons-share {
+  margin-left: 25px;
+} */
 
 .icons-share i {
   color: #7e7d7c;
@@ -1216,7 +1224,7 @@ span.choose-color:first-child {
 }
 
 .product-img img {
-  height: 101%;
+  /* height: 101%; */
   width: 100%;
   position: absolute;
   top: 0;
@@ -1723,23 +1731,23 @@ ul.payment li {
     background-image: url(/assets/images/ImagesFigma/selector.png);
   }
 
-  .img-zoom-result {
+  /* .img-zoom-result {
     position: absolute;
     top: 0;
     left: 104%;
     border: 1px solid #d4d4d4;
     width: 100%;
     height: 350px;
-    /* opacity: 0; */
-    /* overflow: hidden; */
+    opacity: 0;
+    overflow: hidden;
     display: none;
-  }
+  } */
   
-  .img-zoom-container:hover .img-zoom-result {
-    /* opacity: 1; */
-    /* overflow: visible; */
+  /* .img-zoom-container:hover .img-zoom-result {
+    opacity: 1;
+    overflow: visible;
     display: block;
-  }
+  } */
 }
 @media (min-width: 900px) and (max-width: 980px) {
 .product-img-bottom {
@@ -1977,7 +1985,11 @@ ul.payment li {
 
   i#icon {
     font-size: 27px;
-}
+  }
+
+  .icons-share {
+    margin: 0;
+  }
 
 }
 
@@ -2398,4 +2410,345 @@ ul.payment li {
   .header-bottom {
     margin-top: 61px;
   }
+}
+
+@media (max-width: 300px){
+  ul.icon-link li {
+    font-size: 16px;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 18px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+
+  .slide-bn {
+    margin-top: 65px;
+  }
+
+  .itemas .des {
+    font-size: 14px;
+    margin-bottom: 20px 0 -20px 0;
+  }
+
+  .itemas .name {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .slide-bn .content {
+    top: 16%;
+    margin-left: 10px;
+  }
+
+  .itemas:nth-child(3),
+  .itemas:nth-child(4),
+  .itemas:nth-child(5),
+  .itemas:nth-child(n + 6) {
+    top: 75%;
+  }
+
+  .itemas:nth-child(1),
+  .itemas:nth-child(2) {
+    background-position: center 110px;
+    background-size: 250px;
+  }
+
+  .container-banner-image {
+    padding: 0;
+  }
+
+  .buttons button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .login,
+  .signup {
+    max-width: 250px;
+    padding: 20px 10px 0 10px;
+  }
+
+  .signup-heading {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  .title-login {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .forgot-password {
+    font-size: 12px;
+  }
+
+  .signup-submit {
+    padding: 9px;
+    font-size: 17px;
+    margin: 12px 0;
+  }
+
+  .signup-already {
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .signup-social {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .signup-input {
+    padding: 10px 10px 10px 9px;
+  }
+
+  .signup-or {
+    margin: 18px auto;
+  }
+
+  .signup-or span {
+    padding: 2px 12px;
+  }
+
+  .inpu-email-as.sign-up {
+    margin: 30px 0 10px 0;
+  }
+
+  .notification-account {
+    padding: 7px;
+    width: 258px;
+  }
+
+  .icons {
+    width: 40%;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .icons {
+    width: 40%;
+  }
+
+  .itemas .name {
+    font-size: 21px;
+  }
+
+  .itemas .des {
+    font-size: 13px;
+    margin: 5px 0;
+  }
+
+  .btn-line-fill {
+    padding: 5px 8px;
+    font-size: 11px;
+    margin-top: 6px;
+  }
+
+  .slide-bn {
+    margin-top: 30px;
+    height: 550px;
+  }
+
+  .itemas:nth-child(3),
+  .itemas:nth-child(4),
+  .itemas:nth-child(5),
+  .itemas:nth-child(n + 6) {
+    top: 86%;
+  }
+
+  .buttons {
+    width: fit-content;
+    top: 63%;
+    left: 11%;
+    gap: 10px;
+    transform: rotate(90deg);
+  }
+
+  .pr-dc {
+    width: 55px;
+    height: 55px;
+  }
+
+  .add-to-cart {
+    width: 56%;
+    padding: 8px 0;
+  }
+
+  h3.single-bn-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4px 0;
+  }
+
+  h6.pro-title {
+    font-size: 17px;
+  }
+
+  span.price {
+    font-size: 15px;
+  }
+
+  .product-price del {
+    font-size: 13px;
+  }
+ 
+  .rating i {
+    font-size: 12px;
+  }
+
+  span.rating-num {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .info1,
+  .info2 {
+    position: absolute;
+    top: 16px;
+    left: 10px;
+  }
+
+  a.single-bn-link::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    bottom: 3px;
+  }
+
+  .single-banner-02 {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .single-banner-02 img {
+    width: 74%;
+    margin-left: 70px;
+  }
+
+  .single-banner-01 {
+    width: 100%;
+    padding-bottom: 35px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+  }
+
+  .single-banner-01 img {
+    width: 130%;
+  }
+
+  h2.animation-title {
+    font-size: 22px;
+  }
+
+  .trending-items .owl-nav {
+    top: -58px;
+  }
+
+  .fllow-box {
+    padding: 5px 30px;
+    background-size: 50px;
+  }
+
+  .fllow-box h3 {
+    font-size: 19px;
+    margin: 0;
+  }
+
+  .fllow-box span {
+    font-size: 12px;
+  }
+
+  #toast {
+    position: fixed;
+    top: 92px;
+    right: 10px;
+  }
+
+  .tot {
+    padding: 10px 0;
+    min-width: 200px;
+    max-width: 350px;
+  }
+  
+  .title-content {
+    font-size: 22px;
+  }
+  
+}
+
+
+@media (max-width: 373px) {
+  span.rating-num {
+    display: none;
+  } 
+
+  .pr-detail .rating-wrap {
+    display: none;
+  }
+}
+
+@media (max-width: 410px) {
+  .custom-btn {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 358px) {
+  h4.prduct-title {
+    font-size: 20px;
+  }
+
+  .pr-pr span.price {
+    font-size: 19px;
+  }
+
+  span.rating-num {
+    display: none;
+  }
+  
+}
+
+@media (max-width: 335px) {
+  .add-product input[type="number"] {
+    width: 38px;
+    margin: 0 3px;
+  }
+
+  .add-product button {
+    margin: 0;
+  }
+}
+
+@media (max-width: 305px) {
+  h4.prduct-title {
+    font-size: 18px;
+  }
+
+  .product-price del {
+    font-size: 13px;
+  }
+
+  .pr-decs {
+    font-size: 14px;
+  }
+
+  ul.info-pr li {
+    font-size: 14px;
+  }
+
+  .main-tags p,
+  .icons-share i {
+    font-size: 14px;
+  }
+
+  
 }

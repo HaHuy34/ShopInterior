@@ -299,7 +299,7 @@ ul.icon-link li.ic:hover .link-main,
 /* CART COUNT */
 .cart {
   position: relative;
-  animation: bell 1s infinite;
+  /* animation: bell 1s infinite; */
 }
 
 @keyframes bell {
@@ -1356,7 +1356,6 @@ ul.payment li {
   .fllow-box {
     padding: 7px 50px;
     background-size: 65px;
-    left: 54%;
   }
 
   .fllow-box h3 {
@@ -1372,7 +1371,6 @@ ul.payment li {
   .fllow-box {
     padding: 5px 40px;
     background-size: 60px;
-    left: 58%;
   }
 
   .fllow-box h3 {
@@ -1388,8 +1386,6 @@ ul.payment li {
   .fllow-box {
     padding: 5px 40px;
     background-size: 60px;
-    left: 66%;
-    top: 57%;
   }
 
   .fllow-box h3 {
@@ -1850,4 +1846,303 @@ ul.payment li {
   .signup-already {
     font-size: 14px;
   } 
+}
+
+@media (max-width: 350px) {
+  .fllow-box {
+    padding: 5px 40px;
+    background-size: 60px;
+  }
+  .fllow-box h3 {
+    font-size: 19px;
+  }
+  .fllow-box span {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 430px) {
+  .fllow-box {
+    padding: 5px 40px;
+    background-size: 60px;
+  }
+
+  .fllow-box h3 {
+    font-size: 25px;
+  }
+
+  .fllow-box span {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 300px){
+  ul.icon-link li {
+    font-size: 16px;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 18px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+
+  .slide-bn {
+    margin-top: 65px;
+  }
+
+  .itemas .des {
+    font-size: 14px;
+    margin-bottom: 20px 0 -20px 0;
+  }
+
+  .itemas .name {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .slide-bn .content {
+    top: 16%;
+    margin-left: 10px;
+  }
+
+  .itemas:nth-child(3),
+  .itemas:nth-child(4),
+  .itemas:nth-child(5),
+  .itemas:nth-child(n + 6) {
+    top: 75%;
+  }
+
+  .itemas:nth-child(1),
+  .itemas:nth-child(2) {
+    background-position: center 110px;
+    background-size: 250px;
+  }
+
+  .container-banner-image {
+    padding: 0;
+  }
+
+  .buttons button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .login,
+  .signup {
+    max-width: 250px;
+    padding: 20px 10px 0 10px;
+  }
+
+  .signup-heading {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  .title-login {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .forgot-password {
+    font-size: 12px;
+  }
+
+  .signup-submit {
+    padding: 9px;
+    font-size: 17px;
+    margin: 12px 0;
+  }
+
+  .signup-already {
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .signup-social {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .signup-input {
+    padding: 10px 10px 10px 9px;
+  }
+
+  .signup-or {
+    margin: 18px auto;
+  }
+
+  .signup-or span {
+    padding: 2px 12px;
+  }
+
+  .inpu-email-as.sign-up {
+    margin: 30px 0 10px 0;
+  }
+
+  .notification-account {
+    padding: 7px;
+    width: 258px;
+  }
+
+  .icons {
+    width: 40%;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .icons {
+    width: 40%;
+  }
+
+  .itemas .name {
+    font-size: 21px;
+  }
+
+  .itemas .des {
+    font-size: 13px;
+    margin: 5px 0;
+  }
+
+  .btn-line-fill {
+    padding: 5px 8px;
+    font-size: 11px;
+    margin-top: 6px;
+  }
+
+  .slide-bn {
+    margin-top: 30px;
+    height: 550px;
+  }
+
+  .itemas:nth-child(3),
+  .itemas:nth-child(4),
+  .itemas:nth-child(5),
+  .itemas:nth-child(n + 6) {
+    top: 86%;
+  }
+
+  .buttons {
+    width: fit-content;
+    top: 63%;
+    left: 11%;
+    gap: 10px;
+    transform: rotate(90deg);
+  }
+
+  .pr-dc {
+    width: 55px;
+    height: 55px;
+  }
+
+  .add-to-cart {
+    width: 56%;
+    padding: 8px 0;
+  }
+
+  h3.single-bn-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4px 0;
+  }
+
+  h6.pro-title {
+    font-size: 17px;
+  }
+
+  span.price {
+    font-size: 15px;
+  }
+
+  .product-price del {
+    font-size: 13px;
+  }
+ 
+  .rating i {
+    font-size: 12px;
+  }
+
+  span.rating-num {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .info1,
+  .info2 {
+    position: absolute;
+    top: 16px;
+    left: 10px;
+  }
+
+  a.single-bn-link::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    bottom: 3px;
+  }
+
+  .single-banner-02 {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .single-banner-02 img {
+    width: 74%;
+    margin-left: 70px;
+  }
+
+  .single-banner-01 {
+    width: 100%;
+    padding-bottom: 35px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+  }
+
+  .single-banner-01 img {
+    width: 130%;
+  }
+
+  h2.animation-title {
+    font-size: 22px;
+  }
+
+  .trending-items .owl-nav {
+    top: -58px;
+  }
+
+  .fllow-box {
+    padding: 5px 30px;
+    background-size: 50px;
+  }
+
+  .fllow-box h3 {
+    font-size: 19px;
+    margin: 0;
+  }
+
+  .fllow-box span {
+    font-size: 12px;
+  }
+
+  #toast {
+    position: fixed;
+    top: 92px;
+    right: 10px;
+  }
+
+  .tot {
+    padding: 10px 0;
+    min-width: 200px;
+    max-width: 350px;
+  }
+  
+  .title-content {
+    font-size: 22px;
+  }
 }

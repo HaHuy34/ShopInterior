@@ -1,13 +1,13 @@
 // Todo: Loader
-function loader() {
-  document.querySelector(".loader-container").classList.add("fade-out");
-}
+// function loader() {
+//   document.querySelector(".loader-container").classList.add("fade-out");
+// }
 
-function fadeOut() {
-  setInterval(loader, 1000);
-}
+// function fadeOut() {
+//   setInterval(loader, 1000);
+// }
 
-window.onload = fadeOut;
+// window.onload = fadeOut;
 
 // Todo: Block LogIn
 const Account = document.querySelector(".account");
@@ -112,6 +112,10 @@ function retTo() {
 
 function reTo() {
   window.location.href = "./contact.html";
+}
+
+function linkHome() {
+  window.location.href = "/index.html";
 }
 
 function wishlist() {

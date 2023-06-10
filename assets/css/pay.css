@@ -297,7 +297,7 @@ ul.icon-link li.ic:hover .link-main,
 /* CART COUNT */
 .cart {
   position: relative;
-  animation: bell 1s infinite;
+  /* animation: bell 1s infinite; */
 }
 
 @keyframes bell {

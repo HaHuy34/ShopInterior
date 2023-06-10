@@ -1,13 +1,13 @@
-// Todo: Loader
-function loader() {
-  document.querySelector(".loader-container").classList.add("fade-out");
-}
+// // Todo: Loader
+// function loader() {
+//   document.querySelector(".loader-container").classList.add("fade-out");
+// }
 
-function fadeOut() {
-  setInterval(loader, 100);
-}
+// function fadeOut() {
+//   setInterval(loader, 100);
+// }
 
-window.onload = fadeOut;
+// window.onload = fadeOut;
 
 // Todo: Search
 const search = document.querySelector(".search");
@@ -116,6 +116,10 @@ function wishlist() {
   window.location.href = "/wishlistmain.html";
 }
 
+function linkHome() {
+  window.location.href = "/index.html";
+}
+
 function homeLink() {
   window.location.href = "/index.html";
 }
@@ -195,4 +199,11 @@ $(".cooperate-main").owlCarousel({
       items: 6,
     },
   },
+});
+// Lấy icon giỏ hàng
+const cartIcon = document.querySelector(".cart");
+// Đính kèm sự kiện click cho icon giỏ hàng
+cartIcon.addEventListener("click", () => {
+    // Chuyển hướng đến trang chứa thông tin giỏ hàng
+    window.location.href = "./cart.html";
 });

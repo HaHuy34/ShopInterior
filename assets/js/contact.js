@@ -1,13 +1,13 @@
-// Todo: Loader
-function loader() {
-  document.querySelector(".loader-container").classList.add("fade-out");
-}
+// // Todo: Loader
+// function loader() {
+//   document.querySelector(".loader-container").classList.add("fade-out");
+// }
 
-function fadeOut() {
-  setInterval(loader, 500);
-}
+// function fadeOut() {
+//   setInterval(loader, 500);
+// }
 
-window.onload = fadeOut;
+// window.onload = fadeOut;
 
 
 // Todo: Search
@@ -152,3 +152,10 @@ function Update() {
         `;
   main.appendChild(toast);
 }
+// Lấy icon giỏ hàng
+const cartIcon = document.querySelector(".cart");
+// Đính kèm sự kiện click cho icon giỏ hàng
+cartIcon.addEventListener("click", () => {
+    // Chuyển hướng đến trang chứa thông tin giỏ hàng
+    window.location.href = "./cart.html";
+});

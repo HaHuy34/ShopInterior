@@ -1,13 +1,13 @@
 // Todo: Loader
-function loader() {
-  document.querySelector(".loader-container").classList.add("fade-out");
-}
+// function loader() {
+//   document.querySelector(".loader-container").classList.add("fade-out");
+// }
 
-function fadeOut() {
-  setInterval(loader, 1000);
-}
+// function fadeOut() {
+//   setInterval(loader, 1000);
+// }
 
-window.onload = fadeOut;
+// window.onload = fadeOut;
 
 // Todo: Search
 const search = document.querySelector(".search");
@@ -235,4 +235,9 @@ function Update() {
             </div>
         `;
   main.appendChild(toast);
+}
+
+
+function linkHome() {
+  window.location.href = "/index.html";
 }
