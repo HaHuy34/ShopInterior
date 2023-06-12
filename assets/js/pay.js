@@ -354,7 +354,5 @@ saveFormData();
 var toPrValue = localStorage.getItem("toPrValue");
 
 // In giá trị vào phần tử <td>
-var tltTotalPaymentPriceElement = document.querySelector(
-  ".tlt-total-payment-price"
-);
+var tltTotalPaymentPriceElement = document.querySelector(".tlt-total-payment-price");
 tltTotalPaymentPriceElement.textContent = toPrValue;

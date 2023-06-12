@@ -497,11 +497,10 @@ function addToCart(event) {
   var cardItem = event.currentTarget.closest(".card-item");
 
   // Get the background-image, pro-title, and price from the card item
-  var backgroundImage =
-  cardItem.querySelector(".product-img").style.backgroundImage;
-  console.log(backgroundImage);
+  var backgroundImage = cardItem.querySelector(".product-img").style.backgroundImage;
+  // console.log(backgroundImage);
   var proTitle = cardItem.querySelector(".pro-title").textContent;
-  console.log(proTitle);
+  // console.log(proTitle);
 
   var price = cardItem.querySelector(".price").textContent;
 
@@ -512,7 +511,6 @@ function addToCart(event) {
     price: price,
   };
   
-
   // Retrieve existing cart items from local storage (if any)
   var cartItems = localStorage.getItem("cartItems");
   if (cartItems) {
