@@ -1,3 +1,6 @@
+AOS.init({
+  once: true,
+});
 document.getElementById("nextas").onclick = function () {
   let lists = document.querySelectorAll(".itemas");
   document.getElementById("slide").appendChild(lists[0]);
@@ -446,37 +449,35 @@ document
   .addEventListener("DOMSubtreeModified", navCartAnimation);
 
 // Back To Top
-// window.onscroll = function () {
-//   scrollFunction();
-// };
+window.onscroll = function () {
+  scrollFunction();
+};
 
-// var scrollToTopBtn = document.querySelector(".back-to-top");
+var scrollToTopBtn = document.querySelector(".back-to-top");
 
-// window.onscroll = function () {
-//   scrollFunction();
-// };
+window.onscroll = function () {
+  scrollFunction();
+};
 
-// function scrollFunction() {
-//   if (
-//     document.body.scrollTop > 100 ||
-//     document.documentElement.scrollTop > 100
-//   ) {
-//     scrollToTopBtn.style.display = "block";
-//   } else {
-//     scrollToTopBtn.style.display = "none";
-//   }
-// }
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+}
 
-// function scrollToTop() {
-//   var currentPosition =
-//     document.documentElement.scrollTop || document.body.scrollTop;
-//   if (currentPosition > 0) {
-//     window.requestAnimationFrame(scrollToTop);
-//     window.scrollTo(0, currentPosition - currentPosition / 10); // Tốc độ cuộn có thể được điều chỉnh ở đây
-//   }
-// }
-
-
+function scrollToTop() {
+  var currentPosition =
+    document.documentElement.scrollTop || document.body.scrollTop;
+  if (currentPosition > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, currentPosition - currentPosition / 10); // Tốc độ cuộn có thể được điều chỉnh ở đây
+  }
+}
 
 // Todo: Hide Show Password
 const eyeIcon = document.querySelector(".bx");
@@ -497,7 +498,8 @@ function addToCart(event) {
   var cardItem = event.currentTarget.closest(".card-item");
 
   // Get the background-image, pro-title, and price from the card item
-  var backgroundImage = cardItem.querySelector(".product-img").style.backgroundImage;
+  var backgroundImage =
+    cardItem.querySelector(".product-img").style.backgroundImage;
   // console.log(backgroundImage);
   var proTitle = cardItem.querySelector(".pro-title").textContent;
   // console.log(proTitle);
@@ -510,7 +512,7 @@ function addToCart(event) {
     proTitle: proTitle,
     price: price,
   };
-  
+
   // Retrieve existing cart items from local storage (if any)
   var cartItems = localStorage.getItem("cartItems");
   if (cartItems) {
@@ -529,5 +531,5 @@ function addToCart(event) {
 // Get all "Add To Cart" buttons
 var addToCartButtons = document.querySelectorAll(".add-to-cart");
 addToCartButtons.forEach(function (button) {
-  button.addEventListener("click", addToCart, { one: true });// Thêm option { once: true } để chỉ gọi hàm addToCart một lần
+  button.addEventListener("click", addToCart, { one: true }); // Thêm option { once: true } để chỉ gọi hàm addToCart một lần
 });

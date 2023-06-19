@@ -1,15 +1,6 @@
-// // Todo: Loader
-// function loader() {
-//   document.querySelector(".loader-container").classList.add("fade-out");
-// }
-
-// function fadeOut() {
-//   setInterval(loader, 500);
-// }
-
-// window.onload = fadeOut;
-
-
+AOS.init({
+  once: true,
+}); 
 // Todo: Search
 const search = document.querySelector(".search");
 const searchBtn = document.querySelector(".search-btn");
@@ -44,7 +35,6 @@ Account.addEventListener("click", function () {
 // Todo: Hide Account
 closeAccount.addEventListener("click", function () {
   showAccount.style.display = "none";
-
 });
 
 closeAcc.addEventListener("click", function () {
@@ -85,7 +75,6 @@ function subSign() {
     showAccount.style.display = "none";
   }
 }
-
 
 // Todo: Reponsive Bars
 function myFunction(x) {
@@ -156,6 +145,6 @@ function Update() {
 const cartIcon = document.querySelector(".cart");
 // Đính kèm sự kiện click cho icon giỏ hàng
 cartIcon.addEventListener("click", () => {
-    // Chuyển hướng đến trang chứa thông tin giỏ hàng
-    window.location.href = "./cart.html";
+  // Chuyển hướng đến trang chứa thông tin giỏ hàng
+  window.location.href = "./cart.html";
 });

@@ -7,7 +7,9 @@
 // }
 
 // window.onload = fadeOut;
-
+ AOS.init({
+  once: true
+ });
 // Todo: Block LogIn
 const Account = document.querySelector(".account");
 const showAccount = document.querySelector(".bg-form");
@@ -636,7 +638,6 @@ function addToCart(event) {
 var addToCartButtons = document.querySelectorAll(".add-to-cart");
 addToCartButtons.forEach(function (button) {
   button.addEventListener("click", addToCart, { one: true });
-  console.log(addToCartButtons); // Thêm option { once: true } để chỉ gọi hàm addToCart một lần
 });
 
 // Lấy icon giỏ hàng

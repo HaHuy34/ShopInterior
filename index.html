@@ -19,6 +19,8 @@
   <!-- Import bootstrap CSS core -->
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css" />
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Import AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Import style.css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Shop Interior</title>
@@ -325,7 +327,7 @@
       <div id="toast"></div>
       <div class="shipping-info">
         <div class="container">
-          <div class="row gutters" id="row">
+          <div class="row gutters" id="row" data-aos="fade-up">
               <div class="col-12 col-lg-3 col-sm-6" id="col">
                     <div class="content-main">
                         <div class="icon-box">
@@ -382,13 +384,13 @@
         <div class="container">
           <div class="row products-title">
             <div class="col-md-6 text-center">
-              <h2 class="animation-title">Exclusive Products</h2>
+              <h2 class="animation-title" data-aos="fade-up">Exclusive Products</h2>
             </div>
           </div>
           
           <div class="row products-list">
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="card-item" id="animation-cartitems">
+              <div class="card-item" id="animation-cartitems" data-aos="fade-right">
                 <div class="product-img">
                     <div class="product-action-box">
                       <div class="pr-dc">
@@ -423,7 +425,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-right">
               <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
@@ -460,7 +462,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-right">
               <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
@@ -497,7 +499,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-right">
               <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
@@ -534,7 +536,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-left">
               <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
@@ -571,7 +573,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3"data-aos="fade-left">
               <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
@@ -608,7 +610,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-left">
               <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
@@ -645,7 +647,7 @@
                 </div>
               </div>
             </div>  
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-6 col-md-4 col-lg-3"data-aos="fade-left">
               <div class="card-item" id="animation-cartitems">
                 <div class="product-img">
                     <div class="product-action-box">
@@ -685,7 +687,7 @@
           </div>
           <!-- START SECTION BANNER -->
           <div class="banner">
-              <div class="single-banner-01">
+              <div class="single-banner-01" data-aos="fade-right">
                   <img src="./assets/images/ImagesFigma/furniture_banner1.jpg" alt="">
                   <div class="info1">
                       <h5 class="single-bn-title1">Super Sale</h5>
@@ -693,7 +695,7 @@
                       <a href="#" class="single-bn-link" onclick="banerLink()">Shop Now</a>
                   </div>
               </div>
-              <div class="single-banner-02">
+              <div class="single-banner-02" data-aos="fade-left">
                   <img src="./assets/images/ImagesFigma/furniture_banner2.jpg" alt="">
                   <div class="info2">
                       <h5 class="single-bn-title1">Super Sale</h5>
@@ -704,11 +706,11 @@
           </div>
           <div class="row products-title">
             <div class="col-md-6 text-center">
-              <h2 class="animation-title">Trending Items</h2>
+              <h2 class="animation-title" data-aos="fade-up">Trending Items</h2>
             </div>
           </div>
 
-          <div class="trending-items owl-carousel owl-theme">
+          <div class="trending-items owl-carousel owl-theme" data-aos="fade-left">
               <div class="item">
                 <div class="card-item">
                   <div class="product-img">
@@ -1027,7 +1029,7 @@
                 <h3>instagram</h3>
                 <span>@huyn11677</span>
               </div>
-              <div class="slide-banner-image owl-carousel owl-theme">
+              <div class="slide-banner-image owl-carousel owl-theme" data-aos="zoom-in">
                 <div class="item">
                   <img src="./assets/images/ImagesFigma/furniture_insta1.jpg" alt="">
                 </div>
@@ -1112,7 +1114,7 @@
       </div>
       <!-- COOPERATE IMAGE -->
       <div class="container">
-        <div class="cooperate-main owl-carousel owl-theme">
+        <div class="cooperate-main owl-carousel owl-theme" data-aos="fade-up">
           <div class="item">
             <img src="./assets/images/ImagesFigma/cl_logo1.png" alt="">
           </div>
@@ -1288,8 +1290,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- Import js bootstrap -->
   <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Import main.js -->
-  <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+  <!-- Import AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>

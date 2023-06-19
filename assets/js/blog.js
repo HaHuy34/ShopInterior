@@ -8,7 +8,9 @@
 // }
 
 // window.onload = fadeOut;
-
+ AOS.init({
+   once: true,
+ });
 // Todo: Search
 const search = document.querySelector(".search");
 const searchBtn = document.querySelector(".search-btn");
